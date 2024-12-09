@@ -1,0 +1,53 @@
+body,
+menu,
+p,
+h1,
+h2,
+h3,
+h4,
+dd,
+dl,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+menu {
+  margin-top: 1em;
+}
+
+:where(p, h1, h2, h3, h4, ul, menu):first-child {
+  margin-top: 0;
+}
+
+p,
+li,
+span,
+div,
+a {
+  font-size: var(--step-0);
+}
+
+ul {
+  padding-left: var(--space-s);
+  list-style-type: "→";
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+
+  li {
+    padding-left: var(--space-s);
+
+    ul,
+    ul:first-child {
+      margin-top: var(--space-2xs);
+    }
+  }
+}
