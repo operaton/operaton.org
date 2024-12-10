@@ -41,7 +41,6 @@
           <div id="secondary-navigation">
             <p id="tagline">BPMN-Process Automation for Everyone</p>
 
-
             <menu id="secondary">
               <li>
                 <a href="https://github.com/operaton" target="_blank">
@@ -109,7 +108,7 @@
         BPMN-Process Automation for Everyone
       </div>
 
-    <main id="content">
+    <main>
       {{ content }}
     </main>
 
@@ -133,5 +132,42 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // toggle the open state of the details headings on resize
+
+      const details_headings = document.querySelectorAll("details.heading");
+      let was_large_width = innerWidth > 700;
+
+       if (innerWidth <= 700) {
+         details_headings.forEach((child, index) => {
+           child.removeAttribute('open');
+           child.setAttribute('name', 'headings');
+         })
+       }
+
+      window.onresize = () => {
+        console.log(was_large_width, innerWidth);
+
+        if (was_large_width && innerWidth <= 700) {
+          details_headings.forEach((child, index) => {
+            child.removeAttribute('open');
+            child.setAttribute('name', 'headings');
+          })
+
+          was_large_width = false;
+        } else {
+          if (window.innerWidth > 700) {
+            was_large_width = true;
+
+            details_headings.forEach((child, index) => {
+              child.setAttribute('open', true);
+              child.removeAttribute('name');
+            })
+          }
+        }
+
+      }
+    </script>
   </body>
 </html>
