@@ -189,7 +189,7 @@ footer {
     text-decoration-thickness: 0.1em;
   }
 
-  div#further-links {
+  nav#further-links {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xl);
@@ -315,7 +315,7 @@ div#latest-articles {
     height: unset;
     align-items: start;
 
-    > div > menu#primary-navigation {
+    menu#primary-navigation {
       display: none;
     }
   }

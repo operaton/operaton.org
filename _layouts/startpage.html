@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/normalize.css" | relative_url }}">
-    <link href="{{ "/assets/img/favicon.png" | relative_url }}" rel="icon">
+
+    {% include meta.html %}
+    {% include resources.html %}
 
     <style>
       details#primary-navigation-mobile {
@@ -32,106 +30,17 @@
     </style>
   </head>
   <body id="body">
-    <header>
-      <div class="wrapper">
-        <a class="logo" href="/">
-          <img  alt="operaton logo" src="/assets/img/operaton-logo.svg" />
-        </a>
-        <div>
-          <div id="secondary-navigation">
-            <p id="tagline">BPMN-Process Automation for Everyone</p>
-
-            <menu id="secondary">
-              <li>
-                <a href="https://github.com/operaton" target="_blank">
-                  <img src="{{ "/assets/img/icons/code.svg" | relative_url }}" alt=""/>
-                  Source Code
-                </a>
-              </li>
-              <li>
-                <a href="https://docs.operaton.org" target="_blank">
-                  <img src="{{ "/assets/img/icons/book.svg" | relative_url }}" alt=""/>
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="https://forum.operaton.org" target="_blank">
-                  <img src="{{ "/assets/img/icons/users.svg" | relative_url }}" alt=""/>
-                  Forum
-                </a>
-              </li>
-              <li>
-                <a href="/chat">
-                  <img src="{{ "/assets/img/icons/message-square.svg" | relative_url }}" alt=""/>
-                  Chat
-                </a>
-              </li>
-            </menu>
-          </div>
-
-          <menu id="primary-navigation">
-            <menu>
-              <li><a href="/features">Features</a></li>
-              <li><a href="/roadmap">Roadmap</a></li>
-              <li><a href="/#principles">Principles</a></li>
-            </menu>
-            <div class="spacer"></div>
-            <menu>
-              <li><a href="/about">About</a></li>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="/#contact">Contact</a></li>
-            </menu>
-          </menu>
-
-          <details id="primary-navigation-mobile">
-            <summary aria-label="open mobile menu"></summary>
-
-            <menu>
-              <menu>
-                <li><a href="/features">Features</a></li>
-                <li><a href="/roadmap">Roadmap</a></li>
-                <li><a href="/#principles">Principles</a></li>
-              </menu>
-              <div class="spacer"></div>
-              <menu>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/#contact">Contact</a></li>
-              </menu>
-            </menu>
-          </details>
-        </div>
-      </div>
-    </header>
+    {% include header.html %}
 
     <div id="tagline-mobile">
-        BPMN-Process Automation for Everyone
-      </div>
+      BPMN-Process Automation for Everyone
+    </div>
 
     <main>
       {{ content }}
     </main>
 
-    <footer>
-      <div class="wrapper">
-        <p class="tagline">
-          <em><strong>Operaton</strong></em> – community driven, open-source BPMN
-        </p>
-
-        <div id="further-links">
-          <menu>
-            <li><a href="/legal">Legal</a></li>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="https://github.com/operaton/operaton?tab=Apache-2.0-1-ov-file#readme">Licenses</a></li>
-            <li><a href="https://github.com/operaton/branding">Branding</a></li>
-          </menu>
-          <menu>
-            <li><a href="https://fosstodon.org/@operaton">Mastodon</a></li>
-            <li><a href="https://www.linkedin.com/company/operaton">LinkedIn</a></li>
-          </menu>
-        </div>
-      </div>
-    </footer>
+    {% include footer.html %}
 
     <script>
       // toggle the open state of the details headings on resize
