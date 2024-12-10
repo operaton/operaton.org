@@ -374,10 +374,14 @@ details#primary-navigation-mobile {
 
 menu#secondary-navigation-mobile {
   background: var(--color-primary-light);
-  display: flex;
+  display: none;
   flex-direction: column;
   border-radius: var(--space-2xs);
   gap: 0;
+
+  @media (max-width: 1000px) {
+    display: flex;
+  }
 
   li {
     &:not(:last-child) {
