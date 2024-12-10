@@ -5,6 +5,7 @@
   --color-secondary: #ad06b1;
   --color-font: #111;
   --color-font-white: white;
+  --color-font-secondary: #666;
 
   --space-3xs: clamp(0.25rem, 0.2336rem + 0.0822vw, 0.3125rem);
   --space-2xs: clamp(0.5625rem, 0.5461rem + 0.0822vw, 0.625rem);
@@ -38,6 +39,19 @@
 
 html {
   scroll-behavior: smooth;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 body {
@@ -69,15 +83,19 @@ a {
   &.more {
     text-align: end;
     display: block;
+    margin-top: var(--step-1);
   }
 }
 
 main {
-  max-width: 50em;
   margin: 0 auto;
   padding: var(--space-l) var(--space-s);
   flex: 1;
   margin-top: calc(2.7 * var(--step--1) + 4 * var(--space-xs));
+
+  > div#content {
+    max-width: 40em;
+  }
 }
 
 header {
@@ -178,14 +196,41 @@ footer {
 menu {
   list-style-type: none;
   display: flex;
-  gap: var(--space-s);
+  gap: var(--space-m);
   flex-wrap: wrap;
 }
 
 details.heading {
-  margin-top: var(--step-4);
+  margin-top: var(--space-m);
+  padding-bottom: var(--space-m);
+
   summary {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      background-size: 2rem 2rem;
+
+      display: none;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    border-bottom: 0.1em solid var(--color-primary);
+
+    summary {
+      &::before {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -218,7 +263,7 @@ div#latest-articles {
   display: none;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   header {
     > div.wrapper > div > div#secondary-navigation {
       display: none;
@@ -242,7 +287,7 @@ div#latest-articles {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   header > div.wrapper {
     height: unset;
     align-items: start;
@@ -253,7 +298,7 @@ div#latest-articles {
   }
 
   details#primary-navigation-mobile {
-    display: block !important;
+    display: flex !important;
   }
 }
 
@@ -265,9 +310,10 @@ details#primary-navigation-mobile {
   margin-bottom: 0;
 
   summary {
-    display: block;
+    display: inline;
     text-align: right;
     height: 2em;
+    list-style: none;
 
     &::after {
       content: "";
@@ -277,6 +323,10 @@ details#primary-navigation-mobile {
       display: inline-block;
       width: 2rem;
       height: 2rem;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
     }
   }
 
@@ -324,6 +374,47 @@ menu#secondary-navigation-mobile {
     img {
       height: 1em;
       /* filter: invert(1); */
+    }
+  }
+}
+
+#floating-outline {
+  position: sticky;
+  right: var(--space-m);
+}
+
+main {
+  display: grid;
+  grid-template-areas: "content outline";
+  gap: var(--space-l);
+
+  > div#content {
+    grid-area: content;
+    overflow-y: auto;
+  }
+
+  > aside {
+    grid-area: outline;
+
+    p {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-font-secondary);
+      font-size: var(--step--1);
+    }
+
+    a {
+      color: var(--color-primary-darker);
+      font-weight: normal;
+      text-decoration-thickness: 0.1em;
+    }
+  }
+
+  @media (max-width: 700px) {
+    grid-template-areas: "content";
+
+    > aside {
+      display: none;
     }
   }
 }

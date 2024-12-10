@@ -19,9 +19,19 @@
           background-image: url({{"/assets/img/icons/x.svg"|relative_url}});
         }
       }
+
+      details.heading {
+        summary::before {
+          background-image: url({{"/assets/img/icons/chevron-right.svg"|relative_url}});
+        }
+
+        &[open] > summary::before {
+          background-image: url({{"/assets/img/icons/chevron-down.svg"|relative_url}});
+        }
+      }
     </style>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div class="wrapper">
         <a class="logo" href="/">
@@ -117,5 +127,39 @@
         </menu>
       </div>
     </footer>
+
+    <script>
+      // toggle the open state of the details headings on resize
+
+      const details_headings = document.querySelectorAll("details.heading");
+      let was_large_width = innerWidth > 700;
+
+       if (innerWidth <= 700) {
+         details_headings.forEach((child, index) => {
+           child.removeAttribute('open');
+         })
+       }
+
+      window.onresize = () => {
+        console.log(was_large_width, innerWidth);
+
+        if (was_large_width && innerWidth <= 700) {
+          details_headings.forEach((child, index) => {
+            child.removeAttribute('open');
+          })
+
+          was_large_width = false;
+        } else {
+          if (window.innerWidth > 700) {
+            was_large_width = true;
+
+            details_headings.forEach((child, index) => {
+              child.setAttribute('open', true);
+            })
+          }
+        }
+
+      }
+    </script>
   </body>
 </html>
