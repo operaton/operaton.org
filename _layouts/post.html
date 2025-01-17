@@ -32,16 +32,22 @@
   <body id="body">
     {% include header.html %}
 
-    <main id="content">
-      <h1>{{ page.title }}</h1>
-      <p>
-        <em>
-        {{ page.date | date: "%Y-%m-%d" }} - {{ page.author }}
-        </em>
-      </p>
-      {{ content }}
-    </main>
+    <div id="scroll-area">
+      <div id="tagline-mobile">
+        BPMN-Process Automation for Everyone
+      </div>
 
-    {% include footer.html %}
+      <main id="content">
+        <h2>{{ page.title }}</h2>
+        <p>
+          <em>
+          {{ page.date | date: "%Y-%m-%d" }} - {{ page.author }}
+          </em>
+        </p>
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
   </body>
 </html>
