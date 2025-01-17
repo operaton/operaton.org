@@ -39,7 +39,7 @@
 
 html {
   scroll-behavior: smooth;
-
+  
   font-family:
     system-ui,
     -apple-system,
@@ -177,6 +177,13 @@ footer {
   background: var(--color-primary-light);
   padding: var(--space-2xl);
   margin-top: auto;
+
+  .tagline { /* todo fixme, not ideal to have negative px */
+    margin-top: -40px;
+    padding-top: 0;
+    margin-bottom: -10px; 
+    padding-bottom: 0;
+  }
 
   menu {
     flex-direction: column;
