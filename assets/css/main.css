@@ -24,16 +24,6 @@ body {
 #content { max-width: 80ch; }
 #scroll-area { overflow-y: auto; }
 
-h1::before {
-  content: '';
-  background: url("/assets/img/operaton-logo.svg");
-  background-size: 2em 2em;
-  height: 2em;
-  width: 2em;
-  display: block;
-  filter: invert(1);
-}
-
 main {
   margin: 0 auto;
   padding: .7em;
@@ -414,4 +404,16 @@ dd { margin-left: var(--space-m) }
   menu#secondary-navigation-mobile {
     display: flex;
   }
+}
+
+/* format breakers */
+
+h1::before {
+  content: '';
+  background: url("{{"/assets/img/operaton-logo.svg"|relative_url}}");
+  background-size: 2em 2em;
+  height: 2em;
+  width: 2em;
+  display: block;
+  filter: invert(1);
 }
