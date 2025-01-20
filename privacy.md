@@ -3,21 +3,21 @@ layout: default
 title: "Operaton Privacy"
 ---
 
-# Datenschutzerklärung
+## Datenschutzerklärung
 
 In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung dieser Website.
 
-## Verantwortlicher
+### Verantwortlicher
 
 Verantwortlich für die Datenverarbeitung ist:
 Andreas Klein, Andreas Zill und Tim Zöller
 Erreichbar unter mail (at) operaton.org
 
-## Personenbezogene Daten
+### Personenbezogene Daten
 
 Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (betroffene Person) beziehen. Als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind.
 
-## Daten beim Websiteaufruf
+### Daten beim Websiteaufruf
 
 Wenn Sie diese Website nur nutzen, um sich zu informieren und keine Daten angeben, dann verarbeiten wir nur die Daten, die zur Anzeige der Website auf dem von Ihnen verwendeten internetfähigen Gerät erforderlich sind. Das sind insbesondere:
 
@@ -32,7 +32,7 @@ Rechtsgrundlage für die Verarbeitung dieser Daten sind berechtigte Interessen g
 
 Darüber hinaus können Sie verschiedene Leistungen auf der Website nutzen, bei der weitere personenbezogene und nicht personenbezogene Daten verarbeitet werden.
 
-## Ihre Rechte
+### Ihre Rechte
 
 Als betroffene Person haben Sie folgende Rechte:
 
