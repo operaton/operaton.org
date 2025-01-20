@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Operaton Chat (Slack)"
+title: "Chat (Slack)"
 ---
 
 ## Operaton Chat (Slack)
