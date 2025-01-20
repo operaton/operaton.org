@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "About Operaton"
+title: "About"
 ---
 
 
-# About Operaton
+## About Operaton
 
 Operaton is a community-driven free open-source BPMN engine.
 

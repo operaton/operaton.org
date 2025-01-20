@@ -21,8 +21,13 @@ body {
   --space-xl: 4em;
 }
 
-#content { max-width: 80ch; }
-#scroll-area { overflow-y: auto; }
+#content { max-width: 80ch; width: calc(100% - 1.4em) }
+#scroll-area {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 
 h1::before {
   content: '';
@@ -99,15 +104,8 @@ header {
 
 footer {
   background: var(--color-primary-light);
-  padding: var(--space-xl);
-  margin-top: auto;
-
-  .tagline { /* todo fixme, not ideal to have negative px */
-    margin-top: -40px;
-    padding-top: 0;
-    margin-bottom: -10px; 
-    padding-bottom: 0;
-  }
+  padding: var(--space-l) var(--space-l) ;
+  margin-top: var(--space-m);
 
   menu {
     flex-direction: column;
@@ -125,7 +123,7 @@ footer {
     flex-wrap: wrap;
     gap: var(--space-xl);
 
-    margin-top: var(--space-l);
+    margin-top: var(--space-m);
   }
 }
 
@@ -136,12 +134,11 @@ footer {
 
 
 details.heading {
-  margin-top: var(--space-m);
+  margin-top: var(--space-l);
   padding-bottom: var(--space-m);
 
   summary {
     display: flex;
-    align-items: center;
     gap: var(--space-s);
 
     &::-webkit-details-marker {
@@ -157,17 +154,12 @@ details.heading {
       height: 2rem;
     }
 
-    h2 {
-      display: flex;
-      gap: var(--space-s);
+    &::after {
+      content: "";
+      flex: 1;
+      margin-bottom: .8em;
 
-      &::after {
-        content: "";
-        flex: 1;
-        margin-bottom: 0.25em;
-
-        border-bottom: var(--space-3xs) solid var(--color-primary-darker);
-      }
+      border-bottom: .15em solid var(--color-primary-darker);
     }
   }
 
@@ -183,24 +175,6 @@ details.heading {
   position: relative;
 } .card li {
   margin-left: var(--space-m);
-}
-
-div#latest-articles {
-  margin: var(--space-s) 0;
-  article {
-    h3 {
-      font-size: var(--step-0);
-
-      &::before {
-        content: "→";
-        padding-right: 1em;
-      }
-    }
-
-    p {
-      margin-top: var(--space-2xs);
-    }
-  }
 }
 
 #tagline-mobile {
@@ -314,14 +288,17 @@ menu#secondary-navigation-mobile {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-font-secondary);
-  font-size: var(--step--1);
+  font-size: 0.9em;
 } #start-page > aside a {
   color: var(--color-primary-darker);
   font-weight: normal;
   text-decoration-thickness: 0.1em;
 }
 
+#blog-posts td:last-child { text-align: right; }
 
+#latest-articles p:last-child { margin-top: 0 }
+#latest-articles article { margin-top: var(--space-m); }
 
 /* reset */
 
@@ -370,6 +347,18 @@ dt {
 }
 dd { margin-left: var(--space-m) }
 
+table {
+  width: 100%;
+  /*max-width: calc(100% - var(--space-s));*/
+}
+th, td {
+  padding: 0 var(--space-s) var(--space-s) 0;
+}
+
+time {
+  font-size: .9em;
+  font-family: monospace;
+}
 
 .screen-hidden {
   position: absolute;
@@ -400,6 +389,10 @@ dd { margin-left: var(--space-m) }
     summary {
       &::before {
         display: inline-block;
+      }
+
+      &::after {
+        display: none;
       }
     }
   }

@@ -3,14 +3,26 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog</h1>
+<h2>Blog</h2>
 
-<ul>
+<br>
+
+<table id="blog-posts">
+  <thead class="screen-hidden">
+  <tr>
+    <th scope="col">Article title</th>
+    <th scope="col">Release date</th>
+  </tr>
+  </thead>
+  <tbody>
   {% for post in site.posts %}
-  <li>
-    {{ post.date | date: "%Y-%m-%d" }} ::
-    <a href="{{ post.url }}">{{ post.title }}</a>
+  <tr>
+    <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+    <td>
+      <time datetime="{{ post.date | date: " %Y-%m-%d
+      " }}">{{ post.date | date: "%Y-%m-%d" }}</time</td>
     <!-- {{ post.excerpt }} -->
-  </li>
+  </tr>
   {% endfor %}
-</ul>
+  </tbody>
+</table>
