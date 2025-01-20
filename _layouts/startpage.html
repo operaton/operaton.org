@@ -7,6 +7,11 @@
     {% include resources.html %}
 
     <style>
+      h1::before {
+        background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
+        background-size: 2em 2em;
+      }
+
       details#primary-navigation-mobile {
 
         summary::after {
@@ -32,46 +37,51 @@
   <body id="body">
     {% include header.html %}
 
-    <div id="tagline-mobile">
-      BPMN-Process Automation for Everyone
+    <div id="scroll-area">
+      <div id="tagline-mobile">
+        BPMN-Process Automation for Everyone
+      </div>
+
+      <main id="content">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
     </div>
-
-    <main>
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
 
     <script>
       // toggle the open state of the details headings on resize
 
       const details_headings = document.querySelectorAll("details.heading");
       let was_large_width = innerWidth > 700;
-
-       if (innerWidth <= 700) {
-         details_headings.forEach((child, index) => {
-           child.removeAttribute('open');
-           child.setAttribute('name', 'headings');
-         })
-       }
+      if (innerWidth <= 700) {
+        details_headings.forEach((child, index) => {
+          child.removeAttribute('open');
+          child.setAttribute('name', 'headings');
+          child.removeAttribute('disabled');
+        })
+      } else {
+        details_headings.forEach((child, index) => {
+          child.setAttribute('disabled', true);
+        })
+      }
 
       window.onresize = () => {
-        console.log(was_large_width, innerWidth);
-
         if (was_large_width && innerWidth <= 700) {
           details_headings.forEach((child, index) => {
             child.removeAttribute('open');
             child.setAttribute('name', 'headings');
+            child.removeAttribute('disabled');
           })
-
           was_large_width = false;
         } else {
           if (window.innerWidth > 700) {
             was_large_width = true;
-
             details_headings.forEach((child, index) => {
               child.setAttribute('open', true);
               child.removeAttribute('name');
+              child.setAttribute('disabled', true);
+
             })
           }
         }

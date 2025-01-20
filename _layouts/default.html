@@ -7,39 +7,46 @@
     {% include resources.html %}
 
     <style>
+      h1::before {
+        background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
+        background-size: 2em 2em;
+      }
+    
       details#primary-navigation-mobile {
-
+  
         summary::after {
           background-image: url({{"/assets/img/icons/menu.svg"|relative_url}});
         }
-
+  
         &[open] > summary::after {
           background-image: url({{"/assets/img/icons/x.svg"|relative_url}});
         }
       }
-
+  
       details.heading {
         summary::before {
           background-image: url({{"/assets/img/icons/chevron-right.svg"|relative_url}});
         }
-
+  
         &[open] > summary::before {
           background-image: url({{"/assets/img/icons/chevron-down.svg"|relative_url}});
         }
       }
     </style>
   </head>
-  <body id="body">
+  <body>
     {% include header.html %}
 
-    <div id="tagline-mobile">
+    <div id="scroll-area">
+      <div id="tagline-mobile">
         BPMN-Process Automation for Everyone
+      </div>
+      
+      <main id="content">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
     </div>
-
-    <main id="content">
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
   </body>
 </html>

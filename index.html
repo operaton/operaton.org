@@ -7,20 +7,19 @@ title: "Operaton"
   <aside>
     <p>On this page</p>
     <menu>
-      <ul>
-        <li><a href="#news">News</a></li>
-        <li><a href="#features">Features & Goals</a></li>
-        <li><a href="#principles">Principles</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#contributors">Contributors</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#features">Features & Goals</a></li>
+      <li><a href="#principles">Principles</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#contributors">Contributors</a></li>
+      <li><a href="#contact">Contact</a></li>
     </menu>
   </aside>
 
   <div id="content">
+    <h2 class="screen-hidden">Home</h2>
     <p>
-      Operaton is a community-driven, free, and open-source BPMN engine.
+      <strong class="hero-name">Operaton</strong> is a community-driven, free, and open-source BPMN engine.
     </p>
     <p>
       It inherited its source code from the legacy of Camunda, Activiti and their predecessors. 
@@ -28,7 +27,7 @@ title: "Operaton"
       Building on this legacy, we aim to create a thriving future for a truly free and open-source BPMN engine.
     </p>
 
-    <h2>Our Promise</h2>
+    <h3>Our Promise</h3>
     <ul class="card">
       <li>Operaton is a state-of-the-art BPMN engine</li>
       <li>Forever <b>free</b> and open source under the Apache 2.0 license</li>
@@ -65,13 +64,13 @@ title: "Operaton"
 
     <details id="news" class="heading" open>
       <summary>
-        <h2>News</h2>
+        <h3>News</h3>
       </summary>
 
       <div id="latest-articles">
         {% for post in site.posts limit:2 %}
         <article>
-          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
           <p>
             {{ post.excerpt | strip_html | strip_newlines | truncate: 156}}
           </p>
@@ -119,41 +118,31 @@ title: "Operaton"
 
     <details id="principles" class="heading" open>
       <summary>
-        <h2>Principles</h2>
+        <h3>Principles</h3>
       </summary>
-
-      <h3>Community ownership</h3>
-      <ul>
-        <li> Operaton shall always be a community-owned free open-source project (legal work in progress). 
+      <dl>
+        <dt>Community ownership</dt>
+        <dd>Operaton shall always be a community-owned free open-source project (legal work in progress). 
           There shall be no private entity which is able to legally claim its ownership or divert the goals of the community. 
           See our <a href="https://github.com/operaton/operaton?tab=coc-ov-file#readme">Code of Conduct</a> 
-          to learn how we foster an open, welcoming, diverse, inclusive, and healthy community.</li>
-      </ul>
-      <h3>Quality</h3>
-      <ul>
-        <li>It shall be held to high-quality standards regarding every aspect 
+          to learn how we foster an open, welcoming, diverse, inclusive, and healthy community.</dd>
+        <dt>Quality</dt>
+        <dd>It shall be held to high-quality standards regarding every aspect 
           (e.g. see our <a href="https://sonarcloud.io/project/activity?id=operaton_operaton">SonarQube activtities</a> 
-          and our <a href="https://github.com/operaton/operaton/issues">GitHub issues</a>).
-        </li>
-      </ul>
-      <h3>Transparency</h3>
-      <ul>
-        <li>Operaton is developed in the open. 
+          and our <a href="https://github.com/operaton/operaton/issues">GitHub issues</a>).</dd>
+        <dt>Transparency</dt>
+        <dd>Operaton is developed in the open. 
           All decisions are transparently made by its community for its community. 
-          (See our regular <a href="#contact">communication channels</a>). </li>
-      </ul>
-
-      <h3>Self ownership</h3>
-      <ul>
-        <li>There shall be no hidden dependencies making it hard to build it on your own. 
-          Everything is easy to run by yourself (see <a>Getting Started Guide (currently WIP)</a>).
-        </li>
-      </ul>
+          (See our regular <a href="#contact">communication channels</a>).</dd>
+        <dt>Self ownership</dt>
+        <dd>There shall be no hidden dependencies making it hard to build it on your own. 
+          Everything is easy to run by yourself (see Getting Started Guide (currently WIP))</dd>
+      </dl>
     </details>
 
     <details id="roadmap" class="heading" open>
       <summary>
-        <h2>Roadmap</h2>
+        <h3>Roadmap</h3>
       </summary>
 
       <p>
@@ -164,7 +153,6 @@ title: "Operaton"
       </p>
 
       <h3>Release 1.0 – ASAP</h3>
-
       <ul>
         <li>Ensure stability and security</li>
         <li>Drop-in replacement for existing web apps</li>
@@ -172,7 +160,7 @@ title: "Operaton"
         <li>Update dependencies</li>
       </ul>
 
-      <h3>New and improved web apps – 2025</h3>
+      <h4>New and improved web apps – 2025</h4>
 
       <ul>
         <li>Migrate away from legacy AngularJS</li>
@@ -188,7 +176,7 @@ title: "Operaton"
         <li>Implement important features requested by the community</li>
       </ul>
 
-      <h3>Further Development</h3>
+      <h4>Further Development</h4>
       <ul>
         <li>No breaking changes</li>
         <li>New features based on user needs</li>
@@ -208,22 +196,28 @@ title: "Operaton"
 
     <details id="contributors" class="heading" open>
       <summary>
-        <h2>Contributors</h2>
+        <h3>Contributors</h3>
       </summary>
 
-      <h3>Core Contributors</h3>
-      For their many contributions to Operaton we'd like to thank especially:
+      <h4>Core Contributors</h4>
+      <p>
+        For their many contributions to Operaton we'd like to thank especially:
+      </p>
       <ul>
         <li>Julian Haupt</li>
         <li>Karsten Thoms</li>
       </ul>
 
-      <h3>Contributors</h3>
-      Many thanks to all <a href="https://github.com/operaton/operaton/graphs/contributors">contributors</a>. 
-      Keep up the great work.
+      <h4>Community Contributions</h4>
+      <p>
+        Many thanks to all <a href="https://github.com/operaton/operaton/graphs/contributors">contributors</a>. 
+        Keep up the great work.
+      </p>
 
-      <h3>Initiators</h3>
-      The project would not have been possible without the initial work of:
+      <h4>Initiators</h4>
+      <p>
+        The project would not have been possible without the initial work of:
+      </p>
       <ul>
         <li>Tim Zöller</li>
         <li>Andreas Zill</li>
@@ -233,16 +227,15 @@ title: "Operaton"
 
     <details id="contact" class="heading" open>
       <summary>
-        <h2>Contact</h2>
+        <h3>Contact</h3>
       </summary>
 
-      You can reach us via:
       <ul>
         <li><a href="https://forum.operaton.org/">Forum</a></li>
         <li><a href="https://join.slack.com/t/operaton/shared_invite/zt-2v6umjt92-d2DRmsoR1fqDEVlJB5IkNA">Chat (Slack)</a></li>
         <li><a href="https://fosstodon.org/@operaton">Mastodon</a></li>
         <li><a href="https://www.linkedin.com/company/operaton">LinkedIn</a></li>
-        <li>mail (_at_) operaton.org </li>
+        <li>mail [at] operaton.org </li>
       </ul>
     </details>
 
