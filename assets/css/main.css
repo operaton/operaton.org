@@ -102,6 +102,13 @@ footer {
   padding: var(--space-xl);
   margin-top: auto;
 
+  .tagline { /* todo fixme, not ideal to have negative px */
+    margin-top: -40px;
+    padding-top: 0;
+    margin-bottom: -10px; 
+    padding-bottom: 0;
+  }
+
   menu {
     flex-direction: column;
     margin-top: 0;
