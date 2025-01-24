@@ -22,8 +22,8 @@ title: "Operaton"
       <strong class="hero-name">Operaton</strong> is a community-driven, free, and open-source BPMN engine.
     </p>
     <p>
-      It inherited its source code from the legacy of Camunda, Activiti and their predecessors. 
-      Camunda 7 was an important contribution to the open-source BPMN community. 
+      It inherited its source code from the legacy of Camunda, Activiti and their predecessors.
+      Camunda 7 was an important contribution to the open-source BPMN community.
       Building on this legacy, we aim to create a thriving future for a truly free and open-source BPMN engine.
     </p>
 
@@ -88,8 +88,8 @@ title: "Operaton"
 
       <ul>
         <li>
-          Easy migration from Camunda 7 
-          (see <a href="https://docs.operaton.org" target="_blank">Documentation</a> 
+          Easy migration from Camunda 7
+          (see <a href="https://docs.operaton.org" target="_blank">Documentation</a>
           and <a href="https://github.com/operaton/migrate-from-camunda-recipe">OpenRewrite</a> scripts)
         </li>
         <li>
@@ -99,15 +99,15 @@ title: "Operaton"
           Focus on security and stability
         </li>
         <li>
-          Completely new <a href="https://github.com/operaton/web-apps">web apps</a>, 
+          Completely new <a href="https://github.com/operaton/web-apps">web apps</a>,
           rewritten with accessibility and performance in mind
         </li>
         <li>
           Improved documentation (see <a href="https://docs.operaton.org" target="_blank">Documentation</a>)
         </li>
         <li>
-          An inclusive and welcoming community 
-          (join the <a href="https://forum.operaton.org/">Forum</a> 
+          An inclusive and welcoming community
+          (join the <a href="https://forum.operaton.org/">Forum</a>
           and <a href="https://join.slack.com/t/operaton/shared_invite/zt-2v6umjt92-d2DRmsoR1fqDEVlJB5IkNA">Chat (Slack)</a>)
         </li>
         <li>
@@ -122,20 +122,20 @@ title: "Operaton"
       </summary>
       <dl>
         <dt>Community ownership</dt>
-        <dd>Operaton shall always be a community-owned free open-source project (legal work in progress). 
-          There shall be no private entity which is able to legally claim its ownership or divert the goals of the community. 
-          See our <a href="https://github.com/operaton/operaton?tab=coc-ov-file#readme">Code of Conduct</a> 
+        <dd>Operaton shall always be a community-owned free open-source project (legal work in progress).
+          There shall be no private entity which is able to legally claim its ownership or divert the goals of the community.
+          See our <a href="https://github.com/operaton/operaton?tab=coc-ov-file#readme">Code of Conduct</a>
           to learn how we foster an open, welcoming, diverse, inclusive, and healthy community.</dd>
         <dt>Quality</dt>
-        <dd>It shall be held to high-quality standards regarding every aspect 
-          (e.g. see our <a href="https://sonarcloud.io/project/activity?id=operaton_operaton">SonarQube activtities</a> 
+        <dd>It shall be held to high-quality standards regarding every aspect
+          (e.g. see our <a href="https://sonarcloud.io/project/activity?id=operaton_operaton">SonarQube activtities</a>
           and our <a href="https://github.com/operaton/operaton/issues">GitHub issues</a>).</dd>
         <dt>Transparency</dt>
-        <dd>Operaton is developed in the open. 
-          All decisions are transparently made by its community for its community. 
+        <dd>Operaton is developed in the open.
+          All decisions are transparently made by its community for its community.
           (See our regular <a href="#contact">communication channels</a>).</dd>
         <dt>Self ownership</dt>
-        <dd>There shall be no hidden dependencies making it hard to build it on your own. 
+        <dd>There shall be no hidden dependencies making it hard to build it on your own.
           Everything is easy to run by yourself (see Getting Started Guide (currently WIP))</dd>
       </dl>
     </details>
@@ -152,42 +152,62 @@ title: "Operaton"
         contribute changes yourself (with the help of the community).
       </p>
 
-      <h4>Release 1.0 – ASAP</h4>
+      <h4>October 2024 - Release initial fork</h4>
       <ul>
-        <li>Ensure stability and security</li>
-        <li>Drop-in replacement for existing web apps</li>
-        <li>Improve tests</li>
-        <li>Update dependencies</li>
+        <li>Initial fork and package renaming</li>
+        <li>Artefacts published in Maven Central</li>
+        <li>Community setup (Forum, Slack, website)</li>
       </ul>
 
-      <h4>New and improved web apps – 2025</h4>
+      <h4>December 2024 - Build automation</h4>
       <ul>
-        <li>Migrate away from legacy AngularJS</li>
-        <li>
-          Improve user experience based on feedback from the community for
-          casual and power users
-        </li>
-        <li>Include accessibility as a core principle</li>
-        <li>
-          Include all important features without restriction (like paid
-          licenses)
-        </li>
-        <li>Implement important features requested by the community</li>
+        <li>Automated releases and nightly builds</li>
+        <li>SonarQube for static code analysis</li>
+        <li>Update dependencies to Java 17</li>
       </ul>
 
-      <h4>Further Development</h4>
+      <h4>January 2025</h4>
       <ul>
+        <li>Release new webpage (operaton.org)</li>
+      </ul>
+
+      <h4>February 2025</h4>
+      <ul>
+        <li>standalone operaton distribution</li>
+        <li>docker builds</li>
+        <li>wildfly distribution</li>
+        <li>clean up static code analysis findings by > 8.000 findings</li>
+      </ul>
+
+      <h4>Q1 2025</h4>
+      <ul>
+        <li>Publish revised documentation</li>
+        <li>Founding of the Operaton e.V. non-profit organization</li>
+        <li>Drop dependency on legacy technology like Wildfly 26, JavaEE and Spring 5</li>
+      </ul>
+
+      <h4>Q2 2025</h4>
+      <ul>
+        <li>Release of new webapps (replacement for tasklist, cockpit and admin)</li>
+      </ul>
+
+      <h4>Q3 2025</h4>
+      <ul>
+        <li>Prepare semi-automatic migration path to Operaton</li>
+      </ul>
+
+      <h4>October 2025</h4>
+      <ul>
+        <li>End of life Camunda 7.24 CE</li>
+        <li>Release 1.0 based on 7.24 CE</li>
+      </ul>
+
+      <h4>2026</h4>
+      <ul>
+        <li>Release version 2.0</li>
+        <li>Further improvements based on our users needs</li>
         <li>No breaking changes</li>
-        <li>New features based on user needs</li>
-        <li>
-          Modular approach using extensions to keep the core small and
-          maintainable
-        </li>
-        <li>
-          Enhance maintainablity and therefore security by further cleaning up
-          the code base
-        </li>
-        <li>Improve documentation by adding example projects and tutorials</li>
+        <li>Remove deprecated code</li>
       </ul>
 
       <a class="more" href="/roadmap">Roadmap and releases in detail →</a>
