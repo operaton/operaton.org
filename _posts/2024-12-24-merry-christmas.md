@@ -15,7 +15,7 @@ As we look ahead to 2025, we’re more excited than ever about the future of Ope
 ---
 
 ### **What’s your BPMN goal for the new year?**
-Whether it’s implementing workflows, exploring automation, or contributing to open source, let’s start the conversation. Share your thoughts with us in the comments or on GitHub!
+Whether it’s implementing workflows, exploring automation, or contributing to open source, let’s start the conversation. Share your thoughts with us in [our forum](https://forum.operaton.org) or on [GitHub](https://github.com/operaton)!
 
 ---
 
