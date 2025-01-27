@@ -35,7 +35,7 @@ Operaton is more than just a fork—it’s a fresh start.
 
 We’re just at the beginning of this exciting journey, and we’d love for you to be part of it.
 
-💡 Whether you’re a developer, business user, or simply curious, here’s how you can get involved:
+Whether you’re a developer, business user, or simply curious, here’s how you can get involved:
 
 1. **Follow our updates.**  
    Stay tuned to our blog and social channels for news and announcements.
