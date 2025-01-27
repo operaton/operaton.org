@@ -18,7 +18,7 @@ Here's what they offer:
 With a simple command, you can spin up Operaton in seconds:
 
 ```bash
-docker run -p8080:8080 operaton/operaton:SNAPSHOT
+docker run -p 8080:8080 operaton/operaton:SNAPSHOT
 ```
 
 Then open your browser and navigate to http://localhost:8080. Log in using the credentials:
