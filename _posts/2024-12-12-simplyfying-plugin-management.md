@@ -4,7 +4,7 @@ layout: post
 
 ## Plugged In: Simplifying Plugin Management with Operaton
 
-At **Operaton**, our mission is to create a seamless and accessible experience for both users and contributors. When it comes to community plugins, we’ve adopted a streamlined approach: **we fork and maintain plugins as needed within our main GitHub organization**. 🚀
+At **Operaton**, our mission is to create a seamless and accessible experience for both users and contributors. When it comes to community plugins, we’ve adopted a streamlined approach: **we fork and maintain plugins as needed within our main  [GitHub organization](https://github.com/operaton)**. 🚀
 
 No need for a separate “community hub” or scattered repositories—every popular plugin is centrally maintained under the Operaton umbrella. This ensures **quality, reliability, and ease of access** for everyone who uses or contributes to the project.
 
@@ -34,5 +34,5 @@ By maintaining plugins centrally, we stay focused on what matters most:
 
 ### Support Operaton
 
-- **Star us on GitHub** to show your support and keep up with updates.
+- **Star us on [GitHub](https://github.com/operaton/operaton)** to show your support and keep up with updates.
 - **Join the discussion** on our [community forum](https://forum.operaton.org). Your voice matters!

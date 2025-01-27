@@ -38,7 +38,7 @@ For those who prefer not to use Docker, we’re bringing back the distribution f
 
 ### Nightly Builds on GitHub
 
-Stay up-to-date with the **latest features** by accessing our nightly builds on GitHub. These builds allow you to explore new advancements and provide timely feedback to the project.
+Stay up-to-date with the **latest features** by accessing our nightly builds on [GitHub](https://github.com/operaton/operaton). These builds allow you to explore new advancements and provide timely feedback to the project.
 
 ### Ensuring Quality with Integration Tests
 

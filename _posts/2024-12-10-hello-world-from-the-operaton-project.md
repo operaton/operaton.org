@@ -39,7 +39,7 @@ We’re just at the beginning of this exciting journey, and we’d love for you 
 
 1. **Follow our updates.**  
    Stay tuned to our blog and social channels for news and announcements.
-2. **Star us on GitHub.**  
+2. **Star us on [GitHub](https://github.com/operaton/operaton).**  
    Check out the code, test the project, and contribute!
 3. **Join the discussion.**  
    Visit our [forum](https://forum.operaton.org) to share ideas, provide feedback, and collaborate with the community.
