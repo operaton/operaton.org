@@ -36,6 +36,11 @@ body {
     --color-primary-light: #053542;
     --color-secondary: #f99bfb;
   }
+
+  details.heading > summary::before,
+  #secondary-navigation-mobile img {
+    filter: invert(1);
+  }
 }
 
 #content { max-width: 80ch; width: calc(100% - 1.4em) }
@@ -174,6 +179,7 @@ details.heading {
   summary {
     display: flex;
     gap: var(--space-s);
+    align-items: center;
 
     &::-webkit-details-marker {
       display: none;
