@@ -1,7 +1,8 @@
 ---
 layout: post
+author: The Operaton Team
 ---
-## Kickstart Operaton – Choose Your Preferred Access Method!
+## Choose Your Preferred Access Method!
 
 The **Operaton Project**, our free and open-source BPMN engine for everyone, is designed to make **workflow automation** straightforward and easy to use. We're excited to share updates that expand how you can use Operaton in your projects.
 
@@ -21,11 +22,10 @@ With a simple command, you can spin up Operaton in seconds:
 docker run -p 8080:8080 operaton/operaton:SNAPSHOT
 ```
 
-Then open your browser and navigate to http://localhost:8080. Log in using the credentials:
+Then open your browser and navigate to [http://localhost:8080](http://localhost:8080). Log in using the credentials:
 
-*User:* demo
-
-*Password:* demo
+- *User:* demo
+- *Password:* demo
 
 ### Standalone Distribution
 

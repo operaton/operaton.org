@@ -1,5 +1,6 @@
 ---
 layout: post
+author: The Operaton Team
 ---
 ## Making Migration Easier: From Camunda 7 CE to Operaton
 

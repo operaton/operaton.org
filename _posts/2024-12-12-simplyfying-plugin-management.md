@@ -1,5 +1,6 @@
 ---
 layout: post
+author: The Operaton Team
 ---
 
 ## Plugged In: Simplifying Plugin Management with Operaton

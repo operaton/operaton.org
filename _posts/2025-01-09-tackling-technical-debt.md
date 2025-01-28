@@ -1,5 +1,6 @@
 ---
 layout: post
+author: The Operaton Team
 ---
 ## A Path to Long-Term Sustainability
 

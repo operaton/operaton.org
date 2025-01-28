@@ -1,5 +1,6 @@
 ---
 layout: post
+author: The Operaton Team
 ---
 ## Beta Today, Better Tomorrow: Our Release Approach
 

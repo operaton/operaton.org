@@ -1,5 +1,6 @@
 ---
 layout: post
+author: The Operaton Team
 ---
 
 Welcome to **Operaton**, a community-driven project dedicated to keeping open-source process automation alive and thriving!
@@ -27,7 +28,7 @@ Thanks to our incredible community of contributors, Operaton is growing rapidly.
 
 Operaton is more than just a fork—it’s a fresh start.
 
-- **No more closed-source components.** Operaton will provide full technical transparency.
+- **No closed-source components.** Operaton will provide full technical transparency.
 - **Community-first approach.** We’re building this together, with open collaboration at the heart of the project.
 - **A modern roadmap.** We’re not just maintaining the past; we’re innovating for the future.
 

@@ -67,53 +67,68 @@ header {
   color: var(--color-font-white);
   width: 100vw;
   z-index: 100;
-} header a {
+}
+header a {
   color: white;
   text-decoration: none;
-} header a.logo {
+}
+header a:visited {
+  color: white;
+}
+header a.logo {
   padding: var(--space-s);
   display: block;
-} header a.logo img {
+}
+header a.logo img {
   filter: invert(1);
   /* todo fixme */
   max-height: 4rem;
   max-width: 100%;
   display: block;
-} header menu, header menu:not(:first-child) {
+}
+header menu, header menu:not(:first-child) {
   list-style-type: none;
   display: flex;
   gap: var(--space-m);
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-} header menu > li:not(:first-child) {
+}
+header menu > li:not(:first-child) {
   margin-top: 0;
   padding: 0;
-} header > div.wrapper {
+}
+header > div.wrapper {
   display: flex;
   align-items: stretch;
   position: relative;
   height: calc(2.7 * var(--step--1) + 4 * var(--space-xs));
-} header > div.wrapper > div {
+}
+header > div.wrapper > div {
   flex-grow: 1;
-} #secondary-navigation {
+}
+#secondary-navigation {
   background: var(--color-primary-darker);
   display: flex;
   justify-content: space-between;
   padding: var(--space-s);
   align-items: center;
-} #secondary-navigation a {
+}
+#secondary-navigation a {
   display: flex;
   align-items: center;
   gap: var(--space-s);
-} #secondary-navigation a img {
+}
+#secondary-navigation a img {
   height: 1em;
   filter: invert(1);
-} #primary-navigation {
+}
+#primary-navigation {
   justify-content: end;
   padding: var(--space-s);
   align-items: center;
-} #primary-navigation div.spacer {
+}
+#primary-navigation div.spacer {
   width: 0.1em;
   height: 0.8em;
   background: var(--color-font-white);
@@ -121,12 +136,14 @@ header {
 
 footer {
   background: var(--color-primary-light);
-  padding: var(--space-l) var(--space-l) ;
+  padding: var(--space-l) var(--space-l);
   margin-top: var(--space-m);
 
   menu {
     flex-direction: column;
     margin-top: 0;
+    padding: 0;
+    list-style-type: none;
   }
 
   a {
@@ -181,7 +198,8 @@ details.heading {
   }
 
 
-} details.heading[disabled] summary {
+}
+details.heading[disabled] summary {
   pointer-events: none; /* prevents click events */
 }
 
@@ -190,7 +208,8 @@ details.heading {
   border-radius: var(--space-s);
   padding: var(--space-m);
   position: relative;
-} .card li {
+}
+.card li {
   margin-left: var(--space-m);
 }
 
@@ -249,7 +268,7 @@ details#primary-navigation-mobile {
 details#primary-navigation-mobile summary::after { background-image: url("/assets/img/icons/menu.svg"); }
 details#primary-navigation-mobile[open] > summary::after { background-image: url("/assets/img/icons/x.svg"); }
 details.heading summary::before { background-image: url("/assets/img/icons/chevron-right.svg"); }
-details.heading[open] > summary::before {   background-image: url("/assets/img/icons/chevron-down.svg"); }
+details.heading[open] > summary::before { background-image: url("/assets/img/icons/chevron-down.svg"); }
 
 
 menu#secondary-navigation-mobile {
@@ -296,17 +315,21 @@ menu#secondary-navigation-mobile {
   display: grid;
   grid-template-areas: "content outline";
   gap: var(--space-l);
-} #start-page > div#content {
+}
+#start-page > div#content {
   grid-area: content;
   overflow-y: auto;
-} #start-page > aside {
+}
+#start-page > aside {
   grid-area: outline;
-} #start-page > aside p {
+}
+#start-page > aside p {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-font-secondary);
   font-size: 0.9em;
-} #start-page > aside a {
+}
+#start-page > aside a {
   color: var(--color-font-primary);
   font-weight: normal;
   text-decoration-thickness: 0.1em;
@@ -319,7 +342,7 @@ menu#secondary-navigation-mobile {
 
 /* reset */
 
-body, h1 {   margin: 0; padding: 0; line-height: 1.6; }
+body, h1 { margin: 0; padding: 0; line-height: 1.6; }
 
 :where(p, h2, h3, h4, ul, menu, ol) { margin: 0; }
 :where(p, h2, h3, h4, ul, menu, ol) { margin-top: .85em; }
@@ -327,11 +350,12 @@ body, h1 {   margin: 0; padding: 0; line-height: 1.6; }
 
 :where(h2, h3, h4, h5) + p:nth-child(2) { margin-top: 0; }
 
-p, li, span, div, a {  font-size: 1em;  }
+p, li, span, div, a { font-size: 1em; }
 
 ul, ol, menu {
   padding-left: var(--space-m);
-} ul {
+}
+ul {
   list-style-type: "→";
 }
 li { padding-left: var(--space-s); }
@@ -352,10 +376,14 @@ a {
   color: var(--color-secondary);
   font-weight: 500;
   text-decoration-thickness: 0.15em;
-} a.more {
+}
+a.more {
   text-align: end;
   display: block;
   margin-top: var(--space-m);
+}
+a:visited {
+  color: var(--color-font);
 }
 
 dt {
@@ -395,14 +423,16 @@ pre {
 
 @media (max-width: 45em) {
   #start-page { grid-template-areas: "content";
-  } #start-page > aside {
+  }
+  #start-page > aside {
     display: none;
   }
 
   header > div.wrapper {
     height: unset;
     align-items: start;
-  } #primary-navigation { display: none; }
+  }
+  #primary-navigation { display: none; }
 
   #primary-navigation-mobile { display: flex !important; }
 

@@ -5,29 +5,62 @@ title: "Roadmap"
 
 ## Roadmap
 
-### Planned
-#### Release 1.0
+We want to keep Operaton users informed and know what to expect next and
+when. This also shall show where the current priorities of the contributors
+lie. If you have other priorities you may share them in our forum or
+contribute changes yourself (with the help of the community).
 
-- Ensure stability and security
-- Drop-in replacement for existing web apps
-- Improve tests
-- Update dependencies
+### 2025
+
+#### February
+
+- Standalone Operaton distribution
+- Docker builds
+- Wildfly distribution
+- Clean up 8k static code analysis findings
+
+#### Q1
+
+- Publish revised documentation
+- Founding of the Operaton e.V. non-profit organization
+- Drop dependency on legacy technology like Wildfly 26, JavaEE and Spring 5
+
+#### Q2 
+
+- Release of new web apps beta (replacement for tasklist, cockpit and admin)
+
+#### Q3
+
+- Prepare semi-automatic migration path to Operaton
+
+#### October
+
+- End of life Camunda 7.24 CE
+- Release 1.0 based on 7.24 CE
+
+### 2026 and beyond
+
+- Release version 1.1 – No breaking changes
+- Further improvements based on our users needs
+- Remove deprecated code
 
 
-### Releases
-####  v1.0.0-beta-2 (current release)
-See the release on GitHub [v1.0.0-beta-2](https://github.com/operaton/operaton/releases/tag/v1.0.0-beta-2)
+## What happened so far
 
-**Breaking Changes**
+### 2025
 
-- Operaton removed the compatibility layer for Activiti. If you need to use Activiti models you will
-  have to convert them (see the following blog post for details).
-- The support for the javax.el expression language has been removed. Application servers that ship
-  this library are incompatible with Operaton. If you are running Operaton on an application server,
-  make sure that it supports jakarta-el in version 4.0.0 or newer (e.g. Wildfly 21 or newer).
+- Release of new webpage [operaton.org](https://operaton.org)
 
+### 2024
 
-### Initial Release 1.0.0-beta-1
-See the release on GitHub [1.0.0-beta-1](https://github.com/operaton/operaton/releases/tag/1.0.0-beta-1)
+#### December - Build automation
 
-Initial fork and renaming. Artefacts [published in Central Maven](https://central.sonatype.com/namespace/org.operaton.bpm) repository.
+- Automated releases and nightly builds
+- SonarQube for static code analysis
+- Update dependencies to Java 17
+
+#### October - Release of initial fork
+
+- Initial fork and package renaming
+- Artefacts published in Maven Central
+- Community setup (Forum, Slack, website)
