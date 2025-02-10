@@ -3,8 +3,6 @@ layout: post
 author: The Operaton Team
 ---
 
-## Operaton Beta-3 Release
-
 We are excited to announce the release of **Operaton Beta-3**, bringing us one step closer to a powerful, community-driven BPMN engine.
 
 ### Key Updates
@@ -40,7 +38,7 @@ We are excited to announce the release of **Operaton Beta-3**, bringing us one s
 
 A huge thank you to everyone who contributed to this release!
 
-**Contributors:**  
+**Contributors**  
 Andreas Klein, Andreas Zill, Alena Geduldig, Arne Deutsch, Christoph Borowski, Christopher Möllerherm, Dirk Olmes, Javad Malaquti, Julian Haupt, Karsten Thoms, Mikhail Golubev, Paul Hempel, Prajwol Bhandari, Tales Paiva, Tim Zöller, Wolfgang Schmoller.
 
 ### Try it Out Now!
