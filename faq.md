@@ -73,8 +73,9 @@ Operaton is in beta because it is still *undergoing stabilization* and *compatib
 While nothing is finalized yet, there is a high likelihood that releases will follow a fixed cadence, possibly half-yearly or quarterly, depending on community needs and available resources. The project team will provide more details as the project matures.
 
 #### Will there be an LTS (Long-Term Support) version?
-As an Open Source project, the project itself does not provide LTS.
-Some companies of project committers offer Operaton support services including Long-Term Support and the possibility of SLAs (Service Level Agreements).
+As an open-source project, Operaton itself does not provide LTS in the traditional sense. 
+However, the *1.x version is planned to be maintained for a long time*, ensuring stability and reliability for users.
+Additionally, some companies associated with the project committers offer services, including extended maintenance and the possibility of Service Level Agreements (SLAs) for enterprises that require long-term stability.
 
 #### What happens after version 1.x?
 After establishing a stable 1.x version, the project will *gradually modernize and evolve*. The goal is to *stay relevant for the next decade* while maintaining backward compatibility.
