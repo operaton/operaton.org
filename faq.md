@@ -18,13 +18,14 @@ BPMN stands for [Business Process Model and Notation](https://en.wikipedia.org/w
 Operaton is licensed under the [Apache 2.0 license](https://raw.githubusercontent.com/operaton/operaton/refs/heads/main/LICENSE).
 
 #### Why was Operaton created?
-Operaton was created as a fork of the [Camunda 7 CE](https://github.com/camunda/camunda-bpm-platform) to provide an open, community-driven alternative after the end of life of Camunda 7 CE in October 2025.
+Operaton was created as a fork of [Camunda 7 CE](https://github.com/camunda/camunda-bpm-platform) to provide an open, community-driven alternative after the end of life of Camunda 7 CE in October 2025.
 
 #### Who maintains Operaton?
 Operaton is maintained by an open-source community. Unlike proprietary BPMN solutions, no single company controls its direction.
 
 #### How is Operaton different from Camunda 7?
-Operaton started as a fork of Camunda 7, but it is evolving as an independent project. Initially, the focus is on providing a seamless transition for Camunda 7 users, ensuring full compatibility while modernizing certain aspects of the codebase.
+Operaton started as a fork of Camunda 7, but it is evolving as an independent project. Initially, the focus is on providing a seamless transition for Camunda 7 users, ensuring full REST API compatibility while modernizing certain aspects of the codebase.
+Internally, the package namespace changed from `org.camunda` to `org.operaton`. All public classes and interfaces have been renamed accordingly and stay as close to the original as possible.
 
 #### How is Operaton different from other Camunda 7 Forks?
 Operaton is not the only fork of Camunda 7. However, it is unique in its commitment to *community ownership* and *modernization of the code base*. While Operaton is a Free Open Source Software (FOSS) project, other forks may primarily be driven by commercial interests. While they might also have their code available under an open-source license, they follow an Open Core model. There is no guarantee that the community can influence the direction of these projects.
@@ -32,16 +33,16 @@ Operaton is not the only fork of Camunda 7. However, it is unique in its commitm
 ### Technical Approach
 
 #### What is the long-term technical strategy for Operaton?
-The primary goal for now is a *seamless transition from Camunda 7 to Operaton*. This means that *version 1.x* will prioritize stability and compatibility. Breaking changes, if necessary, will only come in *version 2.x or later*.
+The primary goal for now is a *seamless transition from Camunda 7 to Operaton*. This means that *version 1.x* will prioritize stability and compatible REST API. 
+The necessary package renaming is a breaking change, but Operaton will offer migration guides and tools to help users make the switch.
+
+Further breaking changes, if necessary, will only come in *version 2.x or later*. This includes also removal of deprecated API.
 
 #### Will there be major architectural changes?
 No. Major rewrites or architectural overhauls are *not planned for the 1.x versions*. However, basic web applications will be rewritten, legacy containers will be dropped, and the codebase will be modernized—without breaking compatibility.
 
 #### When will Operaton introduce new features?
 Once a *stable and reliable foundation is established*, the community will collaboratively plan future features and enhancements for later versions.
-
-#### Does Operaton support microservices architectures?
-Yes, Operaton can be used in microservices environments. It provides REST APIs and supports lightweight execution models.
 
 #### Which Java version is required?
 Operaton requires a JVM >= 17 for execution.
@@ -72,7 +73,8 @@ Operaton is in beta because it is still *undergoing stabilization* and *compatib
 While nothing is finalized yet, there is a high likelihood that releases will follow a fixed cadence, possibly half-yearly or quarterly, depending on community needs and available resources. The project team will provide more details as the project matures.
 
 #### Will there be an LTS (Long-Term Support) version?
-Yes, version 1.x will be considered LTS. However, Operaton itself does not provide SLAs (Service Level Agreements). Companies that offer Operaton support services will need to ensure long-term maintenance.
+As an Open Source project, the project itself does not provide LTS.
+Some companies of project committers offer Operaton support services including Long-Term Support and the possibility of SLAs (Service Level Agreements).
 
 #### What happens after version 1.x?
 After establishing a stable 1.x version, the project will *gradually modernize and evolve*. The goal is to *stay relevant for the next decade* while maintaining backward compatibility.
@@ -83,7 +85,7 @@ After establishing a stable 1.x version, the project will *gradually modernize a
 Operaton follows security best practices, including authentication, authorization, and encrypted database connections.
 
 #### Can I use Operaton with Single Sign-On (SSO)?
-Yes, Operaton supports authentication via OAuth2, OpenID Connect, and LDAP.
+Yes, Operaton supports authentication via OAuth2, OpenID Connect, and LDAP by engine plugins.
 
 #### What security policies are in place for Operaton?
 Operaton follows a security policy that includes vulnerability management, responsible disclosure, and best practices for open-source security.
@@ -102,15 +104,15 @@ Yes. The 1.x versions of Operaton prioritize *full compatibility with Camunda 7*
 #### How do I migrate from Camunda 7 to Operaton?
 The migration process is straightforward:
 1. Upgrade to Camunda 7 CE *version 7.24*, which is the latest release before its end of life.
-2. Update your application dependencies to use Operaton instead of Camunda 7.
-3. Replace the Camunda 7 libraries with Operaton equivalents in your build system (Maven, Gradle, etc.).
+2. Update your application dependencies to use Operaton instead of Camunda 7 CE.
+3. Replace the Camunda 7 CE libraries with Operaton equivalents in your build system (Maven, Gradle, etc.).
 4. Verify compatibility with your existing database schema.
 5. Run tests to ensure process execution behaves as expected.
 
 A detailed *migration guide* will be available soon.
 
 #### What about database compatibility?
-Operaton *keeps the same database schema as Camunda 7*, so no database migration is required when switching.
+Operaton *keeps the same database schema as Camunda 7 CE*, so no database migration is required when switching.
 
 #### Are there tools to assist with migration?
 Yes, the community is working on migration tooling to automate dependency updates and compatibility checks.
@@ -118,8 +120,8 @@ Yes, the community is working on migration tooling to automate dependency update
 #### Will Camunda Modeler still work with Operaton?
 Yes, you can continue using Camunda Modeler to design BPMN diagrams and deploy them to Operaton.
 
-#### Does Operaton support Camunda 7 plugins?
-Operaton does support the same plugin mechanism as Camunda 7. However, since namespaces have changed, the plugins will require small rewrites to use the Operaton API.
+#### Does Operaton support Camunda 7 CE plugins?
+Operaton does support the same plugin mechanism as Camunda 7 CE. However, since namespaces have changed, the plugins will require small rewrites to use the Operaton API.
 
 #### Is there commercial support available for migration?
 Since Operaton is a free and open-source project, commercial support is provided by third-party companies offering consulting and migration services.
@@ -153,8 +155,8 @@ The project also uses [SonarCloud](https://sonarcloud.io/project/overview?id=ope
 
 ### Long-Term Vision
 
-#### Will Operaton remain a Camunda 7 clone?
-No! While version 1.x ensures compatibility, Operaton will *evolve* over time to introduce modern features. The goal is not just to replicate Camunda 7, but to **build a long-lasting open-source BPMN engine**.
+#### Will Operaton remain a Camunda 7 CE clone?
+No! While version 1.x ensures compatibility, Operaton will *evolve* over time to introduce modern features. The goal is not just to replicate Camunda 7 CE, but to **build a long-lasting open-source BPMN engine**.
 
 #### How can I help shape the future of Operaton?
 By contributing! If you join and participate, you help decide the project’s direction.
