@@ -7,13 +7,13 @@ Welcome to **Operaton**, a community-driven project dedicated to keeping open-so
 
 Operaton was born as a fork of **Camunda 7**, the widely respected open-source process engine that has been a cornerstone of Java-based process automation for years. After Camunda's announcement that the **Community Edition will reach its end of life in October 2025**, we knew it was time to act.
 
-### Why Operaton?
+## Why Operaton?
 
 Camunda 7 Community Edition has built an incredible legacy in the world of open-source process automation. It’s known for its seamless integration into Spring Boot and other Java applications, as well as its versatility as a lightweight external engine.
 
 While we thank Camunda for their immense contribution and inspiration, the decision to discontinue the Community Edition left a gap in the open-source landscape. That’s why we’ve stepped in with **Operaton**—a project built on the foundation of Camunda 7, but with a renewed focus on community-driven innovation and complete technical transparency.
 
-### Exciting Milestones So Far
+## Exciting Milestones So Far
 
 We’re thrilled to share the progress we’ve made with Operaton so far:
 
@@ -24,7 +24,7 @@ We’re thrilled to share the progress we’ve made with Operaton so far:
 
 Thanks to our incredible community of contributors, Operaton is growing rapidly. Together, we’re ensuring process automation remains accessible, open, and driven by the people who rely on it.
 
-### Our Vision
+## Our Vision
 
 Operaton is more than just a fork—it’s a fresh start.
 
@@ -32,7 +32,7 @@ Operaton is more than just a fork—it’s a fresh start.
 - **Community-first approach.** We’re building this together, with open collaboration at the heart of the project.
 - **A modern roadmap.** We’re not just maintaining the past; we’re innovating for the future.
 
-### Join Us!
+## Join Us!
 
 We’re just at the beginning of this exciting journey, and we’d love for you to be part of it.
 

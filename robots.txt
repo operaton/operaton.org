@@ -1,0 +1,3 @@
+User-agent: *
+Host: https://operaton.org/
+Sitemap: https://operaton.org/sitemap.xml

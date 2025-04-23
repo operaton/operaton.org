@@ -3,7 +3,7 @@ layout: default
 title: "Chat (Slack)"
 ---
 
-## Operaton Chat (Slack)
+# Operaton Chat (Slack)
 
 We are currently using Slack alongside the Forum for faster communication.
 
