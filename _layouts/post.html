@@ -20,18 +20,14 @@
     <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 
     <style>
-     .operation-logo {
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      width: 64px;
-      height: 64px;
-       &::before {
-         background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
-         background-size: contain;
-         background-repeat: no-repeat;
-       }
-      }
+     .operaton-logo::before {
+       background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
+       background-size: 2em 2em;
+       height: 2em;
+       width: 2em;
+       font-size: 2em;
+     }
+
 
       details#primary-navigation-mobile {
 
