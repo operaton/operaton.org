@@ -1,0 +1,128 @@
+---
+layout: wide
+title: Service Providers
+---
+
+<h2>Service Providers</h2>
+
+<p class="content">With Operaton you can freely choose your service provider. We do not prevent anyone
+  from offering commercial services. Someone please write a nice text...</p>
+
+<br>
+
+<div class="wrapper">
+
+
+  <div>
+    <strong>Filter by offering</strong>
+
+    <noscript>
+      You can enable JavaScript to filter the table below.
+    </noscript>
+
+    <fieldset>
+      <label>
+        <input type="checkbox" checked name="service-product" id="service-product" onchange="filter_table" />
+        Product
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-tech-training" id="service-tech-training" onchange="filter_table" />
+        Technical Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-bpmn-training" id="service-bpmn-training" onchange="filter_table" />
+        BPMN Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-consulting" id="service-consulting" onchange="filter_table" />
+        Consulting
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-support" id="service-support" onchange="filter_table" />
+        Support
+      </label>
+    </fieldset>
+  </div>
+
+  <br>
+
+  <table>
+    <caption>List of Operaton service providers</caption>
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Tags</th>
+      <th scope="col">Description</th>
+      <th scope="col">Headquarters</th>
+      <th scope="col">Area of Operaton</th>
+    </tr>
+    </thead>
+    <tbody id="results">
+    <tr id="otus">
+      <td>Otus GmbH</td>
+      <td>🦉</td>
+      <td class="tags">
+        <span>Technical Training</span>
+        <span>BPMN Training</span>
+        <span>Consulting</span>
+        <span>Support</span>
+      </td>
+      <td>At Otus we owl at the moon.</td>
+      <td>Heidelberg, Germany</td>
+      <td>EU, Canada</td>
+    </tr>
+    <tr id="prod">
+      <td>Product Ltd</td>
+      <td>💼</td>
+      <td class="tags">
+        <span>Product</span>
+      </td>
+      <td>We make product</td>
+      <td>Wien, Austria</td>
+      <td>DACH</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<script>
+  const
+    results = document.getElementById('results'),
+    tag_cells = document.querySelectorAll('.tags'),
+    show_product = document.getElementById('service-product'),
+    show_tech_training = document.getElementById('service-tech-training'),
+    show_bpmn_training = document.getElementById('service-bpmn-training'),
+    show_consulting = document.getElementById('service-consulting'),
+    show_support = document.getElementById('service-support')
+
+  const filter_table = (e) => {
+    e.preventDefault()
+
+    tag_cells.forEach((value) => {
+        const tags = value.textContent.trim().replaceAll(' ', '').split('\n')
+
+        if (
+          show_product.checked && tags.some((v) => v === 'Product') ||
+          show_tech_training.checked && tags.some((v) => v === 'TechnicalTraining') ||
+          show_bpmn_training.checked && tags.some((v) => v === 'BPMNTraining') ||
+          show_consulting.checked && tags.some((v) => v === 'Consulting') ||
+          show_support.checked && tags.some((v) => v === 'Support')
+        ) {
+          value.parentNode.style.display = ''
+        } else {
+          value.parentNode.style.display = 'none'
+        }
+      }
+    )
+
+  }
+
+  show_product.addEventListener('change', filter_table)
+  show_tech_training.addEventListener('change', filter_table)
+  show_bpmn_training.addEventListener('change', filter_table)
+  show_consulting.addEventListener('change', filter_table)
+  show_support.addEventListener('change', filter_table)
+</script>

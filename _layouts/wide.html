@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+  <title>{{ page.title }} - {{ site.title }}</title>
+
+  {% include meta.html %}
+  {% include resources.html %}
+
+  <style>
+    h1::before {
+      background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
+      background-size: 2em 2em;
+    }
+
+    details#primary-navigation-mobile {
+
+      summary::after {
+        background-image: url({{"/assets/img/icons/menu.svg"|relative_url}});
+      }
+
+      &[open] > summary::after {
+        background-image: url({{"/assets/img/icons/x.svg"|relative_url}});
+      }
+    }
+
+    details.heading {
+      summary::before {
+        background-image: url({{"/assets/img/icons/chevron-right.svg"|relative_url}});
+      }
+
+      &[open] > summary::before {
+        background-image: url({{"/assets/img/icons/chevron-down.svg"|relative_url}});
+      }
+    }
+  </style>
+</head>
+<body>
+{% include header.html %}
+
+<div id="scroll-area">
+  <div id="tagline-mobile">
+    BPMN-Process Automation for Everyone
+  </div>
+
+  <main id="content-wide">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+</div>
+</body>
+</html>

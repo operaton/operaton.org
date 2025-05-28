@@ -44,6 +44,8 @@ body {
 }
 
 #content { max-width: 80ch; width: calc(100% - 1.4em) }
+.content { max-width: 80ch }
+#content-wide { max-width: 100em; width: calc(100% - 1.4em) }
 #scroll-area {
   overflow-y: auto;
   display: flex;
