@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ site.title }} - {{ page.title }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
 
     {% include meta.html %}
     {% include resources.html %}
 
     <style>
-      h1::before {
+      .operaton-logo::before {
         background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
         background-size: 2em 2em;
+        height: 2em;
+        width: 2em;
+        font-size: 2em;
       }
+
 
       details#primary-navigation-mobile {
 

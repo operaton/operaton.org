@@ -2,7 +2,7 @@
 layout: post
 author: The Operaton Team
 ---
-### Time to Clean Up Operaton
+## Time to Clean Up Operaton
 
 At Operaton, our fork of Camunda 7 Community Edition, we are fully committed to modernization. A significant step forward is removing legacy support for outdated environments, particularly Java EE application servers still using the older `javax` namespace. Although Camunda 7 CE impressively supported both Java EE and Jakarta EE simultaneously, this dual support added substantial complexity.
 
