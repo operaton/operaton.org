@@ -5,8 +5,10 @@ title: Service Providers
 
 <h2>Service Providers</h2>
 
-<p class="content">With Operaton you can freely choose your service provider. We do not prevent anyone
-  from offering commercial services. Someone please write a nice text...</p>
+<p class="content">Our community license agreement grants anyone the right to provide professional services for
+  Operaton.
+  You have the freedom to choose any service provider you like, if you require it. See the following list for
+  suggestions:</p>
 
 <br>
 
@@ -59,33 +61,52 @@ title: Service Providers
     </tr>
     </thead>
     <tbody id="results">
-    <tr id="otus">
-      <td>Otus GmbH</td>
-      <td>🦉</td>
-      <td class="tags">
-        <span>Technical Training</span>
-        <span>BPMN Training</span>
-        <span>Consulting</span>
-        <span>Support</span>
-      </td>
-      <td>At Otus we owl at the moon.</td>
-      <td>Heidelberg, Germany</td>
-      <td>EU, Canada</td>
-    </tr>
-    <tr id="prod">
-      <td>Product Ltd</td>
-      <td>💼</td>
-      <td class="tags">
-        <span>Product</span>
-      </td>
-      <td>We make product</td>
-      <td>Wien, Austria</td>
-      <td>DACH</td>
-    </tr>
+      <tr id="otus">
+        <td>Otus GmbH</td>
+        <td><img src="/assets/img/service-providers/Otus_Eule_Verlauf.png" alt="" /></td>
+        <td class="tags">
+          <span>Technical Training,</span>
+          <span>BPMN Training,</span>
+          <span>Consulting,</span>
+          <span>Support</span>
+        </td>
+        <td>At Otus we deliver high quality consulting services for your project.</td>
+        <td><a href="https://otus.gmbh">Visit Otus GmbH Website</a></td>
+        <td>Plankstadt, Germany</td>
+        <td>EU</td>
+      </tr>
+      <tr id="prod">
+        <td>Product Ltd</td>
+        <td>💼</td>
+        <td class="tags">
+          <span>Product</span>
+        </td>
+        <td>We make product</td>
+        <td>Link to Product page</td>
+        <td>Wien, Austria</td>
+        <td>DACH</td>
+      </tr>
+      <!-- Copy this <tr> to add a new service provider.
+           The logo should have a height of 50px??? (@paul)
+           Add your logo to /assets/img/service-providers
+       <tr id="prod">
+         <td>Product Ltd</td>
+         <td>💼</td>
+         <td class="tags">
+           <span>Product</span>3
+         </td>
+        <td>Link to product page</td>
+         <td>We make product</td>
+         <td>Wien, Austria</td>
+         <td>DACH</td>
+       </tr>
+      -->
     </tbody>
   </table>
 
 </div>
+
+<p class="content">If you would like to appear on this list, please start a pull request with the following template [LINK]</p>
 
 
 <script>
@@ -102,7 +123,7 @@ title: Service Providers
     e.preventDefault()
 
     tag_cells.forEach((value) => {
-        const tags = value.textContent.trim().replaceAll(' ', '').split('\n')
+        const tags = value.textContent.trim().replaceAll(' ', '').replaceAll(',', '').split('\n')
 
         if (
           show_product.checked && tags.some((v) => v === 'Product') ||
