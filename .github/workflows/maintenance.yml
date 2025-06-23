@@ -35,9 +35,11 @@ jobs:
             index.html
             chat.md
           branch: maintenance/update-slack-invitation-url
+          token: ${{ secrets.MAINTENANCE_WORKFLOW }}
           base: main
           title: "chore: Update Slack Invitation URL"
           body: "This PR updates the Slack Invitation URL on the website."
+          delete-branch: true
 
       #- name: Commit changes
       #  uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
