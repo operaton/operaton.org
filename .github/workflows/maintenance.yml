@@ -28,9 +28,20 @@ jobs:
         run: |
           .devenv/scripts/maintenance/update-slack-link.sh ${{ github.event.inputs.slack_url}}
         shell: bash
-      - name: Commit changes
-        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v7
         with:
-          add: '["index.html", "chat.md"]'
-          message: "chore: Update Slack Invitation URL"
-          #default_author: github_actions
+          add-paths: |
+            index.html
+            chat.md
+          branch: maintenance/update-slack-invitation-url
+          base: main
+          title: "chore: Update Slack Invitation URL"
+          body: "This PR updates the Slack Invitation URL on the website."
+
+      #- name: Commit changes
+      #  uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9.1.4
+      #  with:
+      #    add: '["index.html", "chat.md"]'
+      #    message: "chore: Update Slack Invitation URL"
+      #    #default_author: github_actions
