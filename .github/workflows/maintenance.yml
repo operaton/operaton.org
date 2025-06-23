@@ -23,7 +23,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.MAINTENANCE_WORKFLOW }}
       - name: Update Slack Invitation URL
         run: |
           .devenv/scripts/maintenance/update-slack-link.sh ${{ github.event.inputs.slack_url}}
