@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.MAINTENANCE_WORKFLOW }}
+          token: ${{ secrets.PAT }}
       - name: Update Slack Invitation URL
         run: |
           .devenv/scripts/maintenance/update-slack-link.sh ${{ github.event.inputs.slack_url}}
@@ -35,7 +35,7 @@ jobs:
             index.html
             chat.md
           branch: maintenance/update-slack-invitation-url
-          token: ${{ secrets.MAINTENANCE_WORKFLOW }}
+          token: ${{ secrets.PAT }}
           base: main
           title: "chore: Update Slack Invitation URL"
           body: "This PR updates the Slack Invitation URL on the website."
