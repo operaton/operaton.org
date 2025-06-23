@@ -32,7 +32,7 @@ jobs:
         run: |
           git config –global user.name “GitHub Action”
           git config –global user.email “action@github.com”
-          git remote set-url origin https://x-access-token:${{ secrets.MAINTENANCE_WORKFLOW }}@github.com/operaton/operaton.org.git
+          # git remote set-url origin https://x-access-token:${{ secrets.MAINTENANCE_WORKFLOW }}@github.com/operaton/operaton.org.git
           git add --all
           git commit -m "chore: Update Slack Invitation URL"
           git push origin HEAD:main
