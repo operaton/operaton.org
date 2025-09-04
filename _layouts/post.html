@@ -54,22 +54,16 @@
   <body id="body">
     {% include header.html %}
 
-    <div id="scroll-area">
-      <div id="tagline-mobile">
-        BPMN-Process Automation for Everyone
-      </div>
+    <main id="content">
+      <h1>{{ page.title }}</h1>
+      <p>
+        <strong>
+        {{ page.date | date: "%Y-%m-%d" }}
+        </strong> – {{ page.author }}
+      </p>
+      {{ content }}
+    </main>
 
-      <main id="content">
-        <h1>{{ page.title }}</h1>
-        <p>
-          <em>
-          {{ page.date | date: "%Y-%m-%d" }} - {{ page.author }}
-          </em>
-        </p>
-        {{ content }}
-      </main>
-
-      {% include footer.html %}
-    </div>
+    {% include footer.html %}
   </body>
 </html>

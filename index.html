@@ -37,22 +37,28 @@ description: "Operaton is a community-driven free open-source BPMN engine.
     <div class="card">
       <header>
         <p>#changelog</p>
-        <h3>Version 1.3 published</h3>
+        <h3>
+          <a href="https://github.com/operaton/operaton/releases/tag/v1.0.0-beta-5">
+            Version 1.0-beta published
+          </a>
+        </h3>
       </header>
       <p>
-        Stable tests, cleaner code and up-to-date dependencies.
+        The 1.0.0-beta-5 is a continuation of our ongoing modernization efforts.
       </p>
     </div>
     <div class="card">
+
+      {% for post in site.posts  limit: 1 %}
       <header>
         <p>#blog</p>
-        <h3>New Web Apps – First Look</h3>
+        <h3>{{ post.title }}</h3>
       </header>
       <p>
-        The rewritten web apps are now public in our Operaton GitHub
-        repository. In this post we’ll show what is changing and what is
-        new.
+        {{post.content | strip_html | truncatewords: 15}}
+        <!--{{ post.excerpt }}-->
       </p>
+      {% endfor %}
     </div>
   </div>
 </header>
@@ -89,12 +95,33 @@ description: "Operaton is a community-driven free open-source BPMN engine.
       <p>The deployment that fits to your needs</p>
     </li>
   </ul>
-  <a class="button">Check out our Feature- and Compatibility-Matrix</a>
+  <br>
+  <a class="button">See also the Feature- and Compatibility-Matrix →</a>
 </section>
 
-<section>
+<section class="gradient-bg">
   <h2>Roadmap</h2>
-  tbd
+  <div class="bpmn">
+    <div class="start">Fork</div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>November 2025</h3>
+      <div class="task">Release 1.0</div>
+      <div class="task">New Web Apps Beta</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>2026 and beyond</h3>
+      <div class="task">Release 2.0</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="end"></div>
+  </div>
+  <br>
+  <p><small><i>
+    *Artists representation of BPMN due to CSS limitations.
+  </i></small></p>
+  <a class="button">Our Roadmap in Detail →</a>
 </section>
 
 <section>
@@ -135,7 +162,7 @@ description: "Operaton is a community-driven free open-source BPMN engine.
   </ul>
 </section>
 
-<section>
+<section class="gradient-bg">
   <ul class="card-list large">
     <li>
       <h2>Contributors</h2>
@@ -167,7 +194,7 @@ description: "Operaton is a community-driven free open-source BPMN engine.
       <a class="button" href="#">Contribution Guide</a>
       <a class="button" href="#">Good First Issues</a>
     </li>
-    <li>
+    <li id="contact">
       <h2>Contact</h2>
         Our primary communication happens on the forum: <br>
         <a class="button" href="#">Forum</a> <br>
