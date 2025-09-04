@@ -43,18 +43,10 @@
   </head>
   <body id="body">
     {% include header.html %}
-
-    <div id="scroll-area">
-      <div id="tagline-mobile">
-        BPMN-Process Automation for Everyone
-      </div>
-
-      <main id="content">
-        {{ content }}
-      </main>
-
-      {% include footer.html %}
-    </div>
+    <main id="content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
 
     <script>
       // toggle the open state of the details headings on resize

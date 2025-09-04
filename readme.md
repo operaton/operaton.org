@@ -10,7 +10,7 @@ You can either install Ruby and use jekyll directly or docker-compose
 
 - Make sure Jekyll is available on your machine: [Official installation guide](https://jekyllrb.com/docs/installation/)
 - (optional) Run `bundle install` in the projects root to update the dependencies if needed
-- Run `jekyll serve` in the projects root folder
+- Run `bundle exec jekyll serve` in the projects root folder
 - Visit `localhost:4000`
 
 ### docker-compose
