@@ -1,6 +1,7 @@
 ---
 layout: post
 author: The Operaton Team
+title: What We Learned From Taking Over Camunda 7 CE
 ---
 
 ## Inheriting Complexity

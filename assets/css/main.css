@@ -34,16 +34,6 @@ body {
   color: var(--color-font);
 }
 
-/*body::after {
-  content: ' ';
-  width: 100vw;
-  height: 80vh;
-  background: linear-gradient(var(--color-primary), var(--color-secondary));
-  position: ;
-  opacity: .2;
-  z-index: -1;
-}*/
-
 @media (prefers-color-scheme: dark) {
   body {
     --color-bg: #111;
@@ -61,6 +51,9 @@ body {
 }
 
 @layer pages {
+  .start-page {
+    padding-bottom: 0;
+  }
   #start-page > header {
     position: relative;
     display: flex;
@@ -111,15 +104,22 @@ body {
   }
   .faq details {
     border-top: .1em solid var(--color-border);
-    cursor: pointer;
+    cursor: default;
     padding: var(--space-s);
   }
   .faq details summary {
     font-weight: 700;
   }
+  .faq details summary a {
+    color: var(--color-font);
+  }
+  .faq details summary a:hover {
+    color: var(--color-primary);
+  }
   .faq details > p:first-of-type {
     margin: var(--space-s) 0;
   }
+
 
   .resources {
     padding-bottom: var(--space-xl);
@@ -136,36 +136,38 @@ body {
     width: min(100%, 16em);
   }
   .resources > div > div > span:first-child {
-    color: var(--color-primary);
+    color: var(--color-bg-secondary);
+    font-size: .9em;
     font-weight: 500;
   }
   .resources > div > div h3 {
     margin: 0;
   }
   .resources > div > div ul {
-    list-style: none;
-    padding: 0;
     margin-top: .3em;
-  }
-  .resources > div > div li {
-    padding: 0;
   }
   .resources > div > div a {
     display: inline-block;
     text-align: center;
     line-height: 1.3;
-    background-color: var(--color-bg-secondary);
-    color: white;
-    padding: .1em .7em;
-    text-decoration: none;
-    border-radius: 999em;
     transition: background-color 100ms, color 100ms;
+  }
+  .resources > div > div a:visited {
+    color: var(--color-primary);
   }
   .resources > div > div a:hover {
     color: var(--color-bg-secondary);
     background-color: white;
     outline: .1em solid var(--color-bg-secondary);
     transition: background-color 150ms, color 300ms;
+  }
+
+  .blog,
+  .post {
+    max-width: 60ch;
+  }
+  .post > nav > div:last-child {
+    text-align: end;
   }
 } /* END @layer pages */
 
@@ -393,6 +395,7 @@ body {
     }
   }
 
+
 } /* END @layer components */
 
 @layer layout {
@@ -415,12 +418,22 @@ body {
     display: block;
   }
 
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   main {
     margin: 0 auto;
     margin-top: 2rem;
     padding-bottom: var(--space-xl);
     flex: 1;
     font-size: 1em;
+    animation: fadein 200ms;
   }
 
   body > header {

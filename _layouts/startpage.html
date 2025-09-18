@@ -43,49 +43,9 @@
   </head>
   <body id="body">
     {% include header.html %}
-    <main id="content">
+    <main id="content" class="{{ page.main-class }}">
       {{ content }}
     </main>
     {% include footer.html %}
-
-    <script>
-      // toggle the open state of the details headings on resize
-
-      const details_headings = document.querySelectorAll("details.heading");
-      let was_large_width = innerWidth > 700;
-      if (innerWidth <= 700) {
-        details_headings.forEach((child, index) => {
-          child.removeAttribute('open');
-          child.setAttribute('name', 'headings');
-          child.removeAttribute('disabled');
-        })
-      } else {
-        details_headings.forEach((child, index) => {
-          child.setAttribute('disabled', true);
-        })
-      }
-
-      window.onresize = () => {
-        if (was_large_width && innerWidth <= 700) {
-          details_headings.forEach((child, index) => {
-            child.removeAttribute('open');
-            child.setAttribute('name', 'headings');
-            child.removeAttribute('disabled');
-          })
-          was_large_width = false;
-        } else {
-          if (window.innerWidth > 700) {
-            was_large_width = true;
-            details_headings.forEach((child, index) => {
-              child.setAttribute('open', true);
-              child.removeAttribute('name');
-              child.setAttribute('disabled', true);
-
-            })
-          }
-        }
-
-      }
-    </script>
   </body>
 </html>

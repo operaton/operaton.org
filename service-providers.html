@@ -15,17 +15,20 @@ title: Service Providers
 
 
 
-<br>
 
 <div class="wrapper">
 
 
-  <div>
-    <strong>Filter by offering</strong>
+  <noscript>
+    <em>
+    You can enable JavaScript to filter the table below.
+    </em>
+  </noscript>
 
-    <noscript>
-      You can enable JavaScript to filter the table below.
-    </noscript>
+  <div id="filters" hidden>
+    <br>
+
+    <strong>Filter by offering</strong>
 
     <fieldset>
       <label>
@@ -95,11 +98,14 @@ title: Service Providers
 
 </div>
 
+<br>
+
 <p class="content">If you would like to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-service-provider-entry.md">issue template on GitHub</a> </p>
 
 
 <script>
   const
+    filters = document.getElementById('filters'),
     results = document.getElementById('results'),
     tag_cells = document.querySelectorAll('.tags'),
     show_product = document.getElementById('service-product'),
@@ -107,6 +113,8 @@ title: Service Providers
     show_bpmn_training = document.getElementById('service-bpmn-training'),
     show_consulting = document.getElementById('service-consulting'),
     show_support = document.getElementById('service-support')
+
+  filters.hidden = false;
 
   const filter_table = (e) => {
     e.preventDefault()
