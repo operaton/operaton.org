@@ -15,13 +15,22 @@
   {
     "name": "Otus GmbH",
     "logo": "/assets/img/service-providers/Otus_Eule_Verlauf.png",
-    "services": [1, 2 , 3, 4],
+    "services": [1, 2, 3, 4],
     "location": {
       "country": "Germany",
       "city": "Plankstadt",
       "area-of-operation": "EU"
     },
     "description": "At Otus we deliver high quality consulting services for your project.",
-    "website": "https://www.otus.com/"
+    "website": "https://www.otus.gmbh/"
+  },
+
+  {
+    "name": "X-OUT TOBI",
+    "logo": "/assets/img/service-providers/x-out-tobi_logo.png",
+    "services": [0, 3],
+    "location": { "country": "Germany", "city": "Berlin", "area-of-operation": "Germany" },
+    "description": "Drive your digital transformation with X-OUT TOBI: seamlessly connecting legacy systems, automating processes, streamlining workflows, and guiding your migration from Camunda to Operaton.",
+    "website": "https://www.x-out.de/kontakt/"
   }
 ]

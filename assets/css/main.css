@@ -105,6 +105,18 @@ body {
     opacity: .2;
     padding: 0;
   }
+
+  .faq details {
+    border-top: .1em solid var(--color-border);
+    cursor: pointer;
+    padding: var(--space-s);
+  }
+  .faq details summary {
+    font-weight: 700;
+  }
+  .faq details > p:first-of-type {
+    margin: var(--space-s) 0;
+  }
 }
 
 @layer components {

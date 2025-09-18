@@ -63,7 +63,7 @@ title: Service Providers
     <tbody id="results">
       {% for provider in site.data.service-providers %}
         <tr id="{{ provider.name | slugify }}">
-          <td><a href="https://www.itemis.com/en/">{{ provider.name }}</a></td>
+          <td><a href="{{ provider.website }}">{{ provider.name }}</a></td>
           <td><img src="{{ provider.logo }}" alt="{{ provider.name }} Logo"/></td>
           <td class="tags">
               {% for service in provider.services -%}
