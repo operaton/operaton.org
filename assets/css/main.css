@@ -109,6 +109,17 @@ body {
   }
   .faq details summary {
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+  .faq details summary span::before {
+    content: "→";
+    margin-right: 1ch;
+    width: 1em;
+    display: inline-block;
+  }
+  .faq details[open] summary span::before {
+    content: "↓";
   }
   .faq details summary a {
     color: var(--color-font);
