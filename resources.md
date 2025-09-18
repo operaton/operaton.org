@@ -15,7 +15,6 @@ main-class: resources
   <h2> {{ category[0] }} </h2>
 
   <div>
-
     {% for topic in category[1] %}
       <div>
         <span>{{ topic[1].tag }}</span>

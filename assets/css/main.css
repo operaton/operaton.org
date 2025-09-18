@@ -416,10 +416,9 @@ body {
   }
 
   main {
-    /*margin: min(10vh, 4em) auto;*/
     margin: 0 auto;
     margin-top: 2rem;
-    /*padding: .7em;*/
+    padding-bottom: var(--space-xl);
     flex: 1;
     font-size: 1em;
   }
