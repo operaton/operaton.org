@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /*overflow-y: hidden;*/
+  overflow-x: hidden;
   font-family: system-ui, sans-serif;
   background-color: var(--color-bg-2);
   color: var(--color-font);
@@ -106,6 +106,9 @@ body {
     padding: 0;
   }
 
+  .faq {
+    margin-bottom: var(--space-l);
+  }
   .faq details {
     border-top: .1em solid var(--color-border);
     cursor: pointer;
@@ -117,7 +120,54 @@ body {
   .faq details > p:first-of-type {
     margin: var(--space-s) 0;
   }
-}
+
+  .resources {
+    padding-bottom: var(--space-xl);
+  }
+  .resources > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-m);
+  }
+  .resources > div > div {
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-s);
+    padding: var(--space-m);
+    width: min(100%, 16em);
+  }
+  .resources > div > div > span:first-child {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+  .resources > div > div h3 {
+    margin: 0;
+  }
+  .resources > div > div ul {
+    list-style: none;
+    padding: 0;
+    margin-top: .3em;
+  }
+  .resources > div > div li {
+    padding: 0;
+  }
+  .resources > div > div a {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.3;
+    background-color: var(--color-bg-secondary);
+    color: white;
+    padding: .1em .7em;
+    text-decoration: none;
+    border-radius: 999em;
+    transition: background-color 100ms, color 100ms;
+  }
+  .resources > div > div a:hover {
+    color: var(--color-bg-secondary);
+    background-color: white;
+    outline: .1em solid var(--color-bg-secondary);
+    transition: background-color 150ms, color 300ms;
+  }
+} /* END @layer pages */
 
 @layer components {
   p.hero {
@@ -248,6 +298,38 @@ body {
     opacity: .2;
     padding: 0;
   }
+
+
+  main > header:first-of-type {
+    position: relative;
+    margin-bottom: var(--space-l);
+  }
+  main > header:first-of-type::before {
+    content: ' ';
+    width: 100vw;
+    background:
+    linear-gradient(
+      110deg,
+      var(--color-primary),
+      var(--color-secondary));
+    position: absolute;
+    height: calc(100% + 10rem);
+    /*margin-top: calc(-1 * (18rem + min(10vh, 4em)));*/
+    margin-top: -9rem;
+    margin-left: calc(
+      -1 *
+        (100vw - min(var(--max-content-width), 100%)
+        )
+        / 2
+    );
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: .2;
+    padding: 0;
+  }
+
+  /****** BPMN ******/
 
   .bpmn {
     color: black;
