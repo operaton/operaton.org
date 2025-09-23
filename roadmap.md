@@ -32,6 +32,8 @@ title: "Roadmap"
   <div class="end"></div>
 </div>
 
+<br>
+
 ### November 2025
 
 #### Release 1.0

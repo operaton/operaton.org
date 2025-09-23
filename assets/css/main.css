@@ -4,9 +4,9 @@ html { scroll-behavior: smooth; }
 
 body {
   --color-primary: #184AEF;
-  --color-secondary: #F32797;
+  --color-secondary: #27F3E0;
   --color-on-secondary: #fff;
-  --color-bg-secondary: #CA0C75;
+  --color-bg-secondary: #112937;
   --color-font: #000;
   --color-font-white: white;
   --color-font-primary: var(--color-primary-darker);
@@ -73,6 +73,11 @@ body {
     align-items: end;
     gap: var(--space-m);
     min-width: min(20em, 100%);
+  }
+  #start-page > header h1 {
+    letter-spacing: .15em;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
   #start-page > header::before {
