@@ -130,7 +130,7 @@ Since Operaton is a free and open-source project, commercial support is provided
 ## Participating
 
 ### How can I join the Operaton community?
-You can join the Operaton community by participating in the [Forum](https://forum.operaton.org/) or the [Chat (Slack)](https://join.slack.com/t/operaton/shared_invite/zt-3dcu23dis-ouyeAbungz_ge_9CactG6w).
+You can join the Operaton community by participating in the [Forum](https://forum.operaton.org/) or the [Chat (Slack)](https://join.slack.com/t/operaton/shared_invite/zt-3fiodp5cz-vM2h5uDZi9JbCZZqG~6WEA).
 
 ### How can I report a bug?
 You can report a bug by creating an issue on our [GitHub repository](https://github.com/operaton/operaton/issues).
