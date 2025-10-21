@@ -6,7 +6,7 @@ body {
   --color-primary: #184AEF;
   --color-secondary: #27F3E0;
   --color-on-secondary: #fff;
-  --color-bg-secondary: #112937;
+  --color-bg-secondary: var(--color-primary);
   --color-font: #000;
   --color-font-white: white;
   --color-font-primary: var(--color-primary-darker);
@@ -36,8 +36,9 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    --color-bg: #111;
-    --color-bg-2: #333;
+    --color-primary: #AECAFF;
+    --color-bg: #000;
+    --color-bg-2: #111  ;
     --color-font: #f2f2f2;
     --color-font-secondary: #ccc;
     --color-font-primary: #61b8d5;
@@ -45,7 +46,8 @@ body {
     --color-secondary: #f99bfb;
   }
 
-  details.heading > summary::before {
+  .operaton-logo,
+  #primary-navigation-mobile > summary::after {
     filter: invert(1);
   }
 }
@@ -152,7 +154,7 @@ body {
     width: min(100%, 16em);
   }
   .resources > div > div > span:first-child {
-    color: var(--color-bg-secondary);
+    color: var(--color-font-secondary);
     font-size: .9em;
     font-weight: 500;
   }
@@ -350,7 +352,6 @@ body {
   /****** BPMN ******/
 
   .bpmn {
-    color: black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -364,7 +365,8 @@ body {
     background-image: url('data:image/svg+xml;utf8,<svg width="104" height="13" viewBox="0 0 104 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M103.922 6.6853L93.9218 0.9118V12.4588L103.922 6.6853ZM0.921753 6.6853V7.6853L94.9218 7.6853V6.6853V5.6853L0.921753 5.6853V6.6853Z" fill="black"/></svg>');
   }
   .bpmn :where(.task, .start, .end) {
-    background-color: var(--color-bg);
+    color: black;
+    background-color: white;
     border: .1em solid black;
     display: flex;
     align-items: center;
@@ -763,6 +765,10 @@ body {
   }
   a:visited {
     color: var(--color-font);
+  }
+  a.button:visited {
+    color: var(--color-on-secondary);
+
   }
 
   dt {
