@@ -23,7 +23,7 @@ sed_inplace() {
 pushd $(pwd) > /dev/null
 cd $(git rev-parse --show-toplevel) || exit 1
 
-AFFECTED_FILES=(index.html chat.md)
+AFFECTED_FILES=(index.html chat.md faq.md)
 
 for AFFECTED_FILE in "${AFFECTED_FILES[@]}"; do
   echo "🔄 Updating Slack Invitation URL in $AFFECTED_FILE"
