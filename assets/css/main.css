@@ -50,6 +50,10 @@ body {
   #primary-navigation-mobile > summary::after {
     filter: invert(1);
   }
+
+  .button {
+    color: black;
+  }
 }
 
 @layer pages {
