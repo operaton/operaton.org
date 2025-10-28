@@ -213,6 +213,7 @@ body {
     column-gap: var(--space-m);
     column-fill: balance;
   }
+  .card-list > div:not(:first-child),
   .card-list > li:not(:first-child) {
     margin-top: var(--space-m);
   }
@@ -226,6 +227,7 @@ body {
   .card {
     max-width: 30ch;
   }
+  .card-list > div,
   .card-list > li,
   .card {
     background: var(--color-bg);
