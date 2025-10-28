@@ -54,6 +54,10 @@ body {
   .button {
     color: black;
   }
+
+  .bpmn .arrow {
+    filter: invert(1);
+  }
 }
 
 @layer pages {
