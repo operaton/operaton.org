@@ -34,3 +34,14 @@
     legacy systems, automating processes, streamlining workflows, and guiding
     your migration from Camunda to Operaton.
   website: https://www.x-out.de/kontakt/
+
+- name: uubato UG
+  logo: /assets/img/service-providers/uubato.png
+  services: [1,2,3,4]
+  location:
+    country: Germany
+    city: Berlin
+    area-of-operation: EU
+  description: >-
+    Achieve software sovereignty and freedom with our services for Operaton and open source process automation.
+  website: https://uubato.com
