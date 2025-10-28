@@ -1,230 +1,219 @@
 ---
-layout: startpage
+layout: default
 title: "Open Source BPM Engine | Camunda 7 Alternative"
-description: "Operaton is a community-driven free open-source BPMN engine. It inherited its source code from the legacy of Camunda, Activiti and their predecessors."
+description: "Operaton is a community-driven free open-source BPMN engine.
+  It inherited its source code from the legacy of Camunda, Activiti and their
+  predecessors."
+main-class: start-page
 ---
 
 <div id="start-page">
-  <aside>
-    <p>On this page</p>
-    <menu>
-      <li><a href="#news">News</a></li>
-      <li><a href="#features">Features & Goals</a></li>
-      <li><a href="#principles">Principles</a></li>
-      <li><a href="#roadmap">Roadmap</a></li>
-      <li><a href="#contributors">Contributors</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </menu>
-  </aside>
-
-  <div id="content">
-    <h1>Operaton is a community-driven, free, and open-source BPMN engine</h1>
+<header>
+  <div>
+    <h1>Operaton</h1>
+    <p class="hero">Community-driven, Free & Open-source BPMN Engine</p>
     <p>
-      It inherited its source code from the legacy of Camunda, Activiti and their predecessors.
-      Camunda 7 was an important contribution to the open-source BPMN community.
-      Building on this legacy, we aim to create a thriving future for a truly free and open-source BPMN engine.
+      <strong>Operaton</strong> is the next generation in line of Camunda,
+      Activiti and their predecessors. Building on Camunda 7, an important
+      contribution to the open-source BPMN community, we aim to create a
+      thriving future for a truly free and open-source BPMN engine that
+      outlasts.
     </p>
-
-    <h2>Our Promise</h2>
-    <ul class="card">
-      <li>Operaton is a state-of-the-art BPMN engine</li>
-      <li>Forever <b>free</b> and open source under the Apache 2.0 license</li>
-      <li>Community-owned by a legal foundation (currently in progress)</li>
-      <li>The trademark <b>Operaton</b> will be owned by the instituted legal foundation</li>
-    </ul>
-
-    <menu id="secondary-navigation-mobile">
-      <li>
-        <a href="https://github.com/operaton" target="_blank">
-          <img src="{{ "/assets/img/icons/code.svg" | relative_url }}" alt="" />
-          Source Code
-        </a>
-      </li>
-      <li>
-        <a href="https://docs.operaton.org" target="_blank">
-          <img src="{{ "/assets/img/icons/book.svg" | relative_url }}" alt="" />
-          Documentation
-        </a>
-      </li>
-      <li>
-        <a href="https://forum.operaton.org" target="_blank">
-          <img src="{{ "/assets/img/icons/users.svg" | relative_url }}" alt="" />
-          Forum
-        </a>
-      </li>
-      <li>
-        <a href="/chat">
-          <img src="{{ "/assets/img/icons/message-square.svg" | relative_url }}" alt="" />
-          Chat (Slack)
-        </a>
-      </li>
-    </menu>
-
-    <details id="news" class="heading" open>
-      <summary>
-        <h2>News</h2>
-      </summary>
-
-      <div id="latest-articles">
-        {% for post in site.posts limit:2 %}
-        <article>
-          <p class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
-          <p>
-            {{ post.excerpt | strip_html | strip_newlines | truncate: 156}}
-          </p>
-        </article>
-        {% endfor %}
-      </div>
-
-      <a class="more" href="/blog">Read more on the blog →</a>
-    </details>
-
-    <details id="features" class="heading" open>
-      <summary>
-        <h2>Features & Goals</h2>
-      </summary>
-
-      <ul>
-        <li>
-          Easy migration from Camunda 7
-          (see <a href="https://docs.operaton.org" target="_blank">Documentation</a>
-          and <a href="https://github.com/operaton/migrate-from-camunda-recipe">OpenRewrite</a> scripts)
-        </li>
-        <li>
-          Up-to-date dependencies (e.g. increased Java and Spring base versions)
-        </li>
-        <li>
-          Focus on security and stability
-        </li>
-        <li>
-          Completely new <a href="https://github.com/operaton/web-apps">web apps</a>,
-          rewritten with accessibility, usability and performance in mind
-        </li>
-        <li>
-          Improved documentation (see <a href="https://docs.operaton.org" target="_blank">Documentation</a>)
-        </li>
-        <li>
-          An inclusive and welcoming community
-          (join the <a href="https://forum.operaton.org/">Forum</a>
-          and <a href="https://join.slack.com/t/operaton/shared_invite/zt-3fiodp5cz-vM2h5uDZi9JbCZZqG~6WEA">Chat (Slack)</a>)
-        </li>
-        <li>
-          Contributions <a href="https://github.com/operaton/operaton/blob/main/CONTRIBUTING.md">are welcome</a>
-        </li>
-      </ul>
-    </details>
-
-    <details id="principles" class="heading" open>
-      <summary>
-        <h2>Principles</h2>
-      </summary>
-      <dl>
-        <dt>Community ownership</dt>
-        <dd>Operaton shall always be a community-owned free open-source project (legal work in progress).
-          There shall be no private or commercial entity which is able to legally claim its ownership or divert the goals of the community.
-          See our <a href="https://github.com/operaton/operaton?tab=coc-ov-file#readme">Code of Conduct</a>
-          to learn how we foster an open, welcoming, diverse, inclusive, and healthy community.</dd>
-        <dt>Quality</dt>
-        <dd>It shall be held to high-quality standards regarding every aspect: <a href="https://sonarcloud.io/project/activity?id=operaton_operaton">SonarQube activtities</a>
-          and <a href="https://github.com/operaton/operaton/issues">GitHub issues</a>.</dd>
-        <dt>Transparency</dt>
-        <dd>Operaton is developed in the open.
-          All decisions are transparently made by its <a href="#contact">community for its community</a>.
-        </dd>
-        <dt>Self ownership</dt>
-        <dd>There shall be no hidden dependencies making it hard to build it on your own.
-          Everything is <a href="/2025/01/27/kickstart-operaton.html">easy to run by yourself</a>.</dd>
-      </dl>
-    </details>
-
-    <details id="roadmap" class="heading" open>
-      <summary>
-        <h2>Roadmap</h2>
-      </summary>
-
-      <p>
-        We want to keep Operaton users informed and know what to expect next and
-        when. This also shall show where the current priorities of the contributors
-        lie. If you have other priorities you may share them in our forum or
-        contribute changes yourself (with the help of the community).
-      </p>
-
-      <h4>February 2025</h4>
-      <ul>
-        <li>Standalone operaton distribution</li>
-        <li>Docker builds</li>
-        <li>Wildfly distribution</li>
-        <li>Clean up 8k static code analysis findings</li>
-      </ul>
-
-      <h4>Q1 2025</h4>
-      <ul>
-        <li>Publish revised documentation</li>
-        <li>Founding of the Operaton e.V. non-profit organization</li>
-        <li>Drop dependency on legacy technology like Wildfly 26, JavaEE and Spring 5</li>
-      </ul>
-
-      <h4>Beyond</h4>
-      <a href="/roadmap">Complete roadmap and releases →</a>
-    </details>
-
-    <details id="contributors" class="heading" open>
-      <summary>
-        <h2>Contributors</h2>
-      </summary>
-
-      <dl>
-        <dt>Core Contributors</dt>
-        <dd>
-          For their many contributions to Operaton we'd like to thank especially:
-          <ul>
-            <li>Julian Haupt</li>
-            <li>Karsten Thoms</li>
-          </ul>
-        </dd>
-        <dt>Community Contributions</dt>
-        <dd>
-          Many thanks to all <a href="https://github.com/operaton/operaton/graphs/contributors">contributors</a>.
-          Keep up the great work.</dd>
-        <dt>Initiators</dt>
-        <dd>
-          The project would not have been possible without the initial work of:
-          <ul>
-            <li>Tim Zöller</li>
-            <li>Andreas Zill</li>
-            <li>Andreas 'Kungi' Klein</li>
-          </ul></dd>
-      </dl>
-    </details>
-
-    <details id="faq" class="heading" open>
-      <summary>
-        <h2>FAQ</h2>
-      </summary>
-
-      You have questions about Operaton? Check out our <a href="/faq">Frequently Asked Questions</a> page.
-
-      <p>
-      If you have any further questions, feel free to ask in our <a href="https://forum.operaton.org/">Forum</a>
-        or on our <a href="https://join.slack.com/t/operaton/shared_invite/zt-3fiodp5cz-vM2h5uDZi9JbCZZqG~6WEA">Slack Channel</a>.
-      </p>
-
-    </details>
-
-    <details id="contact" class="heading" open>
-      <summary>
-        <h2>Contact</h2>
-      </summary>
-
-      <ul>
-        <li><a href="https://forum.operaton.org/">Forum</a></li>
-        <li><a href="https://join.slack.com/t/operaton/shared_invite/zt-3fiodp5cz-vM2h5uDZi9JbCZZqG~6WEA">Chat (Slack)</a></li>
-        <li><a href="https://fosstodon.org/@operaton">Mastodon</a></li>
-        <li><a href="https://www.linkedin.com/company/operaton">LinkedIn</a></li>
-        <li>mail [at] operaton.org </li>
-      </ul>
-    </details>
-
+    <!--<a href="#">Get started using Operaton →</a> <br>-->
+    <a class="button" href="https://docs.operaton.org/docs/get-started/">Get started using Operaton →</a> <br>
+    <!--<a class="button" href="#">Operaton for Decision Makers →</a> <br>-->
+    <!--<a class="button" href="#">Operaton for Technology Experts →</a> <br>-->
   </div>
+
+  <div>
+    <h2 class="screen-hidden">Resources and latests News</h2>
+    <nav aria-label="external resources">
+      <menu class="vertical-button-list right">
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Slack</a></li>
+        <li><a href="#">Source Code</a></li>
+      </menu>
+    </nav>
+    <div class="card">
+      <header>
+        <p>#changelog</p>
+        <h3>
+          <a href="https://github.com/operaton/operaton/releases/tag/v1.0.0-beta-5">
+            Version 1.0-beta published
+          </a>
+        </h3>
+      </header>
+      <p>
+        The 1.0.0-beta-5 is a continuation of our ongoing modernization efforts.
+      </p>
+    </div>
+    <div class="card">
+
+      {% for post in site.posts  limit: 1 %}
+      <header>
+        <p>#blog</p>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      </header>
+      <p>
+        {{post.content | strip_html | truncatewords: 15}}
+        <!--{{ post.excerpt }}-->
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <h2>Features</h2>
+  <ul class="card-list">
+    <li>
+      <h3>Automate Processes</h3>
+      <p>Digital, robust and future proof</p>
+    </li>
+    <li>
+      <h3>Easy migration from Camunda 7</h3>
+      <p>See our Documentation and OpenRewrite scripts</p>
+    </li>
+    <li>
+      <h3>Rewritten Web Apps</h3>
+      <p>With accessibility, usability and performance in mind</p>
+    </li>
+    <li>
+      <h3>BPMN 2.0 & DMN 1.3</h3>
+      <p>The latest open standards used for process definitions</p>
+    </li>
+    <li>
+      <h3>Open Source Development</h3>
+      <p>Strong community, everyone can contribute and no hidden code.</p>
+    </li>
+    <li>
+      <h3>Focus on security and stability</h3>
+      <p>Industry standards for our tech stack we are building on</p>
+    </li>
+    <li>
+      <h3>Cloud Ready, Standalone & Embedable Operations</h3>
+      <p>The deployment that fits to your needs</p>
+    </li>
+  </ul>
+  <br>
+  <!--<a class="button">See also the Feature- and Compatibility-Matrix →</a>-->
+</section>
+
+<section class="gradient-bg">
+  <h2>Roadmap</h2>
+  <div class="bpmn">
+    <div class="start">Fork</div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>November 2025</h3>
+      <div class="task">Release 1.0</div>
+      <div class="task">New Web Apps Beta</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>2026 and beyond</h3>
+      <div class="task">Release 2.0</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="end"></div>
+  </div>
+  <br>
+  <p><small><i>
+    *Artists representation of BPMN due to CSS limitations.
+  </i></small></p>
+  <a class="button" href="/roadmap">Our Roadmap in Detail →</a>
+</section>
+
+<section>
+  <h2>Principles</h2>
+
+  <ul class="card-list large">
+    <li>
+      <h3>Community Ownership </h3>
+      <p>
+        Operaton shall always be a community-owned free open-source  project
+        (legal work in progress). There shall be no private or commercial entity
+        which is able  to legally claim its ownership or divert the goals of the
+        community. See our Code of Conduct to learn how we foster an open,
+        welcoming, diverse, inclusive, and healthy community.
+      </p>
+    </li>
+    <li>
+      <h3>Quality</h3>
+      <p>
+        It shall be held to high-quality standards regarding every aspect:
+        SonarQube activtities and GitHub issues.
+      </p>
+    </li>
+    <li>
+      <h3>Self Ownership </h3>
+      <p>
+        There shall be no hidden dependencies making it hard to build it on your
+        own. Everything is easy to run by yourself.
+      </p>
+    </li>
+    <li>
+      <h3>Transparency</h3>
+      <p>
+        Operaton is developed in the open. All decisions are transparently made
+        by its community for its community.
+      </p>
+    </li>
+  </ul>
+</section>
+
+<section class="gradient-bg">
+  <ul class="card-list large">
+    <li>
+      <h2>Contributors</h2>
+      <p>
+        As community project Operaton is made by its contributors and no single company. If you are interested who is currently working on Operaton, you can use the following links as sources:
+
+      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/operaton/operaton/graphs/contributors">
+            github.com/operaton/operaton/graphs/contributors
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/orgs/operaton/people">
+            github.com/orgs/operaton/people
+          </a>
+        </li>
+        <li>
+          <a href="https://forum.operaton.org/u?order=likes_received">
+            Users at forum.operaton.org
+          </a>
+        </li>
+      </ul>
+      <h3>Get Involved</h3>
+      <p>
+        You can be part of the community as well, see how you can get involved:
+      </p>
+      <a class="button" href="#">Contribution Guide</a>
+      <a class="button" href="#">Good First Issues</a>
+    </li>
+    <li id="contact">
+      <h2>Contact</h2>
+        Our primary communication happens on the forum: <br>
+        <a class="button" href="#">Forum</a> <br>
+
+
+        We also use a Slack workspace: <br>
+        <a class="button" href="#">Slack</a> <br>
+
+        To stay up to date on Operaton, you can follow us on <br>
+        <a class="button" href="#">LinkedIn</a>
+        <a class="button" href="#">Mastodon</a> <br>
+
+
+        If non of the above applies to your contact needs, you can send us an email: <br>
+        <a href="mailto:mail@operaton.org">mail@operaton.org</a>
+
+    </li>
+  </ul>
+</section>
 </div>

@@ -54,22 +54,38 @@
   <body id="body">
     {% include header.html %}
 
-    <div id="scroll-area">
-      <div id="tagline-mobile">
-        BPMN-Process Automation for Everyone
-      </div>
+    <main id="content" class="post">
+      <small><a href="/blog">← All Articles</a></small>
+      <br>
+      <br>
+      <h1>{{ page.title }}</h1>
+      <p>
+        <strong>
+        {{ page.date | date: "%Y-%m-%d" }}
+        </strong> – {{ page.author }}
+      </p>
+      {{ content }}
 
-      <main id="content">
-        <h1>{{ page.title }}</h1>
-        <p>
-          <em>
-          {{ page.date | date: "%Y-%m-%d" }} - {{ page.author }}
-          </em>
-        </p>
-        {{ content }}
-      </main>
+      <br>
+      <hr>
+      <br>
 
-      {% include footer.html %}
-    </div>
+      <nav>
+        <small>Other posts</small> <br>
+        {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+          {% if page.next.url %}
+          <br>
+          {% endif %}
+        {% endif %}
+        {% if page.next.url %}
+          <div>
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          </div>
+        {% endif %}
+      </nav>
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>
