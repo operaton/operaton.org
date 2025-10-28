@@ -12,7 +12,7 @@
   website: https://www.itemis.com/en/
 
 - name: Otus GmbH
-  logo: /assets/img/service-providers/Otus_Eule_Verlauf.png
+  logo: /assets/img/service-providers/otus_logo.svg
   services: [1, 2, 3, 4]
   location:
     country: Germany

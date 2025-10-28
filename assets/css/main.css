@@ -298,6 +298,11 @@ body {
   td.description {
     max-width: 30ch;
   }
+  td img {
+    background: white;
+    padding: .3em;
+    border-radius: .3em;
+  }
 
   .gradient-bg {
     position: relative;
@@ -791,7 +796,7 @@ body {
     /*max-width: calc(100% - var(--space-s));*/
   }
   th, td {
-    padding: 0 var(--space-s) var(--space-s) 0;
+    padding: var(--space-xs) var(--space-s) var(--space-xs) 0;
     text-align: left;
   }
   th {
