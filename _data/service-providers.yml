@@ -45,3 +45,14 @@
   description: >-
     Achieve software sovereignty and freedom with our services for Operaton and open source process automation.
   website: https://uubato.com
+
+- name: BeOne
+  logo: /assets/img/service-providers/beone.png
+  services: [0, 1, 2, 3, 4]
+  location:
+    country: Poland
+    city: Poznan
+    area-of-operation: EU
+  description: >-
+    BeOne provides solutions that enable any organisation, regardless of industry, to effectively manage documents and processes. Our open platform combines proven ECM and BPM systems with simple automation and the latest artificial intelligence services.
+  website: https://beone.pl/
