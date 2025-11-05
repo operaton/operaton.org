@@ -56,3 +56,14 @@
   description: >-
     BeOne provides solutions that enable any organisation, regardless of industry, to effectively manage documents and processes. Our open platform combines proven ECM and BPM systems with simple automation and the latest artificial intelligence services.
   website: https://beone.pl/
+
+- name: Haulmont
+  logo: /assets/img/service-providers/haulmont_tech.svg
+  services: [0,3,4]
+  location:
+    country: UK
+    city: London
+    area-of-operation: UK, Spain, Italy, Hungary, Central Asia, Vietnam, Malaysia
+  description: >-
+    Haulmont leverages the operational expertise of a business to create smart, scalable solutions. Haulmont is a vendor of Flowset - BPM-Ops platform.
+  website: https://haulmont.tech/
