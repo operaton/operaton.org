@@ -1,0 +1,18 @@
+- name: Example
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  type: 2
+  license: 3
+  links:
+    - label: Website
+      url: https://www.example.com
+    - label: Contact
+      url: mailto:foo@bar.com
+- name: Sample Project
+  description: >-
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  type: 1
+  license: 0
+  links:
+    - label: GitHub
+      url: https://github.com/sample/project
