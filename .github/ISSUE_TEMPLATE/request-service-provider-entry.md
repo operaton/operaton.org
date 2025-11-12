@@ -19,7 +19,7 @@ Your information needs to be placed after the `:`, e.g.:
 
 For the services number values, the numbers correspond to the following service-names:
 
-1.  Product 
+1. Product 
 2. Technical Training
 3. BPMN Training 
 4. Consulting
