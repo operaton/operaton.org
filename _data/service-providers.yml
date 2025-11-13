@@ -67,3 +67,14 @@
   description: >-
     Haulmont leverages the operational expertise of a business to create smart, scalable solutions. Haulmont is a vendor of Flowset - BPM-Ops platform.
   website: https://haulmont.tech/
+
+- name: Neutral Consulting Oy
+  logo: /assets/img/service-providers/neutral_consulting_logo.jpg
+  services: [0, 3, 4]
+  location:
+    country: Finland
+    city: Espoo
+    area-of-operation: EU
+  description: >-
+    We help our customers build efficient solutions using BPMN.
+  website: https://neutralconsulting.fi
