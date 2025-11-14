@@ -78,3 +78,14 @@
   description: >-
     We help our customers build efficient solutions using BPMN.
   website: https://neutralconsulting.fi
+
+- name: R2
+  logo: /assets/img/service-providers/r2.png
+  services: [1, 2, 3]
+  location:
+    country: Poland
+    city: Warsaw
+    area-of-operation: EU, North America, Middle East
+  description: >-
+    R2 designs and delivers digital solutions for banking and retail operations, helping clients choose the right technologies and achieve measurable business results.
+  website: https://www.r2.team/
