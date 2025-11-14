@@ -29,7 +29,7 @@ body:
   options:
   - Solution
   - Plugin
-  - Add-On
+  - Add-on
   - Tool
   validations:
   required: true
