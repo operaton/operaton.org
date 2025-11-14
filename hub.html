@@ -57,7 +57,8 @@ title: Hub
     </tr>
     </thead>
     <tbody id="results">
-      {% for item in site.data.hub-items %}
+      {% assign sorted_items = site.data.hub-items | sort: "name" %}
+      {% for item in sorted_items  %}
         <tr id="{{ item.name | slugify }}">
           <td><a href="{{ item.links.website.url }}">{{ item.name }}</a></td>
           <td class="description">{{ item.description }}</td>
@@ -85,11 +86,14 @@ title: Hub
 
 <br>
 
+<p>
+  <i><b>NOTE</b>: The examples will be removed when the first real items have been added.</i>
+</p>
 <p class="content"><b>Disclaimer</b>: Operaton is not responsible for the listed solutions to be compatible or functionally working. The vendors of the listed components are responsible for assuring the quality of their offering.
   Please raise an issue when you think a component should be removed from this list.
 </p>
 
-<p class="content">If you would like add your solution to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-hub-entry.md">issue template on GitHub</a> </p>
+<p class="content">If you would like add your solution to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-hub-entry.md">issue template on GitHub</a>. </p>
 
 
 <script>

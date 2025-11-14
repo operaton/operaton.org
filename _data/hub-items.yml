@@ -1,3 +1,11 @@
+- name: Sample Project
+  description: >-
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  type: 1
+  license: 0
+  links:
+    - label: Contact
+      url: mailto:foo@bar.com
 - name: Example
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -8,13 +16,5 @@
       url: https://www.example.com
     - label: Source
       url: https://github.com/sample/project
-    - label: Contact
-      url: mailto:foo@bar.com
-- name: Sample Project
-  description: >-
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  type: 1
-  license: 0
-  links:
     - label: Contact
       url: mailto:foo@bar.com
