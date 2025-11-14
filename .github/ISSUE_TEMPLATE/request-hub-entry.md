@@ -1,6 +1,6 @@
 name: Request Hub Entry
 description: Submit a new item
-title: "[Hub]: "
+title: "[Hub]: Add [component name] to the Hub"
 labels: ["hub"]
 body:
 - type: input
@@ -9,15 +9,6 @@ body:
   label: Name
   description: Enter the name of the solution, tool, or item
   placeholder: e.g., My Awesome Tool
-  validations:
-  required: true
-
-- type: input
-  id: url
-  attributes:
-  label: URL
-  description: Enter the URL of the item
-  placeholder: https://example.com
   validations:
   required: true
 
@@ -36,7 +27,7 @@ body:
   label: Type
   description: Select the type of item
   options:
-  - Application
+  - Solution
   - Plugin
   - Add-On
   - Tool
@@ -50,15 +41,32 @@ body:
   description: Select the license type
   options:
   - Commercial
+  - AGPL
   - Apache 2.0
-  - MIT
   - BSD
-  - LPGPL
-  - GPL
   - EPL 2.0
+  - GPL
+  - LPGPL
+  - MIT
   - Other Open Source
+    validations:
+    required: true
+
+- type: input
+  id: url
+  attributes:
+  label: Website
+  description: Enter the URL of the item
+  placeholder: https://example.com
   validations:
   required: true
+
+- type: input
+  id: source
+  attributes:
+  label: Source
+  description: Enter the URL to the source code repository (if available)
+  placeholder: https://github.com/example/myexample
 
 - type: input
   id: contact
@@ -66,5 +74,3 @@ body:
   label: Contact
   description: Enter contact information
   placeholder: e.g., email@example.com or GitHub username
-  validations:
-  required: true

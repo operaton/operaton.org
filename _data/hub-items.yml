@@ -6,6 +6,8 @@
   links:
     - label: Website
       url: https://www.example.com
+    - label: Source
+      url: https://github.com/sample/project
     - label: Contact
       url: mailto:foo@bar.com
 - name: Sample Project
@@ -14,5 +16,5 @@
   type: 1
   license: 0
   links:
-    - label: GitHub
-      url: https://github.com/sample/project
+    - label: Contact
+      url: mailto:foo@bar.com
