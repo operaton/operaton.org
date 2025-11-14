@@ -29,7 +29,7 @@ body:
   options:
   - Solution
   - Plugin
-  - Add-on
+  - Add-On
   - Tool
   validations:
   required: true
@@ -46,7 +46,7 @@ body:
   - BSD
   - EPL 2.0
   - GPL
-  - LGPL
+  - LPGPL
   - MIT
   - Other Open Source
     validations:
