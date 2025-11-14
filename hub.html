@@ -60,7 +60,19 @@ title: Hub
       {% assign sorted_items = site.data.hub-items | sort: "name" %}
       {% for item in sorted_items  %}
         <tr id="{{ item.name | slugify }}">
-          <td><a href="{{ item.links.website.url }}">{{ item.name }}</a></td>
+          <td>
+            {% assign website_link = nil %}
+            {% for link in item.links %}
+              {% if link.label == "Website" %}
+                {% assign website_link = link %}
+              {% endif %}
+            {% endfor %}
+            {% if website_link %}
+              <a href="{{ website_link.url }}">{{ item.name }}</a>
+            {% else %}
+              {{ item.name }}
+            {% endif %}
+          </td>
           <td class="description">{{ item.description }}</td>
           <td class="tags">
             <span>

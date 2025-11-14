@@ -46,7 +46,7 @@ body:
   - BSD
   - EPL 2.0
   - GPL
-  - LPGPL
+  - LGPL
   - MIT
   - Other Open Source
     validations:
