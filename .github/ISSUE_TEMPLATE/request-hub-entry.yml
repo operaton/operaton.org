@@ -31,6 +31,7 @@ body:
         - Plugin
         - Add-On
         - Tool
+        - Miscallaneous
     validations:
       required: true
 
