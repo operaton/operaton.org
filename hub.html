@@ -74,7 +74,7 @@ title: Hub
           </td>
           <td>
             {% for link in item.links %}
-              <a href="{{ link.url }}">{{ link.label }}</a>{% if forloop.last == false %}, {% endif %}
+              <a href="{{ link[1].url }}">{{ link[1].label }}</a>{% if forloop.last == false %}, {% endif %}
             {% endfor %}
           </td>
         </tr>
