@@ -21,18 +21,40 @@ title: "Roadmap"
   <div class="group">
     <h3>November 2025</h3>
     <div class="task">Release 1.0</div>
-    <div class="task">New Web Apps Beta</div>
+    <div class="task">Website Relaunch</div>
   </div>
   <div class="arrow"></div>
   <div class="group">
-    <h3>2026 and beyond</h3>
-    <div class="task">Release 2.0</div>
+    <h3>February 2026</h3>
+    <div class="task">Release 1.1</div>
+  </div>
+  <div class="arrow"></div>
+  <div class="group">
+    <h3>2026 (t.b.a.)</h3>
+    <div class="task">Release 1.2</div>
   </div>
   <div class="arrow"></div>
   <div class="end"></div>
 </div>
 
 <br>
+
+### 2026 and beyond
+
+- Make new Web applications production ready and replace legacy ones
+- Further improvements based on our users needs
+- Remove deprecated code
+- Feature releases in t.b.d. release cadence
+
+### February 2026
+
+#### Release 1.1
+
+- (planned) Spring 7 / Spring Boot 4 support
+- Update all dependencies to latest versions
+- Fixes for issues reported by the community
+
+## Past Changes
 
 ### November 2025
 
@@ -41,16 +63,15 @@ title: "Roadmap"
 - End of life Camunda 7.24 CE
 - Release 1.0 based on 7.24 CE
 
-### 2026 and beyond
+#### Operaton Hub launched
 
-- Release version 1.1 – No breaking changes
-- Further improvements based on our users needs
-- Remove deprecated code
-- Release 2.0
+- New community platform for sharing Operaton solutions
 
-## Past Changes
+### October 2025
 
-### 2025
+- operaton.org website relaunch
+
+### Mid 2025
 
 - Publish revised documentation
 - Drop dependency on legacy technology like Wildfly 26, JavaEE and Spring 5
