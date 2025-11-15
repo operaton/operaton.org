@@ -1,0 +1,151 @@
+---
+layout: default
+title: Hub
+---
+
+<header>
+  <h1>Operaton Hub</h1>
+  <p class="content">
+    This is the central hub for Operaton-related resources, including service extensions, plugins, applications, and more.
+  </p>
+</header>
+
+{% assign types = "Solution|Plugin|Add-on|Tool|Miscallaneous" | split: "|" %}
+{% assign licenses = "Commercial|AGPL|Apache 2.0|BSD|EPL 2.0|LGPL|GPL|MIT|Other Open Source" | split: "|" %}
+
+<div class="wrapper">
+
+  <noscript>
+    <em>
+    You can enable JavaScript to filter the table below.
+    </em>
+  </noscript>
+
+  <div id="filters" hidden>
+    <br>
+
+    <strong>Filter by offering</strong>
+
+    <fieldset>
+      <label for="type">Type</label>
+      <select id="type" name="type" onchange="filter_table(event)">
+        <option value="">any</option>
+        {% for t in types %}
+        <option value="{{ t | strip }}">{{ t }}</option>
+        {% endfor %}
+      </select>
+      <label for="license">License</label>
+      <select id="license" name="license" onchange="filter_table(event)">
+        <option value="">any</option>
+        <option value="Commercial">Commercial</option>
+        <option value="Open Source">Open Source</option>
+      </select>
+    </fieldset>
+  </div>
+
+  <br>
+
+  <table>
+    <caption>List of Operaton 3rd party solutions</caption>
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">License</th>
+      <th scope="col">Links</th>
+    </tr>
+    </thead>
+    <tbody id="results">
+      {% assign sorted_items = site.data.hub-items | sort: "name" %}
+      {% for item in sorted_items  %}
+        <tr id="{{ item.name | slugify }}">
+          <td>
+            {% assign website_link = nil %}
+            {% for link in item.links %}
+              {% if link.label == "Website" %}
+                {% assign website_link = link %}
+              {% endif %}
+            {% endfor %}
+            {% if website_link %}
+              <a href="{{ website_link.url }}">{{ item.name }}</a>
+            {% else %}
+              {{ item.name }}
+            {% endif %}
+          </td>
+          <td class="description">{{ item.description }}</td>
+          <td class="tags">
+            <span>
+            {{ types[item.type] }}
+            </span>
+          </td>
+          <td class="tags">
+            <span>
+            {{ licenses[item.license] }}
+            </span>
+          </td>
+          <td>
+            {% for link in item.links %}
+              <a href="{{ link.url }}">{{ link.label }}</a>{% if forloop.last == false %}, {% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+<br>
+
+<p>
+  <i><b>NOTE</b>: The examples will be removed when the first real items have been added.</i>
+</p>
+<p class="content"><b>Disclaimer</b>: Operaton is not responsible for the listed solutions to be compatible or functionally working. The vendors of the listed components are responsible for assuring the quality of their offering.
+  Please raise an issue when you think a component should be removed from this list.
+</p>
+
+<p class="content">If you would like to add your solution to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-hub-entry.md">issue template on GitHub</a>. </p>
+
+
+<script>
+  const
+    filters = document.getElementById('filters'),
+    results = document.getElementById('results'),
+    tag_cells = document.querySelectorAll('.tags'),
+    show_type = document.getElementById('type'),
+    show_license = document.getElementById('license')
+
+  filters.hidden = false;
+
+  const filter_table = (e) => {
+    if (e) e.preventDefault()
+
+    const typeFilter = show_type.value.trim()
+    const licenseFilter = show_license.value.trim()
+
+    const rows = results.querySelectorAll('tr')
+
+    rows.forEach((row) => {
+      const tagTds = row.querySelectorAll('td.tags')
+      const typeText = tagTds[0] ? tagTds[0].textContent.replaceAll(/\s+/g, ' ').trim() : ''
+      const licenseText = tagTds[1] ? tagTds[1].textContent.replaceAll(/\s+/g, ' ').trim() : ''
+
+      const matchType = !typeFilter || typeText === typeFilter
+
+      let matchLicense = false
+      if (!licenseFilter) {
+        matchLicense = true
+      } else if (licenseFilter === 'Commercial') {
+        matchLicense = licenseText.includes('Commercial')
+      } else if (licenseFilter === 'Open Source') {
+        matchLicense = !licenseText.includes('Commercial') && licenseText.length > 0
+      }
+
+      row.style.display = (matchType && matchLicense) ? '' : 'none'
+    })
+  }
+
+  show_license.addEventListener('change', filter_table)
+  show_type.addEventListener('change', filter_table)
+</script>
