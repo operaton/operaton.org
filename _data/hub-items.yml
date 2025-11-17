@@ -51,5 +51,15 @@
       url: https://github.com/cachescrubber/camunda-platform-7-mockito/commits/operaton/
     - label: Contact
       url: "https://github.com/cachescrubber"
-
-
+- name: Operaton Robot Playground
+  description: >-
+    Orchestrating Robot Framework test or task suites with Operaton BPM engine.
+  type: 0
+  license: 2
+  links:
+    - label: Website
+      url: https://datakurre.github.io/operaton-robot-playground/index.html
+    - label: GitHub
+      url: https://github.com/datakurre/operaton-robot-playground
+    - label: Contact
+      url: "https://github.com/datakurre"
