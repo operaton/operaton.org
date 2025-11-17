@@ -18,3 +18,14 @@
       url: https://github.com/sample/project
     - label: Contact
       url: mailto:foo@bar.com
+- name: Keycloak Plugin
+  description: >-
+    Keycloak integration plugin for authentication and authorization.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/operaton/operaton-keycloak
+    - label: Contact
+      url: "https://github.com/cachescrubber"
+
