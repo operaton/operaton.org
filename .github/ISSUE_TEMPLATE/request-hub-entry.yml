@@ -3,15 +3,6 @@ description: Submit a new item
 title: "[Hub]: Add [component name] to the Hub"
 labels: ["hub"]
 body:
-  - type: input
-    id: name
-    attributes:
-      label: Name
-      description: Enter the name of the solution, tool, or item
-      placeholder: e.g., My Awesome Tool
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
