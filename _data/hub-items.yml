@@ -31,4 +31,15 @@
       url: https://backoffice.plus
     - label: Contact
       url: "julian.haupt@backoffice.plus"
+- name: Operaton BPM Data
+  description: >-
+    Beautiful process data handling for Operaton.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/cachescrubber/camunda-bpm-data/tree/operaton
+    - label: Contact
+      url: "https://github.com/cachescrubber"
+
 
