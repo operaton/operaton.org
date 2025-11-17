@@ -18,4 +18,17 @@
       url: https://github.com/datakurre/operaton-cockpit-plugins
     - label: Contact
       url: "https://github.com/datakurre"
+- name: backoffice.plus
+  description: >-
+    backoffice.plus is a modular platform for back-office automation, built on open standards. 
+    All process logic — including document routing and approvals — is executed as BPMN workflows powered by Operaton. 
+    The system includes an integrated DMS, task inbox, AI-based document recognition, and optional ERP integration. 
+    It is a PaaS which can be fully run on-premise, ensuring complete data sovereignty and independence from external cloud services.
+  type: 0
+  license: 0
+  links:
+    - label: Website
+      url: https://backoffice.plus
+    - label: Contact
+      url: "julian.haupt@backoffice.plus"
 
