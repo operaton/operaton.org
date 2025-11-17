@@ -63,3 +63,15 @@
       url: https://github.com/datakurre/operaton-robot-playground
     - label: Contact
       url: "https://github.com/datakurre"
+- name: Operaton Task Worker (Rust Crate)
+  description: >-
+    The `operaton-task-worker` is a Rust Crate for Implementing a Task Worker for Operaton External BPMN Tasks.
+  type: 3
+  license: 7
+  links:
+    - label: Website
+      url: https://crates.io/crates/operaton-task-worker
+    - label: GitHub
+      url: https://github.com/reckel-jm/operaton-task-worker
+    - label: Contact
+      url: "https://github.com/reckel-jm"
