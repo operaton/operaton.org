@@ -28,4 +28,14 @@
       url: https://github.com/operaton/operaton-keycloak
     - label: Contact
       url: "https://github.com/cachescrubber"
+- name: Operaton Cockpit Plugins
+  description: >-
+    This extension library provides a collection of light-weight Cockpit plugins designed to enhance the capabilities of Operaton.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/datakurre/operaton-cockpit-plugins
+    - label: Contact
+      url: "https://github.com/datakurre"
 
