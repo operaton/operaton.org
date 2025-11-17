@@ -2,6 +2,7 @@ name: Request Hub Entry
 description: Submit a new item
 title: "[Hub]: Add [component name] to the Hub"
 labels: ["hub"]
+assignees: ["kthoms"]
 body:
   - type: textarea
     id: description
