@@ -41,5 +41,15 @@
       url: https://github.com/cachescrubber/camunda-bpm-data/tree/operaton
     - label: Contact
       url: "https://github.com/cachescrubber"
+- name: Operaton Mockito
+  description: >-
+    Provides mock helpers to register delegate/listener mocks while testing processes.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/cachescrubber/camunda-platform-7-mockito/commits/operaton/
+    - label: Contact
+      url: "https://github.com/cachescrubber"
 
 
