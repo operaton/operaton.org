@@ -1,4 +1,5 @@
 url: "https://operaton.org" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Operaton" # the name of your site, e.g. ACME Corp.
+description: "A community-driven, free, and open-source BPMN engine."
 permalink: pretty
