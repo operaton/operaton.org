@@ -89,3 +89,14 @@
   description: >-
     R2 designs and delivers digital solutions for banking and retail operations, helping clients choose the right technologies and achieve measurable business results.
   website: https://www.r2.team/
+
+- name: Codeblock GmbH
+  logo: /assets/img/service-providers/CodeblockGmbH.png
+  services: [1, 3, 4]
+  location:
+    country: Switzerland
+    city: Bern
+    area-of-operation: Switzerland, EU
+  description: >-
+    Codeblock is an IT service provider based in Bern with BPM experience with various process engines. We provide our customers with individual support for their software development projects.
+  website: https://www.codeblock.ch
