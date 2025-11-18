@@ -23,11 +23,15 @@ sed_inplace() {
 pushd $(pwd) > /dev/null
 cd $(git rev-parse --show-toplevel) || exit 1
 
-AFFECTED_FILES=(index.html chat.md faq.md)
+AFFECTED_FILES=(index.html chat.md faq.md _data/resources.yml)
 
 for AFFECTED_FILE in "${AFFECTED_FILES[@]}"; do
   echo "🔄 Updating Slack Invitation URL in $AFFECTED_FILE"
-  sed_inplace "s|${EXPECTED_PREFIX}[^\)^\"]+|${SLACK_INVITATION_URL}|" $AFFECTED_FILE
+  if [[ "$AFFECTED_FILE" == "_data/resources.yml" ]]; then
+    sed_inplace "s|url: ${EXPECTED_PREFIX}[^ ]*|url: ${SLACK_INVITATION_URL}|" $AFFECTED_FILE
+  else
+    sed_inplace "s|${EXPECTED_PREFIX}[^\)^\"]+|${SLACK_INVITATION_URL}|" $AFFECTED_FILE
+  fi
 done
 
 echo "✅  Done!"
