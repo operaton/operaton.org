@@ -1,67 +1,156 @@
 ---
 layout: default
-title: "Service Providers"
-description: "Find professional services for Operaton from our community of providers."
-main-class: service-providers-page
+title: Service Providers
 ---
 
-{% assign service_types = "Consulting,Implementation,Training,Support,Migration" | split: "," %}
-
-<header class="page-header">
+<header>
   <h1>Service Providers</h1>
-  <p>
-    The following companies provide professional services for Operaton.
-    The list is displayed in a random order that changes daily to ensure fairness.
+  <p class="content">
+    Our community license agreement grants anyone the right to provide professional services for
+    Operaton.
+    You have the freedom to choose any service provider you like, if you require it. See the following list for
+    suggestions:
   </p>
 </header>
 
-<div class="service-providers-list">
-  {% assign day_of_year = site.time | date: '%j' %}
-  {% assign providers = site.data.service-providers %}
-  {% assign sort_keys = "" | split: "" %}
 
-  {% for provider in providers %}
-    {% capture sort_key %}{{ provider.name | append: day_of_year | reverse }}|{{ forloop.index0 }}{% endcapture %}
-    {% assign sort_keys = sort_keys | push: sort_key %}
-  {% endfor %}
 
-  {% assign sorted_keys = sort_keys | sort_natural %}
+<div class="wrapper">
 
-  {% for key in sorted_keys %}
-    {% assign parts = key | split: '|' %}
-    {% assign provider_index = parts.last | plus: 0 %}
-    {% assign provider = providers[provider_index] %}
 
-    <div class="card">
-    <div class="provider-logo">
-      <img src="{{ provider.logo }}" alt="{{ provider.name }} logo">
-    </div>
-    <div class="provider-details">
-      <h2>{{ provider.name }}</h2>
-      <p class="provider-location">
-        {{ provider.location.city }}, {{ provider.location.country }}
-        (Area of Operation: {{ provider.location.area-of-operation }})
-      </p>
-      <p class="provider-description">{{ provider.description }}</p>
-      <div class="provider-services">
-        <strong>Services:</strong>
-        <ul>
-          {% for service_index in provider.services %}
-            <li>{{ service_types[service_index] }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      <a href="{{ provider.website }}" class="button" target="_blank" rel="noopener noreferrer">Visit Website</a>
-    </div>
+  <noscript>
+    <em>
+    You can enable JavaScript to filter the table below.
+    </em>
+  </noscript>
+
+  <div id="filters" hidden>
+    <br>
+
+    <strong>Filter by offering</strong>
+
+    <fieldset>
+      <label>
+        <input type="checkbox" checked name="service-product" id="service-product" onchange="filter_table" />
+        Product
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-tech-training" id="service-tech-training" onchange="filter_table" />
+        Technical Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-bpmn-training" id="service-bpmn-training" onchange="filter_table" />
+        BPMN Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-consulting" id="service-consulting" onchange="filter_table" />
+        Consulting
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-support" id="service-support" onchange="filter_table" />
+        Support
+      </label>
+    </fieldset>
   </div>
-  {% endfor %}
+
+  <br>
+
+  <table>
+    <caption>List of Operaton service providers</caption>
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Services</th>
+      <th scope="col">Description</th>
+      <th scope="col">Headquarters</th>
+      <th scope="col">Area of Operation</th>
+    </tr>
+    </thead>
+    <tbody id="results">
+      {% assign day_of_year = site.time | date: '%j' %}
+      {% assign providers = site.data.service-providers %}
+      {% assign sort_keys = "" | split: "" %}
+      {% for provider in providers %}
+        {% capture sort_key %}{{ provider.name | append: day_of_year | reverse }}|{{ forloop.index0 }}{% endcapture %}
+        {% assign sort_keys = sort_keys | push: sort_key %}
+      {% endfor %}
+      {% assign sorted_keys = sort_keys | sort_natural %}
+      {% for key in sorted_keys %}
+        {% assign parts = key | split: '|' %}
+        {% assign provider_index = parts.last | plus: 0 %}
+        {% assign provider = providers[provider_index] %}
+        <tr id="{{ provider.name | slugify }}">
+          <td><a href="{{ provider.website }}">{{ provider.name }}</a></td>
+          <td><img src="{{ provider.logo }}" alt="{{ provider.name }} Logo"/></td>
+          <td class="tags">
+              {% for service in provider.services -%}
+                {% if service == 0 %}
+                <span>Product</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 1 %}
+                <span>Technical Training</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 2 %}
+                <span>BPMN Training</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 3 %}
+                <span>Consulting</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 4 %}
+                <span>Support</span>{% unless forloop.last %},{% endunless -%}
+                {% endif %}
+              {% endfor %}
+          </td>
+          <td class="description">{{ provider.description }}</td>
+          <td>{{ provider.location.city }}, {{ provider.location.country }}</td>
+          <td>{{ provider.location.area-of-operation }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
 </div>
 
-<style>
-  .service-providers-list .card { display: flex; gap: 2rem; margin-bottom: 2rem; }
-  .provider-logo { flex-shrink: 0; width: 150px; text-align: center; }
-  .provider-logo img { max-width: 100%; height: auto; }
-  .provider-details { flex-grow: 1; }
-  .provider-services ul { list-style: none; padding: 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-  .provider-services li { background-color: #f0f0f0; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.9em; }
-</style>
+<br>
+
+<p class="content">If you would like to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-service-provider-entry.md">issue template on GitHub</a> </p>
+
+
+<script>
+  const
+    filters = document.getElementById('filters'),
+    results = document.getElementById('results'),
+    tag_cells = document.querySelectorAll('.tags'),
+    show_product = document.getElementById('service-product'),
+    show_tech_training = document.getElementById('service-tech-training'),
+    show_bpmn_training = document.getElementById('service-bpmn-training'),
+    show_consulting = document.getElementById('service-consulting'),
+    show_support = document.getElementById('service-support')
+
+  filters.hidden = false;
+
+  const filter_table = (e) => {
+    e.preventDefault()
+
+    tag_cells.forEach((value) => {
+        const tags = value.textContent.trim().replaceAll(' ', '').replaceAll(',', '').split('\n')
+
+        if (
+          show_product.checked && tags.some((v) => v === 'Product') ||
+          show_tech_training.checked && tags.some((v) => v === 'TechnicalTraining') ||
+          show_bpmn_training.checked && tags.some((v) => v === 'BPMNTraining') ||
+          show_consulting.checked && tags.some((v) => v === 'Consulting') ||
+          show_support.checked && tags.some((v) => v === 'Support')
+        ) {
+          value.parentNode.style.display = ''
+        } else {
+          value.parentNode.style.display = 'none'
+        }
+      }
+    )
+
+  }
+
+  show_product.addEventListener('change', filter_table)
+  show_tech_training.addEventListener('change', filter_table)
+  show_bpmn_training.addEventListener('change', filter_table)
+  show_consulting.addEventListener('change', filter_table)
+  show_support.addEventListener('change', filter_table)
+</script>
