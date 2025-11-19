@@ -100,3 +100,18 @@
   description: >-
     Codeblock is an IT service provider based in Bern with BPM experience with various process engines. We provide our customers with individual support for their software development projects.
   website: https://www.codeblock.ch
+
+- name: Ambiente Livre
+  logo: https://www.ambientelivre.com.br/images/logos_open_source/ambientelivre.png
+  services: [1, 2, 3, 4, 5]
+  location:
+    country: Brazil
+    city: Curitiba
+    area-of-operation: Brazil, LATAM, Global (online)
+  description: >-
+    Ambiente Livre specializes in solutions and technical training for Open Source and Free Software technologies,
+    providing consulting, support, and technical enablement across platforms such as Operaton running on Kubernetes,
+    on-premise cloud environments, integrations with Alfresco ECM, Apache Hop, and a broad range of Open Source technologies.
+    We offer specialized services in Operaton, BPMN modeling, and BPMS implementations, helping organizations design,
+    automate, and optimize their business processes using modern Open Source tools.
+  website: https://ambientelivre.com.br
