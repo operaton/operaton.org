@@ -2,3 +2,4 @@ _site
 .idea
 .jekyll-cache
 *.DS_Store
+.github/data/processed_linkedin_posts.json
