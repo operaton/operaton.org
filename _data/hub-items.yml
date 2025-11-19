@@ -75,3 +75,13 @@
       url: https://github.com/reckel-jm/operaton-task-worker
     - label: Contact
       url: "https://github.com/reckel-jm"
+- name: Operaton Task Activity
+  description: >-
+    This plugin shows activity history and tasks during the process.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/ambientelivre/operaton-task-activity-plugin
+    - label: Contact
+      url: "https://www.ambientelivre.com.br/contato.html"
