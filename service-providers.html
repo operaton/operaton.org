@@ -68,18 +68,7 @@ title: Service Providers
     </tr>
     </thead>
     <tbody id="results">
-      {% assign day_of_year = site.time | date: '%j' %}
-      {% assign providers = site.data.service-providers %}
-      {% assign sort_keys = "" | split: "" %}
-      {% for provider in providers %}
-        {% capture sort_key %}{{ provider.name | append: day_of_year | reverse }}|{{ forloop.index0 }}{% endcapture %}
-        {% assign sort_keys = sort_keys | push: sort_key %}
-      {% endfor %}
-      {% assign sorted_keys = sort_keys | sort_natural %}
-      {% for key in sorted_keys %}
-        {% assign parts = key | split: '|' %}
-        {% assign provider_index = parts.last | plus: 0 %}
-        {% assign provider = providers[provider_index] %}
+      {% for provider in site.data.service-providers %}
         <tr id="{{ provider.name | slugify }}">
           <td><a href="{{ provider.website }}">{{ provider.name }}</a></td>
           <td><img src="{{ provider.logo }}" alt="{{ provider.name }} Logo"/></td>
@@ -153,4 +142,18 @@ title: Service Providers
   show_bpmn_training.addEventListener('change', filter_table)
   show_consulting.addEventListener('change', filter_table)
   show_support.addEventListener('change', filter_table)
+
+  // Shuffle the table rows on page load for every visitor
+  document.addEventListener('DOMContentLoaded', () => {
+    const tbody = document.getElementById('results');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    // Fisher-Yates shuffle algorithm for a fair shuffle
+    for (let i = rows.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rows[i], rows[j]] = [rows[j], rows[i]];
+    }
+
+    rows.forEach(row => tbody.appendChild(row));
+  });
 </script>
