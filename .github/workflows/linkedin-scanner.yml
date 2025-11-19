@@ -33,9 +33,11 @@ jobs:
           POSTS=$(python3 .github/scripts/scan_linkedin.py)
 
           # Store the posts in output for the next step
-          echo "posts<<EOF" >> $GITHUB_OUTPUT
-          echo "$POSTS" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          {
+            echo "posts<<EOF"
+            echo "$POSTS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
           echo "Scan completed. Posts found: $(echo "$POSTS" | jq '. | length')"
 
