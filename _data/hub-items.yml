@@ -104,5 +104,16 @@
   links:
     - label: Website
       url: https://champa-bpmn.com
+    - label: Contact
+      url: "info@champa-bpmn.com"
+
+- name: Camunda Health Monitor & AI/ML Analytics
+  description: >-
+    The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
+  type: 0
+  license: 2
+  links:
     - label: GitHub
+      url: https://github.com/bibacrm/camunda-health-monitor
+    - label: Contact
       url: "info@champa-bpmn.com"
