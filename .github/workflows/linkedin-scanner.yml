@@ -1,0 +1,98 @@
+name: LinkedIn Post Scanner
+
+on:
+  # Runs on schedule - nightly at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
+
+  # Allows manual trigger from Actions tab
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  scan-linkedin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scan LinkedIn posts for operaton company
+        id: scan
+        run: |
+          echo "Scanning LinkedIn for operaton company posts..."
+
+          # Run the Python scanner script
+          POSTS=$(python3 .github/scripts/scan_linkedin.py)
+
+          # Store the posts in output for the next step
+          {
+            echo "posts<<EOF"
+            echo "$POSTS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Scan completed. Posts found: $(echo "$POSTS" | jq '. | length')"
+
+      - name: Create issues for LinkedIn posts
+        if: steps.scan.outputs.posts != '[]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          POSTS='${{ steps.scan.outputs.posts }}'
+
+          if [ "$POSTS" = "[]" ]; then
+            echo "No new LinkedIn posts found"
+            exit 0
+          fi
+
+          # Parse the JSON array and create an issue for each post
+          echo "$POSTS" | jq -c '.[]' | while read -r post; do
+            TITLE=$(echo "$post" | jq -r '.title')
+            URL=$(echo "$post" | jq -r '.url')
+            CONTENT=$(echo "$post" | jq -r '.content')
+            DATE=$(echo "$post" | jq -r '.date')
+
+            # Create issue body with LinkedIn post details
+            ISSUE_BODY="## LinkedIn Post to Blog Post
+
+          LinkedIn URL: $URL
+          Post Date: $DATE
+
+          ### Original Content
+          $CONTENT
+
+          ---
+
+          Task: Create a blog post in the _posts directory based on this LinkedIn post.
+
+          Guidelines:
+          - Follow the naming convention: YYYY-MM-DD-short-title.md
+          - Use wording similar to existing posts like:
+            - _posts/2024-12-17-beta-today-better-tomorrow.md
+            - _posts/2024-12-10-hello-world-from-the-operaton-project.md
+          - Include the standard front matter with layout and author
+          - Maintain the professional yet approachable tone of existing blog posts"
+
+            # Create the issue
+            gh issue create \
+              --title "Blog Post: $TITLE" \
+              --body "$ISSUE_BODY" \
+              --assignee "copilot" \
+              --label "blog-post"
+
+            echo "Created issue for: $TITLE"
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "LinkedIn scanning workflow completed"
+          echo "Check the Actions output for details on created issues"
