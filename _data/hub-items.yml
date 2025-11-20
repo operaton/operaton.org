@@ -85,3 +85,13 @@
       url: https://github.com/ambientelivre/operaton-task-activity-plugin
     - label: Contact
       url: "https://www.ambientelivre.com.br/contato.html"
+- name: Flowset
+  description: >-
+    A BPM-ops platform which contains an alternative frontend for Operaton together with more tools to improve solutions delivery.
+  type: 0
+  license: 2
+  links:
+    - label: Website
+      url: https://flowset.io/
+    - label: GitHub
+      url: "https://github.com/flowset"
