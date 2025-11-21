@@ -15,7 +15,6 @@ title: Service Providers
 
 
 
-
 <div class="wrapper">
 
 
@@ -143,4 +142,18 @@ title: Service Providers
   show_bpmn_training.addEventListener('change', filter_table)
   show_consulting.addEventListener('change', filter_table)
   show_support.addEventListener('change', filter_table)
+
+  // Shuffle the table rows on page load for every visitor
+  document.addEventListener('DOMContentLoaded', () => {
+    const tbody = document.getElementById('results');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    // Fisher-Yates shuffle algorithm for a fair shuffle
+    for (let i = rows.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [rows[i], rows[j]] = [rows[j], rows[i]];
+    }
+
+    rows.forEach(row => tbody.appendChild(row));
+  });
 </script>
