@@ -1,0 +1,146 @@
+---
+layout: default
+title: Service Providers
+---
+
+<header>
+  <h1>Service Providers</h1>
+  <p class="content">
+    Our community license agreement grants anyone the right to provide professional services for
+    Operaton.
+    You have the freedom to choose any service provider you like, if you require it. See the following list for
+    suggestions:
+  </p>
+</header>
+
+
+
+
+<div class="wrapper">
+
+
+  <noscript>
+    <em>
+    You can enable JavaScript to filter the table below.
+    </em>
+  </noscript>
+
+  <div id="filters" hidden>
+    <br>
+
+    <strong>Filter by offering</strong>
+
+    <fieldset>
+      <label>
+        <input type="checkbox" checked name="service-product" id="service-product" onchange="filter_table" />
+        Product
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-tech-training" id="service-tech-training" onchange="filter_table" />
+        Technical Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-bpmn-training" id="service-bpmn-training" onchange="filter_table" />
+        BPMN Training
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-consulting" id="service-consulting" onchange="filter_table" />
+        Consulting
+      </label>
+      <label>
+        <input type="checkbox" checked name="service-support" id="service-support" onchange="filter_table" />
+        Support
+      </label>
+    </fieldset>
+  </div>
+
+  <br>
+
+  <table>
+    <caption>List of Operaton service providers</caption>
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Logo</th>
+      <th scope="col">Services</th>
+      <th scope="col">Description</th>
+      <th scope="col">Headquarters</th>
+      <th scope="col">Area of Operation</th>
+    </tr>
+    </thead>
+    <tbody id="results">
+      {% for provider in site.data.service-providers %}
+        <tr id="{{ provider.name | slugify }}">
+          <td><a href="{{ provider.website }}">{{ provider.name }}</a></td>
+          <td><img src="{{ provider.logo }}" alt="{{ provider.name }} Logo"/></td>
+          <td class="tags">
+              {% for service in provider.services -%}
+                {% if service == 0 %}
+                <span>Product</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 1 %}
+                <span>Technical Training</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 2 %}
+                <span>BPMN Training</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 3 %}
+                <span>Consulting</span>{% unless forloop.last %},{% endunless -%}
+                {% elsif service == 4 %}
+                <span>Support</span>{% unless forloop.last %},{% endunless -%}
+                {% endif %}
+              {% endfor %}
+          </td>
+          <td class="description">{{ provider.description }}</td>
+          <td>{{ provider.location.city }}, {{ provider.location.country }}</td>
+          <td>{{ provider.location.area-of-operation }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+<br>
+
+<p class="content">If you would like to appear on this list, please start a pull request with our <a href="https://github.com/operaton/operaton.org/issues/new?template=request-service-provider-entry.md">issue template on GitHub</a> </p>
+
+
+<script>
+  const
+    filters = document.getElementById('filters'),
+    results = document.getElementById('results'),
+    tag_cells = document.querySelectorAll('.tags'),
+    show_product = document.getElementById('service-product'),
+    show_tech_training = document.getElementById('service-tech-training'),
+    show_bpmn_training = document.getElementById('service-bpmn-training'),
+    show_consulting = document.getElementById('service-consulting'),
+    show_support = document.getElementById('service-support')
+
+  filters.hidden = false;
+
+  const filter_table = (e) => {
+    e.preventDefault()
+
+    tag_cells.forEach((value) => {
+        const tags = value.textContent.trim().replaceAll(' ', '').replaceAll(',', '').split('\n')
+
+        if (
+          show_product.checked && tags.some((v) => v === 'Product') ||
+          show_tech_training.checked && tags.some((v) => v === 'TechnicalTraining') ||
+          show_bpmn_training.checked && tags.some((v) => v === 'BPMNTraining') ||
+          show_consulting.checked && tags.some((v) => v === 'Consulting') ||
+          show_support.checked && tags.some((v) => v === 'Support')
+        ) {
+          value.parentNode.style.display = ''
+        } else {
+          value.parentNode.style.display = 'none'
+        }
+      }
+    )
+
+  }
+
+  show_product.addEventListener('change', filter_table)
+  show_tech_training.addEventListener('change', filter_table)
+  show_bpmn_training.addEventListener('change', filter_table)
+  show_consulting.addEventListener('change', filter_table)
+  show_support.addEventListener('change', filter_table)
+</script>

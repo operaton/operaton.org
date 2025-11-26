@@ -4,6 +4,15 @@ Visit under [operaton.org](https://operaton.org)
 
 ## Getting Started
 
+You can either install Ruby and use jekyll directly or docker-compose
+
+### jekyll serve
+
 - Make sure Jekyll is available on your machine: [Official installation guide](https://jekyllrb.com/docs/installation/)
-- Run `jekyll serve` in the projects root folder
+- (optional) Run `bundle install` in the projects root to update the dependencies if needed
+- Run `bundle exec jekyll serve` in the projects root folder
 - Visit `localhost:4000`
+
+### docker-compose
+
+- Run `docker-compose up -d` in the root of this project

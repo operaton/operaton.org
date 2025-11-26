@@ -1,0 +1,119 @@
+- name: Keycloak Plugin
+  description: >-
+    Keycloak integration plugin for authentication and authorization.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/operaton/operaton-keycloak
+    - label: Contact
+      url: "https://github.com/cachescrubber"
+- name: Operaton Cockpit Plugins
+  description: >-
+    This extension library provides a collection of light-weight Cockpit plugins designed to enhance the capabilities of Operaton.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/datakurre/operaton-cockpit-plugins
+    - label: Contact
+      url: "https://github.com/datakurre"
+- name: backoffice.plus
+  description: >-
+    backoffice.plus is a modular platform for back-office automation, built on open standards. 
+    All process logic — including document routing and approvals — is executed as BPMN workflows powered by Operaton. 
+    The system includes an integrated DMS, task inbox, AI-based document recognition, and optional ERP integration. 
+    It is a PaaS which can be fully run on-premise, ensuring complete data sovereignty and independence from external cloud services.
+  type: 0
+  license: 0
+  links:
+    - label: Website
+      url: https://backoffice.plus
+    - label: Contact
+      url: "julian.haupt@backoffice.plus"
+- name: Operaton BPM Data
+  description: >-
+    Beautiful process data handling for Operaton.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/cachescrubber/camunda-bpm-data/tree/operaton
+    - label: Contact
+      url: "https://github.com/cachescrubber"
+- name: Operaton Mockito
+  description: >-
+    Provides mock helpers to register delegate/listener mocks while testing processes.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/cachescrubber/camunda-platform-7-mockito/commits/operaton/
+    - label: Contact
+      url: "https://github.com/cachescrubber"
+- name: Operaton Robot Playground
+  description: >-
+    Orchestrating Robot Framework test or task suites with Operaton BPM engine.
+  type: 0
+  license: 2
+  links:
+    - label: Website
+      url: https://datakurre.github.io/operaton-robot-playground/index.html
+    - label: GitHub
+      url: https://github.com/datakurre/operaton-robot-playground
+    - label: Contact
+      url: "https://github.com/datakurre"
+- name: Operaton Task Worker (Rust Crate)
+  description: >-
+    The `operaton-task-worker` is a Rust Crate for Implementing a Task Worker for Operaton External BPMN Tasks.
+  type: 3
+  license: 7
+  links:
+    - label: Website
+      url: https://crates.io/crates/operaton-task-worker
+    - label: GitHub
+      url: https://github.com/reckel-jm/operaton-task-worker
+    - label: Contact
+      url: "https://github.com/reckel-jm"
+- name: Operaton Task Activity
+  description: >-
+    This plugin shows activity history and tasks during the process.
+  type: 1
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/ambientelivre/operaton-task-activity-plugin
+    - label: Contact
+      url: "https://www.ambientelivre.com.br/contato.html"
+- name: Flowset
+  description: >-
+    A BPM-ops platform which contains an alternative frontend for Operaton together with more tools to improve solutions delivery.
+  type: 0
+  license: 2
+  links:
+    - label: Website
+      url: https://flowset.io/
+    - label: GitHub
+      url: "https://github.com/flowset"
+
+- name: Champa Intelligence
+  description: >-
+    The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
+  type: 0
+  license: 0
+  links:
+    - label: Website
+      url: https://champa-bpmn.com
+    - label: Contact
+      url: "info@champa-bpmn.com"
+
+- name: Camunda Health Monitor & AI/ML Analytics
+  description: >-
+    The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
+  type: 0
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/bibacrm/camunda-health-monitor
+    - label: Contact
+      url: "info@champa-bpmn.com"

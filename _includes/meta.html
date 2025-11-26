@@ -1,3 +1,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8" />
 <meta name="theme-color" content="#0f7b9d" />
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "{{ site.url }}/#operaton",
+        "name": "Operaton",
+        "applicationCategory": "DeveloperTool",
+        "operatingSystem": "All",
+        "url": "{{ site.url }}",
+        "description": "{{ site.description | escape }}",
+        "creator": {
+            "@type": "Organization",
+            "name": "Operaton Project",
+            "url": "{{ site.url }}",
+            "logo": "{{ site.url }}/assets/img/operaton-logo.svg",
+            "sameAs": [
+                "https://github.com/operaton/operaton",
+                "https://fosstodon.org/@operaton",
+                "https://www.linkedin.com/company/operaton/"
+            ]
+        }
+    }
+</script>

@@ -1,79 +1,40 @@
 <header>
-  <div class="wrapper">
+    <a id="skip-to-content" href="/#content">SKIP TO CONTENT</a>
     <a class="logo" href="{{"/"|relative_url}}">
-      <h1>
+      <div class="operaton-logo">
         <span class="screen-hidden">Operaton</span>
-      </h1>
-    </a>
-    <div>
-      <div id="secondary-navigation">
-        <p id="tagline">BPMN-Process Automation for Everyone</p>
-
-        <nav>
-          <menu id="secondary" aria-label="Resources">
-            <li>
-              <a href="{{ "/download" | relative_url }}" target="_blank">
-                <img src="{{ "/assets/img/icons/download.svg" | relative_url }}" alt=""/>
-                Download
-              </a>
-            </li><li>
-              <a href="https://github.com/operaton" target="_blank">
-                <img src="{{ "/assets/img/icons/code.svg" | relative_url }}" alt=""/>
-                Source Code
-              </a>
-            </li>
-            <li>
-              <a href="https://docs.operaton.org" target="_blank">
-                <img src="{{ "/assets/img/icons/book.svg" | relative_url }}" alt=""/>
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="https://forum.operaton.org" target="_blank">
-                <img src="{{ "/assets/img/icons/users.svg" | relative_url }}" alt=""/>
-                Forum
-              </a>
-            </li>
-            <li>
-              <a href="/chat">
-                <img src="{{ "/assets/img/icons/message-square.svg" | relative_url }}" alt=""/>
-                Chat
-              </a>
-            </li>
-          </menu>
-        </nav>
       </div>
-
-      <nav aria-label="Main">
+    </a>
+    <nav aria-label="Main">
       <menu id="primary-navigation">
-        <menu>
-          <li><a href="{{ "/#features" | relative_url }}">Features</a></li>
-          <li><a href="{{ "/roadmap" | relative_url }}">Roadmap</a></li>
-          <li><a href="{{ "/#principles" | relative_url }}">Principles</a></li>
-        </menu>
-        <div class="spacer"></div>
-        <menu>
-          <li><a href="{{ "/about" | relative_url }}">About</a></li>
-          <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
-          <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
-        </menu>
+        <li><a href="{{ "/#features" | relative_url }}">Features</a></li>
+        <li><a href="{{ "/roadmap" | relative_url }}">Roadmap</a></li>
+        <li><a href="{{ "/resources" | relative_url }}">Resources</a></li>
+        <li><a href="{{ "/hub" | relative_url }}">Hub</a></li>
+        <li><a href="{{ "/service-providers" | relative_url }}">Service Providers</a></li>
+        <li><a href="{{ "/faq" | relative_url }}">FAQ</a></li>
+        <li><div class="spacer"></div></li>
+        <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
+        <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
+        <li><a href="https://docs.operaton.org/docs/get-started/" class="button">Get Started</a></li>
       </menu>
 
 
-      <details id="primary-navigation-mobile">
+      <details id="primary-navigation-mobile" hidden>
         <summary aria-label="open mobile menu"></summary>
 
         <menu>
           <menu>
-            <li><a href="{{ "/features" | relative_url }}">Features</a></li>
+            <li><a href="{{ "/#features" | relative_url }}">Features</a></li>
             <li><a href="{{ "/roadmap" | relative_url }}">Roadmap</a></li>
-            <li><a href="{{ "/#principles" | relative_url }}">Principles</a></li>
-          </menu>
-          <div class="spacer"></div>
-          <menu>
-            <li><a href="{{ "/about" | relative_url }}">About</a></li>
+            <li><a href="{{ "/resources" | relative_url }}">Resources</a></li>
+            <li><a href="{{ "/hub" | relative_url }}">Hub</a></li>
+            <li><a href="{{ "/service-providers" | relative_url }}">Service Providers</a></li>
+            <li><a href="{{ "/faq" | relative_url }}">FAQ</a></li>
+            <li><div class="spacer"></div></li>
             <li><a href="{{ "/blog" | relative_url }}">Blog</a></li>
             <li><a href="{{ "/#contact" | relative_url }}">Contact</a></li>
+            <li><a href="{{ "/#" | relative_url }}" class="button">Get Started</a></li>
           </menu>
         </menu>
       </details>

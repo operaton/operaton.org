@@ -2,16 +2,33 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <title>{{ page.title }} - {{ site.title }}</title>
-
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
     {% include meta.html %}
     {% include resources.html %}
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}" />
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncatewords: 50 }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:image" content="{{ page.image | default: site.default_image | absolute_url }}" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+    <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncatewords: 50 }}" />
+    <meta name="twitter:image" content="{{ page.image | default: site.default_image | absolute_url }}" />
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 
     <style>
-      h1::before {
-        background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
-        background-size: 2em 2em;
-      }
-    
+     .operaton-logo::before {
+       background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
+       background-size: 2em 2em;
+       height: 2em;
+       width: 2em;
+       font-size: 2em;
+     }
+
+
       details#primary-navigation-mobile {
 
         summary::after {
@@ -37,22 +54,38 @@
   <body id="body">
     {% include header.html %}
 
-    <div id="scroll-area">
-      <div id="tagline-mobile">
-        BPMN-Process Automation for Everyone
-      </div>
+    <main id="content" class="post">
+      <small><a href="/blog">← All Articles</a></small>
+      <br>
+      <br>
+      <h1>{{ page.title }}</h1>
+      <p>
+        <strong>
+        {{ page.date | date: "%Y-%m-%d" }}
+        </strong> – {{ page.author }}
+      </p>
+      {{ content }}
 
-      <main id="content">
-        <h2>{{ page.title }}</h2>
-        <p>
-          <em>
-          {{ page.date | date: "%Y-%m-%d" }} - {{ page.author }}
-          </em>
-        </p>
-        {{ content }}
-      </main>
+      <br>
+      <hr>
+      <br>
 
-      {% include footer.html %}
-    </div>
+      <nav>
+        <small>Other posts</small> <br>
+        {% if page.previous.url %}
+          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+          {% if page.next.url %}
+          <br>
+          {% endif %}
+        {% endif %}
+        {% if page.next.url %}
+          <div>
+            <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+          </div>
+        {% endif %}
+      </nav>
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>

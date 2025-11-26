@@ -1,0 +1,117 @@
+- name: itemis AG
+  logo: /assets/img/service-providers/itemis_logo.png
+  services: [0, 1, 3, 4]
+  location:
+    country: Germany
+    city: Dortmund
+    area-of-operation: EU
+  description: >-
+    With passion, trust, and a shared vision, we develop software and systems
+    solutions that inspire not only our customers but also help make the world
+    a better place.
+  website: https://www.itemis.com/en/
+
+- name: Otus GmbH
+  logo: /assets/img/service-providers/otus_logo.svg
+  services: [1, 2, 3, 4]
+  location:
+    country: Germany
+    city: Plankstadt
+    area-of-operation: EU
+  description: >-
+    At Otus we deliver high quality consulting services for your project.
+  website: https://www.otus.gmbh/
+
+- name: X-OUT TOBI
+  logo: /assets/img/service-providers/x-out-tobi_logo.png
+  services: [0, 3]
+  location:
+    country: Germany
+    city: Berlin
+    area-of-operation: Germany
+  description: >-
+    Drive your digital transformation with X-OUT TOBI: seamlessly connecting
+    legacy systems, automating processes, streamlining workflows, and guiding
+    your migration from Camunda to Operaton.
+  website: https://www.x-out.de/kontakt/
+
+- name: uubato UG
+  logo: /assets/img/service-providers/uubato.png
+  services: [1,2,3,4]
+  location:
+    country: Germany
+    city: Berlin
+    area-of-operation: EU
+  description: >-
+    Achieve software sovereignty and freedom with our services for Operaton and open source process automation.
+  website: https://uubato.com
+
+- name: BeOne
+  logo: /assets/img/service-providers/beone.png
+  services: [0, 1, 2, 3, 4]
+  location:
+    country: Poland
+    city: Poznan
+    area-of-operation: Europe, North America, Middle East
+  description: >-
+    BeOne provides solutions that enable any organisation, regardless of industry, to effectively manage documents and processes. Our open platform combines proven ECM and BPM systems with simple automation and the latest artificial intelligence services.
+  website: https://beone.pl/
+
+- name: Haulmont
+  logo: /assets/img/service-providers/haulmont_tech.svg
+  services: [0,3,4]
+  location:
+    country: UK
+    city: London
+    area-of-operation: UK, Spain, Italy, Hungary, Central Asia, Vietnam, Malaysia
+  description: >-
+    Haulmont leverages the operational expertise of a business to create smart, scalable solutions. Haulmont is a vendor of Flowset - BPM-Ops platform.
+  website: https://haulmont.tech/
+
+- name: Neutral Consulting Oy
+  logo: /assets/img/service-providers/neutral_consulting_logo.jpg
+  services: [0, 3, 4]
+  location:
+    country: Finland
+    city: Espoo
+    area-of-operation: EU
+  description: >-
+    We help our customers build efficient solutions using BPMN.
+  website: https://neutralconsulting.fi
+
+- name: R2
+  logo: /assets/img/service-providers/r2.png
+  services: [1, 2, 3]
+  location:
+    country: Poland
+    city: Warsaw
+    area-of-operation: Europe, North America, Middle East
+  description: >-
+    R2 designs and delivers digital solutions for banking and retail operations, helping clients choose the right technologies and achieve measurable business results.
+  website: https://www.r2.team/
+
+- name: Codeblock GmbH
+  logo: /assets/img/service-providers/CodeblockGmbH.png
+  services: [1, 3, 4]
+  location:
+    country: Switzerland
+    city: Bern
+    area-of-operation: Switzerland, EU
+  description: >-
+    Codeblock is an IT service provider based in Bern with BPM experience with various process engines. We provide our customers with individual support for their software development projects.
+  website: https://www.codeblock.ch
+
+- name: Ambiente Livre
+  logo: https://www.ambientelivre.com.br/images/logos_open_source/ambientelivre.png
+  services: [1, 2, 3, 4, 5]
+  location:
+    country: Brazil
+    city: Curitiba
+    area-of-operation: Brazil, LATAM, Global (online)
+  description: >-
+    Ambiente Livre specializes in solutions and technical training for Open Source and Free Software technologies,
+    providing consulting, support, and technical enablement across platforms such as Operaton running on Kubernetes,
+    on-premise cloud environments, integrations with Alfresco ECM, Apache Hop, and a broad range of Open Source technologies.
+    We offer specialized services in Operaton, BPMN modeling, and BPMS implementations, helping organizations design,
+    automate, and optimize their business processes using modern Open Source tools.
+  website: https://ambientelivre.com.br

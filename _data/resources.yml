@@ -1,0 +1,66 @@
+Running & Developing Operaton:
+  GitHub:
+    tag: Source Code
+    resources:
+      - name: BPMN Engine
+        url: https://github.com/operaton/operaton
+      - name: Website
+        url: https://github.com/operaton/operaton.org
+      - name: Documentation
+        url: https://github.com/operaton/documentation
+  Docker Hub:
+    tag: Containerized releases
+    resources:
+      - name: standalone
+        url:
+      - name: wildfly
+        url:
+      - name: tomcat
+        url:
+  Documentation:
+    tag: Help
+    resources:
+      - name: docs.operaton.org
+        url: https://docs.operaton.org
+      - name: Getting Started
+        url: https://docs.operaton.org/docs/get-started/
+      - name: FAQ
+        url: https://operaton.org/faq
+Community:
+  Forum:
+    tag: Discussion, Help
+    resources:
+      - name: forum.operaton.org
+        url: https://forum.operaton.org
+  Chat:
+    tag: Discussion, Help
+    resources:
+      - name: Slack
+        url: https://join.slack.com/t/operaton/shared_invite/zt-3id7iv5lz-zT7uGVWLCVNG_zpnAGpq9g
+Public Channels:
+  LinkedIn:
+    tag: Updates
+    resources:
+      - name: "@operaton"
+        url: https://www.linkedin.com/company/operaton
+  Mastodon:
+    tag: Updates
+    resources:
+      - name: fosstodon.org/@operaton
+        url: https://fosstodon.org/@operaton
+Other:
+  License:
+    tag: Legal
+    resources:
+      - name: Apache License 2.0
+        url: https://github.com/operaton/operaton?tab=Apache-2.0-1-ov-file#readme
+  Branding Materials & Guidelines:
+    tag: Design
+    resources:
+      - name: operaton/branding
+        url: https://github.com/operaton/operaton?tab=Apache-2.0-1-ov-file#readme
+  Professional Services:
+    tag: Paid Offerings
+    resources:
+      - name: operaton.org/service-providers
+        url: https://operaton.org/service-providers
