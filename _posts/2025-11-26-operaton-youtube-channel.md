@@ -21,7 +21,7 @@ Learning by watching has become one of the most effective ways to understand new
 The YouTube channel is another way we're expanding how you can engage with Operaton. Whether you prefer reading documentation, discussing on our forum, or watching video tutorials—there's now a place for everyone.
 
 **Subscribe to our channel:**  
-🎬 [youtube.com/@operaton_org](https://youtube.com/@operaton_org)
+🎬 [youtube.com/@operaton-engine](https://www.youtube.com/@operaton-engine)
 
 We'd love to hear what kind of content you'd like to see. Drop us a comment, connect with us on [LinkedIn](https://www.linkedin.com/company/operaton), or join the conversation in our [forum](https://forum.operaton.org).
 
