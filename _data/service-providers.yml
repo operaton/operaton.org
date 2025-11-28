@@ -115,3 +115,16 @@
     We offer specialized services in Operaton, BPMN modeling, and BPMS implementations, helping organizations design,
     automate, and optimize their business processes using modern Open Source tools.
   website: https://ambientelivre.com.br
+
+- name: Molinari Technology GmbH
+  logo: /assets/img/service-providers/molinari-technology_logo.svg
+  services: [2, 4, 5]
+  location:
+    country: Switzerland
+    city: Chiasso
+    area-of-operation: Switzerland, Italy, EU
+  description: >-
+    Molinari Technology develops privacy-first applications and business process solutions. 
+    With years of BPMN expertise, we design software that collects minimal data, secures user information, and gives 
+    full transparency and control, optimizing workflows without compromising privacy.
+  website: https://www.molinari-technology.ch
