@@ -48,6 +48,11 @@ Public Channels:
     resources:
       - name: fosstodon.org/@operaton
         url: https://fosstodon.org/@operaton
+  YouTube:
+    tag: Videos
+    resources:
+      - name: "@operaton-engine"
+        url: https://www.youtube.com/@operaton-engine
 Other:
   License:
     tag: Legal
