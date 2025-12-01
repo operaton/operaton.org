@@ -96,6 +96,19 @@
     - label: GitHub
       url: "https://github.com/flowset"
 
+- name: bpmn-to-code
+  description: >-
+    A tool designed to simplify process automation through automated code generation from BPMN models. Its vision is to foster clean & robust solutions for BPMN-based process automation. It aims to provide a range of features — such as generating API definition files from BPMN process models — to reduce manual effort, simplify testing, promote the creation of clean process models, and ensure consistency between your BPMN model and your code.
+  type: 3
+  license: 0
+  links:
+    - label: Website
+      url: https://bpmn-to-code.miragon.io/
+    - label: GitHub
+      url: https://github.com/emaarco/bpmn-to-code
+    - label: Contact
+      url: "https://github.com/emaarco"
+
 - name: Champa Intelligence
   description: >-
     The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
