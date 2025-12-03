@@ -120,6 +120,17 @@
     - label: Contact
       url: "info@champa-bpmn.com"
 
+- name: operaton-history
+  description: >-
+    Extensions for Operaton that enable retrieving process history based on processInstanceId, taskId, nodeId from the ECM system (e.g., Alfresco).
+  type: 2
+  license: 8
+  links:
+    - label: GitHub
+      url: https://github.com/BeOne-PL/lib-operaton-history
+    - label: Contact
+      url: "radoslaw.burdzinski@beone.pl"
+
 - name: Camunda Health Monitor & AI/ML Analytics
   description: >-
     The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
