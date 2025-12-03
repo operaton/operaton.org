@@ -131,6 +131,17 @@
     - label: Contact
       url: "radoslaw.burdzinski@beone.pl"
 
+- name: event-handler
+  description: >-
+    A plugin for Operaton that intercepts emitted events, creates messages from them, and sends them to a queue.
+  type: 1
+  license: 8
+  links:
+    - label: GitHub
+      url: https://github.com/BeOne-PL/operaton-event-handler
+    - label: Contact
+      url: "radoslaw.burdzinski@beone.pl"
+
 - name: Camunda Health Monitor & AI/ML Analytics
   description: >-
     The single pane of glass for your entire Camunda 7 based process landscape. Transform business processes with AI-powered analytics, real-time monitoring, and intelligent optimization.
