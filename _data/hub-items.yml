@@ -1,3 +1,20 @@
+# type:
+# 0 - Solution
+# 1 - Plugin
+# 2 - Add-On
+# 3 - Tool
+# 4 - Miscallaneous
+# license:
+# 0 - Commercial
+# 1 - AGPL
+# 2 - Apache 2.0
+# 3 - BSD
+# 4 - EPL 2.0
+# 5 - GPL
+# 6 - LPGPL
+# 7 - MIT
+# 8 - Other Open Source
+
 - name: Keycloak Plugin
   description: >-
     Keycloak integration plugin for authentication and authorization.
