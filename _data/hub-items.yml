@@ -141,7 +141,7 @@
   description: >-
     Extensions for Operaton that enable retrieving process history based on processInstanceId, taskId, nodeId from the ECM system (e.g., Alfresco).
   type: 2
-  license: 8
+  license: 2
   links:
     - label: GitHub
       url: https://github.com/BeOne-PL/lib-operaton-history
@@ -152,7 +152,7 @@
   description: >-
     A plugin for Operaton that intercepts emitted events, creates messages from them, and sends them to a queue.
   type: 1
-  license: 8
+  license: 2
   links:
     - label: GitHub
       url: https://github.com/BeOne-PL/operaton-event-handler
