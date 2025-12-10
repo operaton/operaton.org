@@ -170,7 +170,7 @@
     - label: Contact
       url: "info@champa-bpmn.com"
 
-- name: operaton-platform-scenario
+- name: Operaton Platform Scenario
   description: >-
     This community extension to Operaton Platform enables you to write robust test suites for process models.
   type: 2
