@@ -169,3 +169,14 @@
       url: https://github.com/bibacrm/camunda-health-monitor
     - label: Contact
       url: "info@champa-bpmn.com"
+
+- name: Operaton Platform Scenario
+  description: >-
+    This community extension to Operaton Platform enables you to write robust test suites for process models.
+  type: 2
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/ronalders/operaton-platform-scenario
+    - label: Contact
+      url: "https://github.com/ronalders"
