@@ -12,11 +12,11 @@ Running & Developing Operaton:
     tag: Containerized releases
     resources:
       - name: standalone
-        url:
+        url: https://hub.docker.com/r/operaton/operaton
       - name: wildfly
-        url:
+        url: https://hub.docker.com/r/operaton/wildfly
       - name: tomcat
-        url:
+        url: https://hub.docker.com/r/operaton/tomcat
   Documentation:
     tag: Help
     resources:
