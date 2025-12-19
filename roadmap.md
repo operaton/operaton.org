@@ -13,6 +13,10 @@ title: "Roadmap"
   </p>
 </header>
 
+## Principles
+
+The Operaton project is a community-driven, open-source fork of Camunda 7 OSS. As a relatively small core team, we need a sustainable and clear strategy for releasing new features, providing bug fixes, and defining the end-of-life (EOL) for versions. The strategy must balance innovation velocity with stability for users, without placing an unsustainable maintenance burden on the core team.
+
 ## Upcoming
 
 <div class="bpmn">
@@ -30,8 +34,13 @@ title: "Roadmap"
   </div>
   <div class="arrow"></div>
   <div class="group">
-    <h3>2026</h3>
-    <div class="task">Release 1.2</div>
+    <h3>April 2026</h3>
+    <div class="task">Release 2.0</div>
+  </div>
+  <div class="arrow"></div>
+  <div class="group">
+    <h3>October 2026</h3>
+    <div class="task">Release 2.1</div>
   </div>
   <div class="arrow"></div>
   <div class="end"></div>
@@ -39,24 +48,36 @@ title: "Roadmap"
 
 <br>
 
-### 2026 and beyond
+### Release and Support Policy
+
+Long-time Camunda 7 users should feel right at home with Operaton. The most notable change compared to Camunda 7 is the availability of monthly patch releases for the current active major/minor version. 
+
+| |                                                                                             |
+| :--- |:--------------------------------------------------------------------------------------------|
+| **Release Cadence** | Predictable, every six months (April and October) for major/minor versions.                 |
+| **Support Period** | 6 month until next major/minor.                                                             |
+| **Feature Releases** | Included in major/minor releases (every six months).                                        |
+| **Preview Releases** | Monthly milestone releases from the main branch (2.0.0-M1, 2.0.0-M2). Not for production.   |
+| **Patch Releases** | Monthly patch release for the current major/minor                                           |
+| **Rolling Updates** | Backwards compatibility of the database schema between consecutive minor versions. |
+| **Summary** | Predictability but frequent updates (every 6 month) assisted by the rolling update feature. |
+
+### Version Roadmap & Compatibility Matrix
+
+| Version | Release Date | Support Timeline | Comment                                 | Spring Boot | Quarkus  |
+| :--- | :--- | :--- |:----------------------------------------| :--- |:---------|
+| 1.0 | Nov. 2025 | until 1.1 |                                         | 3.5.x |          |
+| 1.1 | Feb. 2026 | 6 month | Extended support for Spring Boot 3.5.x  | 3.5.x | 3.27 LTS | 
+| 2.0 | Apr. 2026 | 6 month | Change to the half-yearly release cycle | 4.0.x | 3.33 LTS |
+| 2.1 | Okt. 2026 | 6 month |                                         | 4.1.x |          |
+
+### Product Roadmap - 2026 and beyond
 
 - Make new Web applications production ready and replace legacy ones
 - Further improvements based on our users needs
 - Remove deprecated code
-- Establish feature releases with plannable release cadence
-- SpringBoot 4/Spring 7 support
 - Job executor performance improvements
-- Jakarta EE 11 support
-- JUnit 6 support
-
-### February 2026
-
-#### Release 1.1
-
-- Update all dependencies to latest versions
-- Fixes for low prio issues reported by the community
-- Wildfly 38+ support
+- Keep Supported Platforms and Databases up to date
 
 ## Past Changes
 
