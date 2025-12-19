@@ -66,10 +66,10 @@ Long-time Camunda 7 users should feel right at home with Operaton. The most nota
 
 | Version | Release Date | Support Timeline | Comment                                 | Spring Boot | Quarkus  |
 | :--- | :--- | :--- |:----------------------------------------| :--- |:---------|
-| 1.0 | Nov. 2025 | until 1.1 |                                         | 3.5.x |          |
-| 1.1 | Feb. 2026 | 6 month | Extended support for Spring Boot 3.5.x  | 3.5.x | 3.27 LTS | 
+| 1.0 | Nov. 2025 | until 1.1 |                                         | 3.5.x | 3.x      |
+| 1.1 | Feb. 2026 | 6 month | Extended support for Spring Boot 3.5.x  | 3.5.x | 3.x      | 
 | 2.0 | Apr. 2026 | 6 month | Change to the half-yearly release cycle | 4.0.x | 3.33 LTS |
-| 2.1 | Okt. 2026 | 6 month |                                         | 4.1.x |          |
+| 2.1 | Okt. 2026 | 6 month |                                         | 4.1.x | next LTS |
 
 ### Product Roadmap - 2026 and beyond
 
