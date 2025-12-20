@@ -57,8 +57,6 @@ This approach is designed to maximize impact and reliability: it enables continu
 
 For detailed information on planned releases, please check our [Release Calendar](https://calendar.google.com/calendar/u/0?cid=MjQ5MmZhNDE4Yjg4MThiY2I4MTM3Y2YzZTBlYTNkY2Y4ZTEzZmFhMDNlZjdmZWNjNWIwMzA3YjczMmRkNWVjYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 
-<iframe src="https://calendar.google.com/calendar/embed?src=2492fa418b8818bcb8137cf3e0ea3dcf8e13faa03ef7fecc5b0307b732dd5eca%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
 ### Release and Support Policy
 
 Long-time Camunda 7 users should feel right at home with Operaton. The most notable change compared to Camunda 7 is the availability of monthly patch releases for the current active major/minor version. In Summary: Predictable feature updates, keeping supported Environments and Databases up to date, accompanied by regular patch releases.
