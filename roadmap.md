@@ -55,7 +55,7 @@ This approach is designed to maximize impact and reliability: it enables continu
 
 ### Release Calendar
 
-For detailed information on planned releases, please check our [Release Calendar](https://calendar.google.com/calendar/u/0?cid=MjQ5MmZhNDE4Yjg4MThiY2I4MTM3Y2YzZTBlYTNkY2Y4ZTEzZmFhMDNlZjdmZWNjNWIwMzA3YjczMmRkNWVjYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
+For detailed information on planned releases, please check our Release Calendar [(Google Calendar ↗)](https://calendar.google.com/calendar/u/0?cid=MjQ5MmZhNDE4Yjg4MThiY2I4MTM3Y2YzZTBlYTNkY2Y4ZTEzZmFhMDNlZjdmZWNjNWIwMzA3YjczMmRkNWVjYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
 
 ### Release and Support Policy
 
