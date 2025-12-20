@@ -10,7 +10,8 @@ when. This also shall show where the current priorities of the contributors
 lie. If you have other priorities you may share them in our forum or
 contribute changes yourself (with the help of the community).
 
-Our project is a community-driven, open-source fork of Camunda 7 OSS. As a relatively small core team, we need a sustainable and clear strategy for releasing new features, providing bug fixes, and defining the end-of-life (EOL) for versions. The strategy must balance innovation velocity with stability for users, without placing an unsustainable maintenance burden on the core team.
+Our project is a community-driven, open-source fork of Camunda 7 OSS, built and steered by an experienced and focused core team. To ensure long-term sustainability, we follow a clear and disciplined release strategy that defines how new features are introduced, how bug fixes are delivered, and how version end-of-life (EOL) is handled.
+This approach is designed to maximize impact and reliability: it enables continuous innovation while providing users with predictable stability and support — all without creating unnecessary operational overhead.
 
 ## Upcoming
 
