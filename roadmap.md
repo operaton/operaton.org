@@ -3,19 +3,14 @@ layout: default
 title: "Roadmap"
 ---
 
-<header>
-  <h1>Roadmap</h1>
-  <p>
-  We want to keep Operaton users informed and know what to expect next and
-  when. This also shall show where the current priorities of the contributors
-  lie. If you have other priorities you may share them in our forum or
-  contribute changes yourself (with the help of the community).
-  </p>
-</header>
+# Roadmap
 
-## Principles
+We want to keep Operaton users informed and know what to expect next and
+when. This also shall show where the current priorities of the contributors
+lie. If you have other priorities you may share them in our forum or
+contribute changes yourself (with the help of the community).
 
-The Operaton project is a community-driven, open-source fork of Camunda 7 OSS. As a relatively small core team, we need a sustainable and clear strategy for releasing new features, providing bug fixes, and defining the end-of-life (EOL) for versions. The strategy must balance innovation velocity with stability for users, without placing an unsustainable maintenance burden on the core team.
+Our project is a community-driven, open-source fork of Camunda 7 OSS. As a relatively small core team, we need a sustainable and clear strategy for releasing new features, providing bug fixes, and defining the end-of-life (EOL) for versions. The strategy must balance innovation velocity with stability for users, without placing an unsustainable maintenance burden on the core team.
 
 ## Upcoming
 
@@ -48,21 +43,7 @@ The Operaton project is a community-driven, open-source fork of Camunda 7 OSS. A
 
 <br>
 
-### Release and Support Policy
-
-Long-time Camunda 7 users should feel right at home with Operaton. The most notable change compared to Camunda 7 is the availability of monthly patch releases for the current active major/minor version. 
-
-| |                                                                                             |
-| :--- |:--------------------------------------------------------------------------------------------|
-| **Release Cadence** | Predictable, every six months (April and October) for major/minor versions.                 |
-| **Support Period** | 6 month until next major/minor.                                                             |
-| **Feature Releases** | Included in major/minor releases (every six months).                                        |
-| **Preview Releases** | Monthly milestone releases from the main branch (2.0.0-M1, 2.0.0-M2). Not for production.   |
-| **Patch Releases** | Monthly patch release for the current major/minor                                           |
-| **Rolling Updates** | Backwards compatibility of the database schema between consecutive minor versions. |
-| **Summary** | Predictability but frequent updates (every 6 month) assisted by the rolling update feature. |
-
-### Version Roadmap & Compatibility Matrix
+### Planned Release Dates & Compatibility Matrix
 
 | Version | Release Date | Support Timeline | Comment                                 | Spring Boot | Quarkus  |
 | :--- | :--- | :--- |:----------------------------------------| :--- |:---------|
@@ -71,13 +52,32 @@ Long-time Camunda 7 users should feel right at home with Operaton. The most nota
 | 2.0 | Apr. 2026 | 6 month | Change to the half-yearly release cycle | 4.0.x | 3.33 LTS |
 | 2.1 | Okt. 2026 | 6 month |                                         | 4.1.x | next LTS |
 
+### Release Calendar
+
+For detailed information on planned releases, please check our [Release Calendar](https://calendar.google.com/calendar/u/0?cid=MjQ5MmZhNDE4Yjg4MThiY2I4MTM3Y2YzZTBlYTNkY2Y4ZTEzZmFhMDNlZjdmZWNjNWIwMzA3YjczMmRkNWVjYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t).
+
+<iframe src="https://calendar.google.com/calendar/embed?src=2492fa418b8818bcb8137cf3e0ea3dcf8e13faa03ef7fecc5b0307b732dd5eca%40group.calendar.google.com&ctz=Europe%2FBerlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+### Release and Support Policy
+
+Long-time Camunda 7 users should feel right at home with Operaton. The most notable change compared to Camunda 7 is the availability of monthly patch releases for the current active major/minor version. In Summary: Predictable feature updates, keeping supported Environments and Databases up to date, accompanied by regular patch releases.
+
+| |                                                                                           |
+| :--- |:------------------------------------------------------------------------------------------|
+| **Release Cadence** | Predictable, every six months (April and October) for major/minor versions.               |
+| **Support Period** | 6 month until next major/minor.                                                           |
+| **Feature Releases** | Included in major/minor releases (every six months).                                      |
+| **Preview Releases** | Monthly milestone releases from the main branch (2.0.0-M1, 2.0.0-M2). Not for production. |
+| **Patch Releases** | Monthly patch release for the current major/minor.                                        |
+| **Rolling Updates** | Backwards compatibility of the database schema between consecutive minor versions.        |
+
 ### Product Roadmap - 2026 and beyond
 
 - Make new Web applications production ready and replace legacy ones
 - Further improvements based on our users needs
 - Remove deprecated code
 - Job executor performance improvements
-- Keep Supported Platforms and Databases up to date
+- Keep Supported Environments and Databases up to date
 
 ## Past Changes
 
