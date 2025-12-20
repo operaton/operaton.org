@@ -46,12 +46,13 @@ This approach is designed to maximize impact and reliability: it enables continu
 
 ### Planned Release Dates & Compatibility Matrix
 
-| Version | Release Date | Support Timeline | Summary                                       | JDK | Jakarta EE | Spring Boot | Quarkus  |
-| :--- | :--- | :--- |:-------------------------------------------------|:---|:-----------| :--- |:---------|
-| 1.0 | Nov. 2025 | until 1.1 | Feature parity & compatibility with Camunda 7.24 | 17  | 10         | 3.5.x | 3.x      |
-| 1.1 | Feb. 2026 | 6 month | Extended support for Spring Boot 3.5.x           | 17  | 10         | 3.5.x | 3.x      |
-| 2.0 | Apr. 2026 | 6 month | Change to the half-yearly release cycle          | 17  | 11         | 4.0.x | 3.33 LTS |
-| 2.1 | Okt. 2026 | 6 month |                                                  | 17  | 11         | 4.1.x | next LTS |
+| Version | Release Date | Support Timeline | Summary                                          | JDK | Jakarta EE | Spring Boot | Quarkus  |
+|:--------|:-------------| :--- |:-------------------------------------------------|:----|:-----------|:------------|:---------|
+| 1.0     | Nov. 2025    | until 1.1 | Feature parity & compatibility with Camunda 7.24 | 17  | 10         | 3.5.x       | 3.x      |
+| 1.1     | Feb. 2026    | 6 month | Extended support for Spring Boot 3.5.x           | 17  | 10         | 3.5.x       | 3.x      |
+| 2.0     | Apr. 2026    | 6 month | Change to the half-yearly release cycle          | 17  | 11         | 4.0.x       | 3.33 LTS |
+| 2.1     | Okt. 2026    | 6 month | Update Supported Environments and Databases      | 17  | 11         | 4.1.x       | next LTS |
+| NEXT    | April. 2027  | 6 month | Update Supported Environments and Databases      | 17  | 11         | 4.2.x       | next LTS |
 
 ### Release Calendar
 
