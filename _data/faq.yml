@@ -5,6 +5,12 @@ General:
     a: BPMN stands for [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation). It is a graphical representation for specifying business processes in a business process model.
   - q: What is the license of Operaton?
     a: Operaton is licensed under the [Apache 2.0 license](https://raw.githubusercontent.com/operaton/operaton/refs/heads/main/LICENSE).
+  - q: Is Operaton used in production?
+    a: >
+      Yes, several companies and government services are using Operaton in production. 
+      Companies providing Software products running on Operaton are listed on the [Service Providers](/service-providers) and [Hub](/hub) pages. 
+      For references to not publicly visible projects using Operaton e.g. in FinTech or other specific branches 
+      contact members of the Operaton team or Service Providers.
   - q: Why was Operaton created?
     a: Operaton was created as a fork of [Camunda 7 CE](https://github.com/camunda/camunda-bpm-platform) to provide an open, community-driven alternative after the end of life of Camunda 7 CE in October 2025.
   - q: Who maintains Operaton?
@@ -43,19 +49,23 @@ Governance & Community:
     a: Yes! All discussions and decisions are public. If you have questions, we encourage you to ask them in the [Forum](https://forum.operaton.org/) rather than in private.
 
 Release Planning:
-  - q: Why is Operaton still beta?
-    a: Operaton is in beta because it is still *undergoing stabilization* and *compatibility testing*. The project team is working hard to ensure that the transition from Camunda 7 is as smooth as possible. At the same time, the project is *modernizing the codebase* to ensure long-term sustainability. Until these goals are met, the project will remain in beta.
-
   - q: What is the release cycle for Operaton?
-    a: While nothing is finalized yet, there is a high likelihood that releases will follow a fixed cadence, possibly half-yearly or quarterly, depending on community needs and available resources. The project team will provide more details as the project matures.
+    a: The general cadence for feature releases is half-yearly in April and October. Patch releases are created monthly and additionally on urgent requirement. Major releases have at least one feature release in between.
 
   - q: Will there be an LTS (Long-Term Support) version?
     a: >
       As an open-source project, Operaton itself does not provide LTS in the traditional sense.
-      However, the *1.x version is planned to be maintained for a long time*, ensuring stability and reliability for users.
+      However, the *1.x version is planned to be maintained in 2ß26*, ensuring stability and reliability for users.
       Additionally, some companies associated with the project committers offer services, including extended maintenance and the possibility of Service Level Agreements (SLAs) for enterprises that require long-term stability.
+
   - q: What happens after version 1.x?
     a: After establishing a stable 1.x version, the project will *gradually modernize and evolve*. The goal is to *stay relevant for the next decade* while maintaining backward compatibility.
+
+  - q: What about Spring Boot 4 support?
+    a: SpringBoot 4 support will be provided with Operaton 2.0 (April 2026).
+
+  - q: What about Spring Boot 3 support after Operaton 2.0?
+    a: Operaton 2.0 drops support for Spring Boot 3. Thus Spring Boot 3 support is bound to Operaton 1.x.
 
 Security:
 
@@ -69,7 +79,10 @@ Security:
     a: Operaton follows a security policy that includes vulnerability management, responsible disclosure, and best practices for open-source security.
 
   - q: Does Operaton provide SBOMs?
-    a: Yes, Operaton provides *[Software Bill of Materials (SBOMs)](https://en.wikipedia.org/wiki/Software_supply_chain)* to help users understand the dependencies and security of the software they are using.
+    a: >
+      Yes, Operaton provides *[Software Bill of Materials (SBOMs)](https://en.wikipedia.org/wiki/Software_supply_chain)* 
+      to help users understand the dependencies and security of the software they are using.
+      The SBOMs are delivered in the provided distributions.
 
 Migration from Camunda 7 CE:
 
