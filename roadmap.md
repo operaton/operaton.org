@@ -16,13 +16,7 @@ This approach is designed to maximize impact and reliability: it enables continu
 ## Upcoming
 
 <div class="bpmn">
-  <div class="start">Fork</div>
-  <div class="arrow"></div>
-  <div class="group">
-    <h3>November 2025</h3>
-    <div class="task">Release 1.0</div>
-    <div class="task">Website Relaunch</div>
-  </div>
+  <div class="start">Today</div>
   <div class="arrow"></div>
   <div class="group">
     <h3>February 2026</h3>
