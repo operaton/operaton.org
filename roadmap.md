@@ -43,7 +43,7 @@ This approach is designed to maximize impact and reliability: it enables continu
 | Version | Release Date | Support Timeline | Summary                                                   | JDK | Jakarta EE | Spring Boot | Quarkus  |
 |:--------|:-------------| :--- |:----------------------------------------------------------|:----|:-----------|:------------|:---------|
 | 1.0     | Nov. 2025    | until 1.1 | Feature parity & compatibility with Camunda 7.24          | 17  | 10         | 3.5.x       | 3.28.x   |
-| 1.1     | Feb. 2026    | 6 month | Extended support for Spring Boot 3.5.x                    | 17  | 10         | 3.5.x       | 3.x      |
+| 1.1     | Feb. 2026    | 6 month | Extended support for Spring Boot 3.5.x                    | 17  | 10         | 3.5.x       | 3.30.x   |
 | 2.0     | Apr. 2026    | 6 month | New Features. Change to the half-yearly release cycle     | 17  | 11         | 4.0.x       | 3.33 LTS |
 | 2.1     | Okt. 2026    | 6 month | New Features. Update Supported Environments and Databases | 17  | 11         | 4.1.x       | next LTS |
 
