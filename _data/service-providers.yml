@@ -128,3 +128,16 @@
     With years of BPMN expertise, we design software that collects minimal data, secures user information, and gives 
     full transparency and control, optimizing workflows without compromising privacy.
   website: https://www.molinari-technology.ch
+
+- name: Neuron Process
+  logo: /assets/img/service-providers/neuronprocess.png
+  services: [1, 2, 3, 4, 5]
+  location:
+    country: Mexico
+    city: Queretaro
+    area-of-operation: Mexico, Canada, United States
+  description: >-
+    We provide business processes templates ready to deploy
+    We help you with your business processes optimization
+    We automate anything
+  website: https://www.neuronprocess.com
