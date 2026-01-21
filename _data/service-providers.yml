@@ -130,7 +130,7 @@
   website: https://www.molinari-technology.ch
 
 - name: Neuron Process
-  logo: /assets/img/service-providers/neuronprocess.svg
+  logo: /assets/img/service-providers/neuronprocess.png
   services: [1, 2, 3, 4, 5]
   location:
     country: Mexico
