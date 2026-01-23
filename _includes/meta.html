@@ -1,6 +1,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8" />
 <meta name="theme-color" content="#0f7b9d" />
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:title" content="{{ page.title | default: site.title }}" />
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 30 }}" />
+<meta property="og:image" content="{{ site.url }}/assets/img/operaton-logo.svg" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.title }}" />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 30 }}" />
+<meta name="twitter:image" content="{{ site.url }}/assets/img/operaton-logo.svg" />
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
