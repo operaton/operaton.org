@@ -1,4 +1,4 @@
-name: Maintenance
+name: Update Slack URL
 
 on:
   workflow_dispatch:
