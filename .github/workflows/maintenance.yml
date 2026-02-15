@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -29,9 +30,8 @@ jobs:
           .devenv/scripts/maintenance/update-slack-link.sh ${{ github.event.inputs.slack_url}}
         shell: bash
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e #v7.0.8
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 #v8.1.0
         with:
           title: '[bot] Update Slack Invitation URL'
           commit-message: 'chore: Update Slack Invitation URL'
           branch: 'maintenance/update-slack-invitation-url'
-          labels: maintenance
