@@ -141,3 +141,18 @@
     We help you with your business processes optimization
     We automate anything
   website: https://www.neuronprocess.com
+
+- name: New Line Technologies
+  logo: /assets/img/service-providers/neuronprocess.png
+  services: [1, 2, 4, 5]
+  location:
+    country: Bulgaria
+    city: Plovdiv
+    area-of-operation: EU
+  description: >-
+    New Line Technologies builds and integrates custom software solutions around
+    Operaton and BPMN-based process automation. With 15+ years of experience, we
+    help businesses in Fintech and beyond design, implement, and maintain
+    workflow-driven applications — from initial process modelling to long-term
+    production support.
+  website: https://newline.tech
