@@ -2,6 +2,10 @@
 
 Visit under [operaton.org](https://operaton.org)
 
+## Contributing
+
+We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get involved, including instructions for writing blog posts.
+
 ## Getting Started
 
 You can either install Ruby and use jekyll directly or docker-compose
