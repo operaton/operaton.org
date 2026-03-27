@@ -67,13 +67,13 @@ In this example, the AI identifies migratable instances and then executes the mi
 **User:** Which process instances can be migrated?
 
 **AI:** ⏺ **Migratable Process Instances:**
-There are 5 eligible instances that can be migrated:
+There are 3 eligible instances that can be migrated:
 
-| Instance ID | Version | Status |
-| :--- | :--- | :--- |
-| 25341320-2225-11f1-ba79-feb948cfc98c | V1 | ✅ Eligible |
-| 1b65355f-4fea-419d-8ca8-ff0422c99694 | V1 | ✅ Eligible |
-| 574ec5ea-6e51-49ef-962f-a7abf8f6e752 | V2 | ✅ Eligible |
+| Instance ID                          | Version | Status     |
+|:-------------------------------------|:--------|:-----------|
+| 25341320-2225-11f1-ba79-feb948cfc98c | V1      | ✅ Eligible |
+| 1b65355f-4fea-419d-8ca8-ff0422c99694 | V1      | ✅ Eligible |
+| 574ec5ea-6e51-49ef-962f-a7abf8f6e752 | V2      | ✅ Eligible |
 
 **Blocked Instances (cannot migrate):**
 There are 2 instances with active call activities that block migration:
@@ -83,12 +83,11 @@ There are 2 instances with active call activities that block migration:
 **User:** migrate eligible instances
 
 **AI:** ⏺ **Migration successful! ✅**
-1 eligible V1 instances have been migrated to V2:
+1 eligible V1 instance has been migrated to V2:
 
-| Instance ID | Status | New Definition |
-| :--- | :--- | :--- |
-| 25341320-2225-11f1-ba79-feb948cfc98c | ✅ Migrated | invoice:2 |
-
+| Instance ID                          | Status     | New Definition |
+|:-------------------------------------|:-----------|:---------------|
+| 25341320-2225-11f1-ba79-feb948cfc98c | ✅ Migrated | invoice:2      |
 
 ### Join the Conversation
 

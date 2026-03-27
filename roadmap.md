@@ -18,32 +18,35 @@ predictable stability and support — all without creating unnecessary operation
 
 ## Upcoming
 
-<div class="bpmn">
-  <div class="start">Today</div>
-  <div class="arrow"></div>
-  <div class="group">
-    <h3>March 2026</h3>
-    <div class="task">Release 1.1</div>
-    <div class="task">Release 2.0</div>
+  <div class="bpmn">
+    <div class="start">Today</div>
+    <div class="arrow"></div>
+    <div class="group">
+      Release 1.1
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>March 2026</h3>
+      <div class="task">Release 2.0</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>April 2026</h3>
+      <div class="task">Release 2.1</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>August 2026</h3>
+      <div class="task">End of Support 1.1</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>October 2026</h3>
+      <div class="task">Release 2.2</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="end"></div>
   </div>
-  <div class="arrow"></div>
-  <div class="group">
-    <h3>April 2026</h3>
-    <div class="task">Release 2.1</div>
-  </div>
-  <div class="arrow"></div>
-  <div class="group">
-    <h3>August 2026</h3>
-    <div class="task">End of Support 1.1</div>
-  </div>
-  <div class="arrow"></div>
-  <div class="group">
-    <h3>October 2026</h3>
-    <div class="task">Release 2.2</div>
-  </div>
-  <div class="arrow"></div>
-  <div class="end"></div>
-</div>
 
 <br>
 
@@ -52,11 +55,11 @@ predictable stability and support — all without creating unnecessary operation
 | Version    | Release Date | Support Timeline | Summary                                                                        | JDK        | Jakarta EE | Spring Boot | Quarkus  |
 |:-----------|:-------------|:-----------------|:-------------------------------------------------------------------------------|:-----------|:-----------|:------------|:---------|
 | 1.0        | Nov. 2025    | until 1.1        | Feature parity & compatibility with Camunda 7.24                               | 17,21,25   | 10         | 3.5.x       | 3.28.x   |
-| 1.1        | Feb. 2026    | 6 month          | Extended support for Spring Boot 3.5.x                                         | 17,21,25   | 10         | 3.5.x       | 3.30.x   |
+| 1.1        | Feb. 2026    | 6 months         | Extended support for Spring Boot 3.5.x                                         | 17,21,25   | 10         | 3.5.x       | 3.30.x   |
 | 2.0        | Mar. 2026    | 1 month          | Spring Boot 4 support, platform upgrades                                       | 17,21,25   | 11         | 4.0.x       | 3.32     |
-| 2.1        | Apr. 2026    | 6 month          | Upgrade to Quarkus LTS. New features. Change to the half-yearly release cycle. | 17,21,25   | 11         | 4.0.x       | 3.33 LTS |
-| 2.2        | Okt. 2026    | 6 month          | New Features. Update Supported Environments and Databases                      | 17,21,25   | 11         | 4.1.x       | next LTS |
-| 2.3 or 3.0 | Apr. 2026    | 6 month          | T.B.A.                                                                         | (17?)21,25 | 11(?)      | 4.?         | next LTS |
+| 2.1        | Apr. 2026    | 6 months         | Upgrade to Quarkus LTS. New features. Change to the half-yearly release cycle. | 17,21,25   | 11         | 4.0.x       | 3.33 LTS |
+| 2.2        | Oct. 2026    | 6 months         | New Features. Update Supported Environments and Databases                      | 17,21,25   | 11         | 4.1.x       | next LTS |
+| 2.3 or 3.0 | Apr. 2027    | 6 months         | T.B.A.                                                                         | (17?)21,25 | 11(?)      | 4.?         | next LTS |
 
 ### Release Calendar
 
