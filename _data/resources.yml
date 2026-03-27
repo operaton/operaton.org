@@ -17,6 +17,13 @@ Running & Developing Operaton:
         url: https://hub.docker.com/r/operaton/wildfly
       - name: tomcat
         url: https://hub.docker.com/r/operaton/tomcat
+  Extensions:
+    tag: Plugins, Add-ons, Products
+    resources:
+    - name: mcp server
+      url: https://www.npmjs.com/package/operaton-mcp
+    - name: extension registry
+      url: https://operaton.org/hub/
   Documentation:
     tag: Help
     resources:
