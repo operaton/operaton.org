@@ -21,10 +21,22 @@
   type: 1
   license: 2
   links:
-    - label: GitHub
-      url: https://github.com/operaton/operaton-keycloak
-    - label: Contact
-      url: "https://github.com/cachescrubber"
+  - label: GitHub
+    url: https://github.com/operaton/operaton-keycloak
+  - label: Contact
+    url: "https://github.com/cachescrubber"
+- name: Operaton MCP Server
+  description: >-
+    MCP server for integrating external systems with Operaton using the MCP protocol.
+  type: 3
+  license: 2
+  links:
+  - label: GitHub
+    url: https://github.com/operaton/operaton-mcp
+  - label: Node Package
+    url: https://www.npmjs.com/package/operaton-mcp
+  - label: Contact
+    url: "https://github.com/kthoms"
 - name: Operaton Cockpit Plugins
   description: >-
     This extension library provides a collection of light-weight Cockpit plugins designed to enhance the capabilities of Operaton.
