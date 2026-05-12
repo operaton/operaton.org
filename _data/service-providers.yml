@@ -143,7 +143,7 @@
   website: https://www.neuronprocess.com
 
 - name: New Line Technologies
-  logo: /assets/img/service-providers/neuronprocess.png
+  logo: assets/img/service-providers/new-line-technologies.png
   services: [1, 2, 4, 5]
   location:
     country: Bulgaria
