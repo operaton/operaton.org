@@ -192,3 +192,28 @@
       url: https://github.com/ronalders/operaton-platform-scenario
     - label: Contact
       url: "https://github.com/ronalders"
+
+- name: Operaton Platform Scenario
+  description: >-
+    Extension to write robust test suites for process models. 
+    It provides a fluent API to define test scenarios, execute them against your process model, and assert the expected outcomes. 
+    With Operaton Platform Scenario, you can easily create comprehensive tests that cover various paths and edge cases in your BPMN processes, 
+    ensuring the reliability and correctness of your process automation solutions.
+  type: 2
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/ronalders/operaton-platform-scenario
+    - label: Contact
+      url: "mailto:aldersron@gmail.com"
+
+- name: Operaton Process Test Coverage
+  description: >-
+    JUnit extension to visualise test process paths and check your process model coverage ratio
+  type: 2
+  license: 2
+  links:
+    - label: GitHub
+      url: https://github.com/ronalders/operaton-process-test-coverage
+    - label: Contact
+      url: "mailto:aldersron@gmail.com"
