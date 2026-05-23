@@ -156,3 +156,18 @@
     workflow-driven applications — from initial process modelling to long-term
     production support.
   website: https://newline.tech
+
+- name: nterra Integration GmbH
+  logo: /assets/img/service-providers/nterra.png
+  services: [1, 2, 3, 4]
+  location:
+    country: Germany
+    city: Darmstadt
+    area-of-operation: EU
+  description: >-
+    nterra is the partner in the DACH region for jointly creating solutions for 
+    smooth digital processes. 
+    For over 25 years, we have been one of the top addresses when it comes to 
+    integration projects in complex system landscapes. 
+    With our integration work, we serve as the essential enabler for functional AI solutions.
+  website: https://www.nterra.com/operaton/
