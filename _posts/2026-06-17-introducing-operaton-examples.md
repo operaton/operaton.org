@@ -1,7 +1,7 @@
-  ---
+---
 layout: post
 author: The Operaton Team
-  ---
+---
 
 ## Learning by Example: Introducing the Operaton Examples repository
 
