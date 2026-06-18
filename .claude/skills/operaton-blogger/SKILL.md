@@ -1,6 +1,6 @@
 ---
 name: operaton-blogger
-description: Use when the user wants to write, draft, or publish a blog post about Operaton — releases, features, community news, migration stories, or commentary on LinkedIn posts mentioning @operaton. Produces a Jekyll post in operaton/operaton.org and opens a PR.
+description: Use when the user wants to write, draft, or publish a blog post about Operaton — releases, features, community news, migration stories, commentary on LinkedIn posts mentioning @operaton, or a weekly community summary. Produces a Jekyll post in operaton/operaton.org and opens a PR.
 ---
 
 # Writing Operaton Blog Posts
@@ -19,6 +19,7 @@ Produce a publication-ready Jekyll blog post for the [operaton/operaton.org](htt
 - "Draft a post announcing Operaton X.Y"
 - "Cover [LinkedIn URL] in a blog post"
 - "Write up the d.velop / Ritense / nterra news"
+- "Write a weekly community update" / "weekly summary post" / "what happened this week"
 
 **Don't use for:** Hub entries, service-provider entries, roadmap edits, documentation pages — those are different templates/files.
 
@@ -49,6 +50,59 @@ Produce a publication-ready Jekyll blog post for the [operaton/operaton.org](htt
 8. **Commit & PR** after approval:
    - Commit message: `blog: <post title>` (matches style — see `git log --oneline -- _posts/`).
    - Push branch, then `gh pr create` with title `Blog: <post title>` and a body summarizing the post and listing sources.
+
+## Weekly Summary Workflow
+
+Trigger phrases: "weekly summary", "weekly community update", "week in review", "what happened this week/last week".
+
+**Default window:** last 7 days. Accept an explicit number: "last 14 days" → use 14.
+
+### Step 1 — Check for previous weekly post
+
+```bash
+.devenv/scripts/blogging/find-last-weekly-post.sh
+```
+
+If found, read it. Note its coverage period so this post picks up where it left off.
+
+### Step 2 — Collect data in parallel
+
+Run these concurrently (independent sources):
+
+**GitHub activity** (script handles all Operaton repos):
+```bash
+.devenv/scripts/blogging/collect-github-activity.sh [days]
+.devenv/scripts/blogging/collect-releases.sh [days]
+```
+
+**Slack** (use `mcp__claude_ai_Slack__slack_read_channel` for each public channel):
+- `#general` — announcements, community chat
+- `#dev` or `#development` — technical discussions, PR mentions
+- `#releases` — release announcements (if it exists)
+- Search for any other active channels: `mcp__claude_ai_Slack__slack_search_channels` with query `operaton`
+- For threads with 3+ replies: fetch with `mcp__claude_ai_Slack__slack_read_thread`
+
+**LinkedIn** (use `WebSearch` then `WebFetch`):
+- Search: `site:linkedin.com "operaton" after:<SINCE_DATE>`
+- Also search: `"@operaton" OR "#operaton" linkedin` with date filter
+- Fetch any promising URLs found
+- If WebFetch fails on a LinkedIn URL, note it and skip — don't block the post
+
+### Step 3 — Synthesize and draft
+
+Organize findings into these categories (omit empty ones):
+
+1. **Releases** — any new versions shipped
+2. **Notable merged work** — PRs with meaningful user impact (skip chores, typos, dependency bumps unless exceptional)
+3. **Active discussions / in-progress** — hot PRs or issues worth watching
+4. **Community highlights** — Slack conversations, LinkedIn posts, forum threads
+5. **Looking ahead** — upcoming milestones visible from open PRs or issues
+
+**Quality bar:** If a week was quiet, say so honestly in 1–2 sentences rather than padding. Don't inflate minor activity.
+
+### Step 4 — Write and ship (same as standard workflow)
+
+Follow steps 3–8 of the standard Workflow above. Branch name: `blog/weekly-<YYYY-MM-DD>`.
 
 ## File & Frontmatter Conventions
 
@@ -116,6 +170,34 @@ Thank you to all contributors…
 ### Join the Conversation
 ```
 
+### Weekly community summary post
+```
+## Operaton Community Update — Week of <Month DD, YYYY>
+
+<1-sentence framing: what kind of week it was — busy release week, quiet triage week, etc.>
+
+### Releases
+<bullet per release: version, one-line highlight, link to release notes>
+— or omit section if none —
+
+### Notable Merged Work
+<bullet per meaningful PR: repo, PR title or paraphrase, link>
+
+### In Progress
+<bullet per hot open PR worth watching>
+— or omit section if none —
+
+### Community Highlights
+<bullet per Slack thread, LinkedIn post, or forum topic worth mentioning — link + 1-sentence summary>
+— or omit section if none —
+
+### Looking Ahead
+<1–3 bullets on what's coming based on open milestones or PRs>
+— or omit section if nothing concrete —
+
+*The Operaton Team*
+```
+
 ### Community / migration / LinkedIn-sourced post
 ```
 ## <Company> <Action> Operaton…
@@ -159,6 +241,10 @@ Thank you to all contributors…
 | Quoting large blocks of LinkedIn posts | Paraphrase + link; quote 1–2 sentences max |
 | Using relative image paths | Use absolute: `/assets/img/blog/...` |
 | Date in filename ≠ intended publish date | Use today's date unless user specifies |
+| Including chore/dependency-bump PRs in weekly summary | Only list PRs with meaningful user-visible impact |
+| Padding a quiet week with minor activity | Say "it was a quiet week for X" honestly |
+| Skipping the find-last-weekly-post check | Always check — avoid duplicate coverage |
+| Blocking on a failed LinkedIn WebFetch | Note it and skip; LinkedIn often blocks crawlers |
 
 ## Red Flags — STOP
 
