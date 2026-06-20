@@ -7,9 +7,9 @@ General:
     a: Operaton is licensed under the [Apache 2.0 license](https://raw.githubusercontent.com/operaton/operaton/refs/heads/main/LICENSE).
   - q: Is Operaton used in production?
     a: >
-      Yes, several companies and government services are using Operaton in production. 
-      Companies providing Software products running on Operaton are listed on the [Service Providers](/service-providers) and [Hub](/hub) pages. 
-      For references to not publicly visible projects using Operaton e.g. in FinTech or other specific branches 
+      Yes, several companies and government services are using Operaton in production.
+      Companies providing Software products running on Operaton are listed on the [Service Providers](/service-providers) and [Hub](/hub) pages.
+      For references to not publicly visible projects using Operaton e.g. in FinTech or other specific branches
       contact members of the Operaton team or Service Providers.
   - q: Why was Operaton created?
     a: Operaton was created as a fork of [Camunda 7 CE](https://github.com/camunda/camunda-bpm-platform) to provide an open, community-driven alternative after the end of life of Camunda 7 CE in October 2025.
@@ -19,6 +19,27 @@ General:
     a: Operaton started as a fork of Camunda 7, but it is evolving as an independent project. Initially, the focus is on providing a seamless transition for Camunda 7 users, ensuring full REST API compatibility while modernizing certain aspects of the codebase. Internally, the package namespace changed from `org.camunda` to `org.operaton`. All public classes and interfaces have been renamed accordingly and stay as close to the original as possible.
   - q: How is Operaton different from other Camunda 7 Forks?
     a: Operaton is not the only fork of Camunda 7. However, it is unique in its commitment to *community ownership* and *modernization of the code base*. While Operaton is a Free Open Source Software (FOSS) project, other forks may primarily be driven by commercial interests. While they might also have their code available under an open-source license, they follow an Open Core model. There is no guarantee that the community can influence the direction of these projects.
+
+Commercial Support & Services:
+  - q: Is Operaton free to use?
+    a: >
+      Yes. Operaton is free and open-source under the Apache 2.0 license.
+      There are no license fees, no usage limits, and no commercial tier — you can use Operaton in production,
+      including for commercial purposes, at no cost.
+  - q: Can I get professional support for Operaton?
+    a: >
+      Yes. While Operaton itself is free, an international network of independent service providers
+      offers paid services — consulting, implementation, migration from Camunda 7, training, and long-term
+      maintenance with SLAs. See the [Service Providers](/service-providers) page for the full list.
+  - q: What kinds of services are available?
+    a: >
+      Listed service providers offer consulting and architecture, implementation and custom development,
+      migration from Camunda 7 CE, training and enablement, and long-term support with SLAs.
+      Coverage spans Europe, the UK, the Americas, the Middle East, and parts of Asia.
+  - q: How do I choose a service provider?
+    a: >
+      Browse the [Service Providers](/service-providers) page and filter by service type, country,
+      and area of operation. Providers are independent companies; you engage with them directly.
 
 Technical Approach:
   - q: What is the long-term technical strategy for Operaton?
@@ -30,7 +51,42 @@ Technical Approach:
   - q: When will Operaton introduce new features?
     a: Once a *stable and reliable foundation is established*, the community will collaboratively plan future features and enhancements for later versions.
   - q: Which Java version is required?
-    a: Operaton requires a JVM >= 17 for execution.
+    a: Operaton requires a JVM >= 17. Java 17, 21, and 25 are tested per release — see the compatibility matrix on the [Roadmap](/roadmap).
+
+Deployment & Operations:
+  - q: How do I run Operaton?
+    a: >
+      You have three options: embed the engine in your Java application (Spring Boot, Quarkus, Jakarta EE),
+      use the standalone distribution, or use the official Docker images. See the [Download](/download) page.
+  - q: Is there a Docker image?
+    a: Yes. Official Docker images are published for each release. See the [Download](/download) page.
+  - q: Can I run Operaton on Kubernetes?
+    a: Yes. A Helm chart is maintained at [operaton/operaton-helm](https://github.com/operaton/operaton-helm).
+  - q: Which databases are supported?
+    a: >
+      PostgreSQL, MySQL/MariaDB, Microsoft SQL Server, Oracle, and IBM DB2 for production use; H2 for development.
+      Operaton uses the same database schema as Camunda 7 CE.
+      Supported database versions per release are listed on the [Roadmap](/roadmap).
+
+Ecosystem:
+  - q: What is the Operaton Hub?
+    a: The [Hub](/hub) is a community platform for sharing Operaton solutions, extensions, and integrations.
+  - q: Does Operaton have a BPMN Modeler?
+    a: >
+      A dedicated Operaton Modeler is in active development at
+      [operaton/operaton-modeler](https://github.com/operaton/operaton-modeler).
+      In the meantime, Camunda Modeler remains fully compatible for designing BPMN diagrams
+      and deploying them to Operaton.
+  - q: Is there an MCP server for AI agents?
+    a: >
+      Yes. The Operaton MCP server lets AI agents interact with the engine — deploying processes and decisions,
+      managing instances, querying history, and working with tasks.
+      See [operaton/operaton-mcp](https://github.com/operaton/operaton-mcp).
+  - q: Can I integrate LLMs into processes?
+    a: >
+      Yes. LLMs can be invoked from service tasks and decisions. A working example is the candidate-screening
+      use case at
+      [operaton-examples](https://github.com/operaton/operaton-examples/tree/main/examples/use-cases/candidate-screening).
 
 Governance & Community:
   - q: How is the Operaton project governed?
@@ -50,22 +106,23 @@ Governance & Community:
 
 Release Planning:
   - q: What is the release cycle for Operaton?
-    a: The general cadence for feature releases is half-yearly in April and October. Patch releases are created monthly and additionally on urgent requirement. Major releases have at least one feature release in between.
-
-  - q: Will there be an LTS (Long-Term Support) version?
     a: >
-      As an open-source project, Operaton itself does not provide LTS in the traditional sense.
-      However, the *1.x version is planned to be maintained in 2ß26*, ensuring stability and reliability for users.
-      Additionally, some companies associated with the project committers offer services, including extended maintenance and the possibility of Service Level Agreements (SLAs) for enterprises that require long-term stability.
-
-  - q: What happens after version 1.x?
-    a: After establishing a stable 1.x version, the project will *gradually modernize and evolve*. The goal is to *stay relevant for the next decade* while maintaining backward compatibility.
-
-  - q: What about Spring Boot 4 support?
-    a: SpringBoot 4 support will be provided with Operaton 2.0 (April 2026).
-
-  - q: What about Spring Boot 3 support after Operaton 2.0?
-    a: Operaton 2.0 drops support for Spring Boot 3. Thus Spring Boot 3 support is bound to Operaton 1.x.
+      Half-yearly feature releases (April and October), monthly patch releases for the current major/minor,
+      and monthly milestone previews from `main`. See the [Roadmap](/roadmap) for the live schedule.
+  - q: What is the support window for a release?
+    a: >
+      Each major/minor is supported for 6 months, until the next major/minor ships.
+      The compatibility matrix on the [Roadmap](/roadmap) shows the current support timelines per version.
+  - q: Is there an LTS (Long-Term Support) version?
+    a: >
+      Operaton itself does not offer a traditional LTS line; the rolling 6-month support window is the model.
+      Listed [Service Providers](/service-providers) can offer extended maintenance and SLAs for organizations
+      that need long-term stability.
+  - q: What happens after 1.x?
+    a: >
+      The 2.x line is the active development line; 1.x continues to receive patch releases per the [Roadmap](/roadmap).
+      Operaton aims to evolve with backward-compatible changes where possible, while modernizing the platform
+      over time.
 
 Security:
 
@@ -80,7 +137,7 @@ Security:
 
   - q: Does Operaton provide SBOMs?
     a: >
-      Yes, Operaton provides *[Software Bill of Materials (SBOMs)](https://en.wikipedia.org/wiki/Software_supply_chain)* 
+      Yes, Operaton provides *[Software Bill of Materials (SBOMs)](https://en.wikipedia.org/wiki/Software_supply_chain)*
       to help users understand the dependencies and security of the software they are using.
       The SBOMs are delivered in the provided distributions.
 
@@ -99,19 +156,27 @@ Migration from Camunda 7 CE:
       2. Update your application dependencies to use Operaton instead of Camunda 7 CE.
       3. Replace the Camunda 7 CE libraries with Operaton equivalents in your build system (Maven, Gradle, etc.).
       4. Verify compatibility with your existing database schema.
-      5. Run tests to ensure process execution behaves as expected."
+      5. Run tests to ensure process execution behaves as expected.
 
-      A detailed *migration guide* will be available soon.
+
+      See the [Camunda to Operaton Migration Guide](https://docs.operaton.org/docs/documentation/update/camunda-to-operaton) for full details.
   - q: What about database compatibility?
     a: Operaton *keeps the same database schema as Camunda 7 CE*, so no database migration is required when switching.
   - q: Are there tools to assist with migration?
-    a: Yes, the community is working on migration tooling to automate dependency updates and compatibility checks.
+    a: >
+      Yes. The [migrate-from-camunda-recipe](https://github.com/operaton/migrate-from-camunda-recipe)
+      is an OpenRewrite recipe that automates dependency updates and the `org.camunda` → `org.operaton`
+      package renaming across Maven/Gradle projects.
   - q: Will Camunda Modeler still work with Operaton?
     a: Yes, you can continue using Camunda Modeler to design BPMN diagrams and deploy them to Operaton.
   - q: Does Operaton support Camunda 7 CE plugins?
     a: Operaton does support the same plugin mechanism as Camunda 7 CE. However, since namespaces have changed, the plugins will require small rewrites to use the Operaton API.
   - q: Is there commercial support available for migration?
-    a: Since Operaton is a free and open-source project, commercial support is provided by third-party companies offering consulting and migration services.
+    a: >
+      Yes. Operaton itself is free, but several listed [Service Providers](/service-providers) offer
+      paid migration services — from assessment and tooling-assisted dependency updates to full
+      hands-on migration projects. See the [Commercial Support & Services](#commercial-support-services)
+      section above for details.
 
 Participating:
   - q: How can I join the Operaton community?
