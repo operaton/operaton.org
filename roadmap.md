@@ -22,17 +22,10 @@ predictable stability and support — all without creating unnecessary operation
     <div class="start">Today</div>
     <div class="arrow"></div>
     <div class="group">
-      Release 1.1
-    </div>
-    <div class="arrow"></div>
-    <div class="group">
-      <h3>March 2026</h3>
-      <div class="task">Release 2.0</div>
-    </div>
-    <div class="arrow"></div>
-    <div class="group">
-      <h3>April 2026</h3>
-      <div class="task">Release 2.1</div>
+      <h3>June 2026</h3>
+      <div class="task">Release 2.1.2</div>
+      <div class="task">Release 1.1.4</div>
+      <div class="task">Release 2.2.0-M1</div>
     </div>
     <div class="arrow"></div>
     <div class="group">
@@ -43,6 +36,7 @@ predictable stability and support — all without creating unnecessary operation
     <div class="group">
       <h3>October 2026</h3>
       <div class="task">Release 2.2</div>
+      <div class="task">End of Support 2.1</div>
     </div>
     <div class="arrow"></div>
     <div class="end"></div>
@@ -83,14 +77,39 @@ Environments and Databases up to date, accompanied by regular patch releases.
 
 ### Product Roadmap - 2026 and beyond
 
-- Major Dependency Changes for the Operaton 2.0 Release - [GitHub Issue ↗](https://github.com/operaton/operaton/issues/1672)
+- Major Dependency Changes for the Operaton 2.2 Release - [GitHub Issue ↗](https://github.com/operaton/operaton/issues/2840)
 - Make new Web applications production ready and replace legacy ones
+- Backport relevant features from other Camunda 7 forks (e.g. cibseven, Fluxnova, EximeeBPMS, orquieo)
 - Further improvements based on our users needs
 - Remove deprecated code
 - Job executor performance improvements
 - Keep Supported Environments and Databases up to date
 
 ## Past Changes
+
+### June 2026
+
+#### Patch Releases 2.1.2 / 1.1.4
+
+- Monthly patch releases with bug fixes
+
+### April 2026
+
+#### Release 2.1
+
+- Quarkus 3.33 LTS upgrade
+- Spring Boot 4.0.6 / Spring Framework 7.0.7
+- Jakarta EE 11 compliance maintained
+- RESTEasy 7 (Jakarta REST 4.0)
+
+### March 2026
+
+#### Release 2.0
+
+- Spring Boot 4 and Spring Framework 7 (breaking change for Spring integrators)
+- Jakarta EE 11 compliance
+- JUnit 6 support for testing
+- OSGi support removed
 
 ### February 2026
 
