@@ -3,7 +3,7 @@ layout: post
 author: Maximilian Kurscheidt, Heilbronn University
 title: Operaton powers the Data Sharing Framework in production
 ---
-<img width="1672" height="941" alt="DSFxOperaton-Graphics" src="https://github.com/user-attachments/assets/4949b4b1-2d3c-4edb-977c-fb670ed17a50" />
+<img width="1672" height="941" alt="DSFxOperaton-Graphics" src="/assets/img/blog/2026-07-10_DSFxOperaton-Graphics.png" />
 
 The [Data Sharing Framework (DSF) community](https://dsf.dev) has successfully completed the migration of all 38 participating German university hospitals and additional five research sites to DSF v.2.1.0 in the Medical Informatics Initiative. With Operaton powering the business process engine, this production rollout marks an important milestone for Germany’s sustainable, federated research data infrastructure.
 
