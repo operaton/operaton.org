@@ -3,11 +3,11 @@ layout: post
 author: The Operaton Team
 ---
 
-## Operaton 2.1.3 and 1.1.5 Released — Security Fixes, and 1.1.x Reaches End of Life
+## Operaton 2.1.3 and 1.1.5 Released — Dependency Security Updates, and 1.1.x Reaches End of Life
 
 We've published two maintenance releases today: **Operaton 2.1.3** and **Operaton 1.1.5**.
 
-### Operaton 2.1.3 — security fixes
+### Operaton 2.1.3 — security updates in dependencies
 
 2.1.3 pins two vulnerable transitive dependencies that reached Operaton through
 Spring Boot 4 and the Quarkus extension:
