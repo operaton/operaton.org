@@ -217,3 +217,16 @@
       url: https://github.com/ronalders/operaton-process-test-coverage
     - label: Contact
       url: "mailto:aldersron@gmail.com"
+
+- name: FLUX MES
+  description: >-
+    FLUX MES is a Manufacturing Execution System for variant- and project-based manufacturers,
+    designed to get production live in months rather than years.
+    Core shop-floor processes run as BPMN 2.0 workflows executed by Operaton.
+  type: 0
+  license: 0
+  links:
+    - label: Website
+      url: https://flux-mes.de/
+    - label: Contact
+      url: "mailto:info@flux-mes.de"
