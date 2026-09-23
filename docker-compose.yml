@@ -3,7 +3,7 @@ services:
     image: ruby:3.3.11
     working_dir: /site
     volumes:
-      - .:/site
+      - .:/site:z
       - bundle-cache:/usr/local/bundle
     ports:
       - '4000:4000'
