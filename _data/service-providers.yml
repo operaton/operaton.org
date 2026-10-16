@@ -6,10 +6,11 @@
     city: Dortmund
     area-of-operation: EU
   description: >-
-    With passion, trust, and a shared vision, we develop software and systems
-    solutions that inspire not only our customers but also help make the world
-    a better place.
-  website: https://www.itemis.com/dienstleistungen/operaton-support/
+    Orchestrate complex work across systems, people and AI on an open technology foundation that fits into your 
+    software architecture and stays under your control. From process execution and engineering tooling to integration,
+    custom development and enterprise support: itemis brings together the building blocks that turn process automation
+    into production-grade enterprise software.
+  website: https://www.itemis.com/custom-software/prozessautomatisierung/
 
 - name: Otus GmbH
   logo: /assets/img/service-providers/otus_logo.svg
