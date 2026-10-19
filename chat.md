@@ -7,4 +7,4 @@ title: "Chat (Slack)"
 
 We are currently using Slack alongside the Forum for faster communication.
 
-Feel free to join the conversation by using [Slack's invitation link](https://join.slack.com/t/operaton/shared_invite/zt-4aazesdxe-VV1qa6MqmpWhg3l5RToqJg).
+Feel free to join the conversation by using [Slack's invitation link](https://join.slack.com/t/operaton/shared_invite/zt-4dkhr4vyr-xE2hR4XotI32sdXDHyLO9g).
