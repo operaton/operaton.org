@@ -65,6 +65,24 @@ main-class: start-page
   </div>
 </header>
 
+<section id="usage">
+  <h2>Trusted by</h2>
+  
+  Operaton is actively and successfully deployed at many organisations
+
+  <ul class="logo-gallery">
+    {% for adopter in site.data.adopters %}
+      <li>
+        <a href="{{ adopter.website }}">
+          <img alt="{{ adopter.name }}" src="{{ adopter.logo }}">
+        </a>
+        <br>
+        <small>{{ adopter.name }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
 <section id="features">
   <h2>Features</h2>
   <ul class="card-list">
