@@ -1,0 +1,15 @@
+- name: The Hague
+  logo: /assets/img/adopters/denhaag_logo.png
+  website: https://www.denhaag.nl/en/
+
+- name: Gemeente Rotterdam
+  logo: /assets/img/adopters/rotterdam_logo.svg
+  website: https://www.rotterdam.nl/en
+
+- name: City of Utrecht
+  logo: /assets/img/adopters/wapen-utrecht-rood.svg
+  website: https://www.utrecht.nl/city-of-utrecht
+
+- name: valtimo
+  logo: /assets/img/adopters/valtimo_logo.svg
+  website: https://www.valtimo.nl/
