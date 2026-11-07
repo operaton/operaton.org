@@ -22,21 +22,25 @@ predictable stability and support — all without creating unnecessary operation
     <div class="start">Today</div>
     <div class="arrow"></div>
     <div class="group">
-      <h3>June 2026</h3>
-      <div class="task">Release 2.1.2</div>
-      <div class="task">Release 1.1.4</div>
-      <div class="task">Release 2.2.0-M1</div>
+      <h3>Nov 2026 - Mar 2027</h3>
+      <div class="task">Patch Releases for 2.2</div>
     </div>
     <div class="arrow"></div>
     <div class="group">
-      <h3>August 2026</h3>
-      <div class="task">End of Support 1.1</div>
+      <h3>April 2027</h3>
+      <div class="task">Release 2.3</div>
+      <div class="task">Last Patch Release for 2.2</div>
     </div>
     <div class="arrow"></div>
     <div class="group">
-      <h3>October 2026</h3>
-      <div class="task">Release 2.2</div>
-      <div class="task">End of Support 2.1</div>
+      <h3>May 2027 - Sep 2027</h3>
+      <div class="task">Patch Releases for 2.3</div>
+    </div>
+    <div class="arrow"></div>
+    <div class="group">
+      <h3>October 2027</h3>
+      <div class="task">Release 2.4/3.0 (T.B.D.)</div>
+      <div class="task">Last Patch Release for 2.3</div>
     </div>
     <div class="arrow"></div>
     <div class="end"></div>
@@ -46,14 +50,14 @@ predictable stability and support — all without creating unnecessary operation
 
 ### Planned Release Dates & Compatibility Matrix
 
-| Version    | Release Date | Support Timeline | Summary                                                                        | JDK        | Jakarta EE | Spring Boot | Quarkus  |
-|:-----------|:-------------|:-----------------|:-------------------------------------------------------------------------------|:-----------|:-----------|:------------|:---------|
-| 1.0        | Nov. 2025    | until 1.1        | Feature parity & compatibility with Camunda 7.24                               | 17,21,25   | 10         | 3.5.x       | 3.28.x   |
-| 1.1        | Feb. 2026    | 6 months         | Extended support for Spring Boot 3.5.x                                         | 17,21,25   | 10         | 3.5.x       | 3.30.x   |
-| 2.0        | Mar. 2026    | 1 month          | Spring Boot 4 support, platform upgrades                                       | 17,21,25   | 11         | 4.0.x       | 3.32     |
-| 2.1        | Apr. 2026    | 6 months         | Upgrade to Quarkus LTS. New features. Change to the half-yearly release cycle. | 17,21,25   | 11         | 4.0.x       | 3.33 LTS |
-| 2.2        | Oct. 2026    | 6 months         | New Features. Update Supported Environments and Databases                      | 17,21,25   | 11         | 4.1.x       | next LTS |
-| 2.3 or 3.0 | Apr. 2027    | 6 months         | T.B.A.                                                                         | (17?)21,25 | 11(?)      | 4.?         | next LTS |
+| Version | Release Date | Support Timeline | Summary                                                                        | JDK        | Jakarta EE | Spring Boot | Quarkus  |
+|:--------|:-------------|:-----------------|:-------------------------------------------------------------------------------|:-----------|:-----------|:------------|:---------|
+| 1.0     | Nov. 2025    | until 1.1        | Feature parity & compatibility with Camunda 7.24                               | 17,21,25   | 10         | 3.5.x       | 3.28.x   |
+| 1.1     | Feb. 2026    | 6 months         | Extended support for Spring Boot 3.5.x                                         | 17,21,25   | 10         | 3.5.x       | 3.30.x   |
+| 2.0     | Mar. 2026    | 1 month          | Spring Boot 4 support, platform upgrades                                       | 17,21,25   | 11         | 4.0.x       | 3.32     |
+| 2.1     | Apr. 2026    | 6 months         | Upgrade to Quarkus LTS. New features. Change to the half-yearly release cycle. | 17,21,25   | 11         | 4.0.x       | 3.33 LTS |
+| 2.2     | Oct. 2026    | 6 months         | New Web Apps. Update Supported Environments and Databases                      | 17,21,25   | 11         | 4.1.x       | 3.40 LTS |
+| 2.3     | Apr. 2027    | 6 months         | API hardening, History Outbox, New Webapps Improvements                        | 17,21,25   | 11(?)      | 4.2 (?)     | next LTS |
 
 ### Release Calendar
 
@@ -77,15 +81,29 @@ Environments and Databases up to date, accompanied by regular patch releases.
 
 ### Product Roadmap - 2026 and beyond
 
-- Major Dependency Changes for the Operaton 2.2 Release - [GitHub Issue ↗](https://github.com/operaton/operaton/issues/2840)
-- Make new Web applications production ready and replace legacy ones
-- Backport relevant features from other Camunda 7 forks (e.g. cibseven, Fluxnova, EximeeBPMS, orquieo)
-- Further improvements based on our users needs
-- Remove deprecated code
-- Job executor performance improvements
-- Keep Supported Environments and Databases up to date
+- Legacy Webapps are deprecated and will be dropped with 3.0. New Webapps are shipped since Operaton 2.2 (opt-in).
+- API hardening (esp. Nullability contracts)
 
 ## Past Changes
+
+### October 2026
+
+#### Patch Release 2.1.6
+
+Last patch release for 2.1 with bug fixes and dependency updates.
+
+#### Release 2.2
+
+- New Web Apps "Neo" shipped
+- Performance improvements for the Job Executor
+- Spring Boot 4.1, Wildfly 41, Quarkus 3.40 Platform upgrades
+- Backport relevant features and fixes from other Camunda 7 forks (e.g. cibseven, Fluxnova, EximeeBPMS, orquieo)
+- Deliver SBOMs for all Operaton artifacts (including Docker images) to support security and compliance requirements
+
+#### MCP Server
+
+- Release 1.1
+- Fine grained access control for the Operaton MCP Server
 
 ### June 2026
 
@@ -110,6 +128,10 @@ Environments and Databases up to date, accompanied by regular patch releases.
 - Jakarta EE 11 compliance
 - JUnit 6 support for testing
 - OSGi support removed
+
+### MCP Server
+
+- First release of the [Operaton MCP Server](https://www.npmjs.com/package/@operaton/mcp)
 
 ### February 2026
 
