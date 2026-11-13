@@ -172,3 +172,18 @@
     integration projects in complex system landscapes. 
     With our integration work, we serve as the essential enabler for functional AI solutions.
   website: https://www.nterra.com/operaton/
+
+- name: Swisscom Ltd
+  logo: /assets/img/service-providers/swisscomLogo.png
+  services: [0, 1, 2, 3, 4]
+  location:
+    country: Switzerland
+    city: Bern
+    area-of-operation: EU
+  description: >-
+    As Switzerland’s leading ICT provider, we design, develop, automate, and operate business processes and workflows. 
+    Our BPM experts deliver end-to-end services, from consulting and system integration to secure hosting, DevSecOps, 
+    and 24/7 managed operations. With hundreds of workflows running daily, including in critical environments, 
+    we bring proven expertise in delivering and maintaining reliable, scalable automation solutions.
+  website: https://www.swisscom.ch
+
