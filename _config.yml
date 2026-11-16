@@ -3,3 +3,4 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "Operaton" # the name of your site, e.g. ACME Corp.
 description: "A community-driven, free, and open-source BPMN engine."
 permalink: pretty
+default_image: /assets/img/operaton-logo.png

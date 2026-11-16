@@ -1,10 +1,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="utf-8" />
 <meta name="theme-color" content="#0f7b9d" />
+<meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncatewords: 50 | escape }}" />
 
+{% unless page.layout == "post" %}
 <!-- Open Graph / Social Media Meta Tags -->
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
-<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 30 }}" />
+<meta property="og:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncatewords: 30 | escape }}" />
 <meta property="og:image" content="{{ site.url }}/assets/img/operaton-logo.png" />
 <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 <meta property="og:type" content="website" />
@@ -13,29 +15,68 @@
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
-<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 30 }}" />
-<meta name="twitter:image" content="{{ site.url }}/assets/img/operaton-logo.svg" />
+<meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncatewords: 30 | escape }}" />
+<meta name="twitter:image" content="{{ site.url }}/assets/img/operaton-logo.png" />
+{% endunless %}
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "@id": "{{ site.url }}/#operaton",
-        "name": "Operaton",
-        "applicationCategory": "DeveloperTool",
-        "operatingSystem": "All",
-        "url": "{{ site.url }}",
-        "description": "{{ site.description | escape }}",
-        "creator": {
-            "@type": "Organization",
-            "name": "Operaton Project",
-            "url": "{{ site.url }}",
-            "logo": "{{ site.url }}/assets/img/operaton-logo.svg",
-            "sameAs": [
-                "https://github.com/operaton/operaton",
-                "https://fosstodon.org/@operaton",
-                "https://www.linkedin.com/company/operaton/"
-            ]
-        }
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "{{ site.url }}/#website",
+                "name": "Operaton",
+                "alternateName": ["Operaton BPMN Engine", "operaton.org"],
+                "url": "{{ site.url }}/",
+                "inLanguage": "en",
+                "publisher": { "@id": "{{ site.url }}/#organization" }
+            },
+            {
+                "@type": "Organization",
+                "@id": "{{ site.url }}/#organization",
+                "name": "Operaton",
+                "alternateName": "Operaton Project",
+                "url": "{{ site.url }}/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ site.url }}/assets/img/operaton-logo.png"
+                },
+                "sameAs": [
+                    "https://github.com/operaton",
+                    "https://fosstodon.org/@operaton",
+                    "https://www.linkedin.com/company/operaton/",
+                    "https://www.youtube.com/@operaton-engine"
+                ]
+            },
+            {
+                "@type": ["SoftwareApplication", "SoftwareSourceCode"],
+                "@id": "{{ site.url }}/#operaton",
+                "name": "Operaton",
+                "alternateName": "Operaton BPMN Engine",
+                "description": {{ site.description | jsonify }},
+                "disambiguatingDescription": "Operaton is an open-source BPMN process engine for Java and a community-driven fork of Camunda 7.",
+                "url": "{{ site.url }}/",
+                "applicationCategory": "DeveloperApplication",
+                "operatingSystem": "Cross-platform",
+                "programmingLanguage": "Java",
+                "codeRepository": "https://github.com/operaton/operaton",
+                "license": "https://www.apache.org/licenses/LICENSE-2.0",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+                "softwareHelp": { "@type": "CreativeWork", "url": "https://docs.operaton.org/" },
+                "isBasedOn": {
+                    "@type": "SoftwareApplication",
+                    "name": "Camunda 7",
+                    "sameAs": "https://www.wikidata.org/wiki/Q15790886"
+                },
+                "author": { "@id": "{{ site.url }}/#organization" },
+                "publisher": { "@id": "{{ site.url }}/#organization" },
+                "sameAs": [
+                    "https://www.wikidata.org/wiki/Q142187312",
+                    "https://github.com/operaton/operaton",
+                    "https://hub.docker.com/r/operaton/operaton"
+                ]
+            }
+        ]
     }
 </script>

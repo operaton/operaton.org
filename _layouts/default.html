@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{% if page.url == "/" %}{{ page.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}</title>
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
     {% include meta.html %}
     {% include resources.html %}
