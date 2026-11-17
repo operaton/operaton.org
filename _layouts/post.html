@@ -19,6 +19,22 @@
     <meta name="twitter:image" content="{{ page.image | default: site.default_image | absolute_url }}" />
     <meta name="twitter:url" content="{{ page.url | absolute_url }}" />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "url": "{{ page.url | absolute_url }}",
+        "mainEntityOfPage": "{{ page.url | absolute_url }}",
+        "image": "{{ page.image | default: site.default_image | absolute_url }}",
+        {% if page.author == nil or page.author == "The Operaton Team" %}"author": { "@id": "{{ site.url }}/#organization" },{% else %}"author": { "@type": "Person", "name": {{ page.author | jsonify }} },{% endif %}
+        "publisher": { "@id": "{{ site.url }}/#organization" },
+        "isPartOf": { "@id": "{{ site.url }}/#website" },
+        "about": { "@id": "{{ site.url }}/#operaton" }
+      }
+    </script>
+
     <style>
      .operaton-logo::before {
        background: url({{"/assets/img/operaton-logo.svg"|relative_url}});
